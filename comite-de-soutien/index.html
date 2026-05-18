@@ -6,6 +6,17 @@
   <title>Le Comité de soutien | Comité de soutien au juge Hakim Karki</title>
   <meta name="description" content="Pourquoi le Comité de soutien à Hakim Karki s’est constitué, son rôle, ses convictions et les éléments qui interrogent dans cette affaire." />
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .supporters-section { background: #f8f5ed; }
+    .supporters-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .supporter-card h3 { margin-bottom: 8px; font-size: 1.05rem; }
+    .supporter-card p { margin: 0; color: var(--muted); }
+    .published-consent { margin-top: 14px; font-size: 0.95rem; font-weight: 700; color: var(--navy); }
+    .more-supporters { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+    @media (max-width: 980px) { .supporters-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .supporters-grid { grid-template-columns: 1fr; } }
+  </style>
+
 </head>
 <body>
   <header class="site-header" id="top">
@@ -35,50 +46,6 @@
   </header>
 
   <main class="page-main committee-page">
-    <section class="committee-hero">
-      <div class="container committee-hero-grid">
-        <div>
-          <span class="breadcrumb">Accueil / Le Comité de soutien</span>
-          <p class="eyebrow">Soutien • Vérité • Justice</p>
-          <h1>Le Comité de soutien à Hakim Karki</h1>
-          <p class="committee-lead">
-            Serviteur de la loi à Mayotte dès la départementalisation de 2010, Hakim Karki a exercé comme juge d’instruction dans des affaires sensibles. Aujourd’hui incarcéré après une condamnation qu’il conteste, il continue de clamer son innocence.
-          </p>
-          <div class="hero-actions">
-            <a class="btn primary" href="../chronologie/">Comprendre la chronologie</a>
-            <a class="btn secondary" href="../ecrire-a-hakim-karki/">Lui écrire</a>
-          </div>
-        </div>
-        <aside class="committee-card" aria-label="Repères essentiels">
-          <span class="card-label">Repères</span>
-          <div class="stat"><strong>2014</strong><span>Accusation de viol</span></div>
-          <div class="stat"><strong>2021</strong><span>Renvoi devant les Assises</span></div>
-          <div class="stat"><strong>2022</strong><span>Condamnation à 8 ans en première instance</span></div>
-          <div class="stat"><strong>2024</strong><span>Condamnation à 10 ans en appel</span></div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section intro-section">
-      <div class="container split committee-intro">
-        <div>
-          <p class="section-kicker">Pourquoi cette page</p>
-          <h2>Un comité né d’une conviction : Hakim Karki ne doit pas être laissé seul.</h2>
-        </div>
-        <div class="rich-text">
-          <p>
-            Nous nous sommes constitués en Comité de soutien d’Hakim Karki pour le soutenir concrètement au quotidien dans l’épreuve de son incarcération. Nous lui témoignons, sur le plan moral, que nous ne partageons pas la condamnation pénale qui l’a jugé coupable de viol.
-          </p>
-          <p>
-            Les nombreuses personnes qui connaissent Hakim Karki, souvent de longue date, témoignent d’une personnalité entière, sans jamais aucune ombre de relation malsaine avec les femmes. Nous le soutenons aussi dans la procédure disciplinaire intentée par sa hiérarchie depuis 2014, en lien avec son activité de juge d’instruction auprès des Mahorais.
-          </p>
-          <p class="strong-paragraph">
-            Surtout, notre comité de soutien clame la nécessité de faire reconnaître l’innocence d’Hakim Karki et de faire connaître les preuves de son innocence.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <section class="section cards-section" id="comite">
       <div class="container">
         <div class="section-head">
@@ -101,6 +68,46 @@
             <h3>Faire connaître</h3>
             <p>Permettre au public de comprendre les enjeux et de partager le site avec sobriété et responsabilité.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section supporters-section" id="soutiens">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-kicker">Liste non exhaustive</p>
+          <h2>Les soutiens du juge Hakim Karki</h2>
+          <p>
+            Des citoyens, professionnels, élus et membres de la société civile ont accepté de faire figurer leur nom publiquement en soutien à Hakim Karki.
+          </p>
+          <p class="published-consent">Liste publiée avec l’accord des personnes concernées.</p>
+        </div>
+
+        <div class="cards supporters-grid">
+          <article class="card supporter-card"><h3>Stéphane Boileau</h3><p>Pâtissier</p></article>
+          <article class="card supporter-card"><h3>Florence Castadot</h3><p>Personnel de direction — Éducation nationale</p></article>
+          <article class="card supporter-card"><h3>Corinne Cattaneo</h3><p>Enseignante</p></article>
+          <article class="card supporter-card"><h3>Brigitte Charon-Poirier</h3><p>Cadre de santé retraitée</p></article>
+          <article class="card supporter-card"><h3>Pierre Gauthier</h3><p>Ingénieur du son, cinéma télévision</p></article>
+          <article class="card supporter-card"><h3>Denis Herrmann</h3><p>Journaliste</p></article>
+          <article class="card supporter-card"><h3>Martine Herrmann</h3><p>Assistante de direction retraitée</p></article>
+          <article class="card supporter-card"><h3>Frédéric Lejour</h3><p>Agent immobilier</p></article>
+          <article class="card supporter-card"><h3>Dana Malschi</h3><p>Docteur biologiste, retraitée</p></article>
+          <article class="card supporter-card"><h3>Jean Mecheri</h3><p>Steward-chef polyvalent en restauration de collectivité</p></article>
+          <article class="card supporter-card"><h3>Alexis Michaut</h3><p>Normalien, agrégé de philosophie</p></article>
+          <article class="card supporter-card"><h3>Alexandra Moise</h3><p>Conseillère en gestion de droits</p></article>
+          <article class="card supporter-card"><h3>Marius Moise</h3><p>Gérant société générale de bâtiment</p></article>
+          <article class="card supporter-card"><h3>Ertan Narin</h3><p>Compte clé national</p></article>
+          <article class="card supporter-card"><h3>Annie Nguyen</h3><p>Contrôleur de gestion — Siège AP-HP</p></article>
+          <article class="card supporter-card"><h3>Gérard Poirier</h3><p>Directeur d’association, à la retraite</p></article>
+          <article class="card supporter-card"><h3>Amara Rafa</h3><p>Restaurateur</p></article>
+          <article class="card supporter-card"><h3>Jeanne Roussel</h3><p>Élue départementale</p></article>
+          <article class="card supporter-card"><h3>Céline Rousselet</h3><p>Greffière</p></article>
+          <article class="card supporter-card"><h3>Mohamed Tayeb</h3><p>Directeur commercial</p></article>
+          <article class="card supporter-card"><h3>Rida Toumi</h3><p>Chef d’entreprise</p></article>
+          <article class="card supporter-card"><h3>Nathalie Viet</h3><p>Économiste, consultante et élue municipale</p></article>
+          <article class="card supporter-card"><h3>Nadine Wanono</h3><p>Ingénieure de recherche retraitée CNRS</p></article>
+          <article class="card supporter-card more-supporters"><h3>…</h3><p>Liste non exhaustive</p></article>
         </div>
       </div>
     </section>
