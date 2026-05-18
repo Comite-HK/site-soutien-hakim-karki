@@ -122,3 +122,10 @@ Comité de soutien au juge Hakim Karki
 
 Site officiel actuel :
 https://www.soutien-juge-hakim-karki.fr/
+
+
+## Mise à jour V5
+
+- Transfert des sections « Le parcours judiciaire », « Les points qui interrogent » et « Notre appel » vers la page d’accueil.
+- Transfert du bloc « Le comité » vers la page « Comité de soutien ».
+- Maintien de l’architecture globale du site et des URLs propres.
