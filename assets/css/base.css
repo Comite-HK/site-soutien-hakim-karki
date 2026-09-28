@@ -1,0 +1,263 @@
+/* Socle de refonte — styles de base et composants élémentaires. Étape 1.
+ * Dépend de tokens.css et de assets/fonts/fonts.css.
+ * Aucune des 16 routes existantes n'est raccordée à ce fichier.
+ * Portée limitée : titres, texte courant, citations, boutons, liens, repères, filets.
+ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--hk-fond);
+  color: var(--hk-texte);
+  font-family: var(--hk-font-texte);
+  font-size: var(--hk-t-0);
+  line-height: var(--hk-lh-texte);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Aucune barre horizontale, y compris à 320 px. */
+body, .hk-conteneur { overflow-x: clip; }
+
+img, svg, video, iframe { max-width: 100%; height: auto; }
+
+/* ---------- Gabarits ---------- */
+
+.hk-conteneur {
+  width: 100%;
+  max-width: var(--hk-conteneur);
+  margin-inline: auto;
+  padding-inline: var(--hk-marge);
+}
+
+.hk-lecture { max-width: var(--hk-lecture); }
+
+.hk-section { padding-block: var(--hk-respiration); }
+
+.hk-section--parchemin {
+  background: var(--hk-fond-alt);
+  border-block: var(--hk-filet);
+}
+
+.hk-filet { border: 0; border-top: var(--hk-filet); margin-block: var(--hk-e-6); }
+
+/* ---------- Titres ---------- */
+
+.hk-h1, .hk-h2, .hk-h3, .hk-h4 {
+  font-family: var(--hk-font-titre);
+  font-weight: 700;
+  line-height: var(--hk-lh-titre);
+  letter-spacing: var(--hk-ls-titre);
+  color: var(--hk-encre);
+  margin: 0 0 var(--hk-e-4);
+  text-wrap: balance;
+}
+
+.hk-h1 { font-size: var(--hk-t-5); line-height: var(--hk-lh-serre); }
+.hk-h2 { font-size: var(--hk-t-4); }
+.hk-h3 { font-size: var(--hk-t-3); font-weight: 600; }
+.hk-h4 { font-size: var(--hk-t-2); font-weight: 600; }
+
+/* Surtitre : capitales espacées, en ardoise, jamais porteur d'information seul. */
+.hk-surtitre {
+  font-family: var(--hk-font-texte);
+  font-size: var(--hk-t--1);
+  font-weight: 600;
+  letter-spacing: var(--hk-ls-surtitre);
+  text-transform: uppercase;
+  color: var(--hk-texte-doux);
+  margin: 0 0 var(--hk-e-3);
+}
+
+/* ---------- Texte courant ---------- */
+
+.hk-texte {
+  max-width: 64ch;
+  margin: 0 0 var(--hk-e-4);
+  color: var(--hk-texte);
+}
+
+.hk-texte:last-child { margin-bottom: 0; }
+
+.hk-texte--chapeau {
+  font-size: var(--hk-t-1);
+  line-height: 1.55;
+  color: var(--hk-texte-doux);
+}
+
+.hk-texte--secondaire { color: var(--hk-texte-doux); }
+
+.hk-texte strong, .hk-fort { font-weight: 600; color: var(--hk-encre); }
+
+.hk-liste { max-width: 64ch; padding-left: var(--hk-e-5); margin: 0 0 var(--hk-e-4); }
+.hk-liste li { margin-bottom: var(--hk-e-2); }
+
+/* ---------- Liens ---------- */
+
+.hk-lien {
+  color: var(--hk-lien);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.hk-lien:hover { text-decoration-thickness: 2px; }
+
+/* Lien d'action autonome : cible tactile complète, contrairement à un lien en pleine phrase. */
+.hk-lien--action {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--hk-cible);
+  font-weight: 600;
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: var(--hk-focus);
+  outline-offset: var(--hk-focus-ecart);
+  border-radius: var(--hk-rayon);
+}
+
+/* ---------- Données ---------- */
+
+.hk-donnee {
+  font-family: var(--hk-font-donnee);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+  color: var(--hk-texte-doux);
+}
+
+/* ---------- Citation ---------- */
+
+.hk-citation {
+  margin: 0 0 var(--hk-e-5);
+  padding: var(--hk-e-2) 0 var(--hk-e-2) var(--hk-e-5);
+  border-left: 3px solid var(--hk-accent);
+  max-width: 62ch;
+}
+
+.hk-citation p {
+  font-family: var(--hk-font-titre);
+  font-size: var(--hk-t-2);
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+  color: var(--hk-encre);
+}
+
+.hk-citation figcaption,
+.hk-citation .hk-source {
+  display: block;
+  margin-top: var(--hk-e-3);
+  font-family: var(--hk-font-texte);
+  font-size: var(--hk-t--1);
+  color: var(--hk-texte-doux);
+}
+
+/* ---------- Boutons ---------- */
+
+.hk-bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--hk-e-2);
+  min-height: var(--hk-cible);
+  padding: var(--hk-e-3) var(--hk-e-5);
+  border: 1px solid transparent;
+  border-radius: var(--hk-rayon);
+  font-family: var(--hk-font-texte);
+  font-size: var(--hk-t-0);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.hk-bouton--principal { background: var(--hk-bleu); color: var(--hk-blanc); }
+.hk-bouton--principal:hover { background: #1B3266; }
+
+.hk-bouton--secondaire {
+  background: transparent;
+  color: var(--hk-bleu);
+  border-color: var(--hk-bleu);
+}
+.hk-bouton--secondaire:hover { background: rgba(35, 64, 127, 0.07); }
+
+.hk-bouton--discret {
+  background: transparent;
+  color: var(--hk-texte);
+  border-color: var(--hk-bordure);
+}
+.hk-bouton--discret:hover { background: var(--hk-fond-alt); }
+
+.hk-boutons { display: flex; flex-wrap: wrap; gap: var(--hk-e-3); }
+
+/* ---------- Repère chiffré ---------- */
+
+.hk-repere {
+  padding: var(--hk-e-4) 0 var(--hk-e-4) var(--hk-e-4);
+  border-left: 2px solid var(--hk-trait);
+}
+
+.hk-repere__valeur {
+  display: block;
+  font-family: var(--hk-font-titre);
+  font-size: var(--hk-t-2);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--hk-encre);
+}
+
+.hk-repere__libelle {
+  display: block;
+  margin-top: var(--hk-e-1);
+  font-size: var(--hk-t--1);
+  color: var(--hk-texte-doux);
+}
+
+/* ---------- Encadré d'alerte ---------- */
+
+.hk-alerte {
+  padding: var(--hk-e-4) var(--hk-e-5);
+  background: var(--hk-blanc);
+  border: var(--hk-filet);
+  border-left: 3px solid var(--hk-alerte);
+  border-radius: var(--hk-rayon);
+  max-width: 64ch;
+}
+
+/* ---------- Grille ---------- */
+
+.hk-grille { display: grid; gap: var(--hk-e-5); grid-template-columns: 1fr; }
+
+@media (min-width: 640px) { .hk-grille--2, .hk-grille--3, .hk-grille--4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) {
+  .hk-grille--3 { grid-template-columns: repeat(3, 1fr); }
+  .hk-grille--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---------- Carte ---------- */
+
+.hk-carte {
+  padding: var(--hk-e-5);
+  background: var(--hk-blanc);
+  border: var(--hk-filet);
+  border-radius: var(--hk-rayon);
+}
+
+/* ---------- Accessibilité ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

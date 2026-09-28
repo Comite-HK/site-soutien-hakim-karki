@@ -1,0 +1,129 @@
+{
+  "generated_at_utc": "2026-09-28T07:45:29.675Z",
+  "note": "Sous-ensembles latin + latin-ext servis par Google Fonts, rapatriés localement. Aucune requête vers fonts.googleapis.com ou fonts.gstatic.com au chargement des pages. Inter est livrée en police variable : un seul fichier par sous-ensemble couvre les graisses 400 à 600.",
+  "licenses": {
+    "spectral": {
+      "file": "OFL-spectral.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/spectral/OFL.txt",
+      "sha256": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98",
+      "copyright": "Copyright 2017 The Spectral Project Authors (https://github.com/productiontype/Spectral)",
+      "license": "SIL Open Font License 1.1"
+    },
+    "inter": {
+      "file": "OFL-inter.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt",
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "copyright": "Copyright 2020 The Inter Project Authors (https://github.com/rsms/inter)",
+      "license": "SIL Open Font License 1.1"
+    },
+    "ibmplexmono": {
+      "file": "OFL-ibmplexmono.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/OFL.txt",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "copyright": "Copyright © 2017 IBM Corp. with Reserved Font Name \"Plex\"",
+      "license": "SIL Open Font License 1.1"
+    }
+  },
+  "files": [
+    {
+      "family": "Spectral",
+      "weight": 600,
+      "style": "normal",
+      "subset": "latin",
+      "file": "spectral-600-latin.woff2",
+      "bytes": 22936,
+      "sha256": "33faca8b5795a0de1af77cbc43a050a3655c4b1e03e04847fdef4d19d2e361d2",
+      "sourceUrl": "https://fonts.gstatic.com/s/spectral/v15/rnCs-xNNww_2s0amA9vmtm3BafY.woff2",
+      "weightRange": "600"
+    },
+    {
+      "family": "Spectral",
+      "weight": 600,
+      "style": "normal",
+      "subset": "latin-ext",
+      "file": "spectral-600-latin-ext.woff2",
+      "bytes": 20824,
+      "sha256": "dea6bd9ca650814af1f750b7474d7205b7fe0e4c79a6b58c6f7157d90dc8815c",
+      "sourceUrl": "https://fonts.gstatic.com/s/spectral/v15/rnCs-xNNww_2s0amA9vmtm3PafadWQ.woff2",
+      "weightRange": "600"
+    },
+    {
+      "family": "Spectral",
+      "weight": 700,
+      "style": "normal",
+      "subset": "latin",
+      "file": "spectral-700-latin.woff2",
+      "bytes": 23036,
+      "sha256": "5276f202cce67e8caa9f697800e11cfc9d708da67d47f6f5507dcadcf1e11c11",
+      "sourceUrl": "https://fonts.gstatic.com/s/spectral/v15/rnCs-xNNww_2s0amA9uCt23BafY.woff2",
+      "weightRange": "700"
+    },
+    {
+      "family": "Spectral",
+      "weight": 700,
+      "style": "normal",
+      "subset": "latin-ext",
+      "file": "spectral-700-latin-ext.woff2",
+      "bytes": 20824,
+      "sha256": "9b5a5be420405c68cf73fcdd06fa4c9978dcd8fb8b87b0e187e107cfb7a5da29",
+      "sourceUrl": "https://fonts.gstatic.com/s/spectral/v15/rnCs-xNNww_2s0amA9uCt23PafadWQ.woff2",
+      "weightRange": "700"
+    },
+    {
+      "family": "Inter",
+      "style": "normal",
+      "subset": "latin",
+      "file": "inter-var-latin.woff2",
+      "bytes": 48256,
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "sourceUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "variable": true,
+      "weightRange": "400 600",
+      "coveredWeights": [
+        400,
+        500,
+        600
+      ]
+    },
+    {
+      "family": "Inter",
+      "style": "normal",
+      "subset": "latin-ext",
+      "file": "inter-var-latin-ext.woff2",
+      "bytes": 85068,
+      "sha256": "34b9c504cab7a73e37b746343a449132e56cf7b5481af2cb81dc74dcff25c956",
+      "sourceUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2",
+      "variable": true,
+      "weightRange": "400 600",
+      "coveredWeights": [
+        400,
+        500,
+        600
+      ]
+    },
+    {
+      "family": "IBM Plex Mono",
+      "weight": 500,
+      "style": "normal",
+      "subset": "latin",
+      "file": "ibmplexmono-500-latin.woff2",
+      "bytes": 14888,
+      "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+      "sourceUrl": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg.woff2",
+      "weightRange": "500"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "weight": 500,
+      "style": "normal",
+      "subset": "latin-ext",
+      "file": "ibmplexmono-500-latin-ext.woff2",
+      "bytes": 13432,
+      "sha256": "6bb06407c97584b0867a959e05e8874693bfeb8c317de190811c51598f2d99ea",
+      "sourceUrl": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwl5FgtIU.woff2",
+      "weightRange": "500"
+    }
+  ],
+  "deduplicated_at_utc": "2026-09-28T07:46:30.319Z",
+  "totalBytes": 249264
+}

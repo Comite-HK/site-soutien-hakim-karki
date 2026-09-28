@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Socle visuel — démonstration interne (hors site)</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+  /* Habillage propre à la page de démonstration. Non destiné au site. */
+  .sg-bandeau{background:var(--hk-encre);color:#fff;padding:var(--hk-e-4) 0;font-size:var(--hk-t--1)}
+  .sg-bandeau p{margin:0;max-width:78ch}
+  .sg-bandeau strong{color:#fff}
+  .sg-bloc{padding-block:var(--hk-e-7);border-bottom:var(--hk-filet)}
+  .sg-etiquette{font-family:var(--hk-font-donnee);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--hk-texte-doux);margin:0 0 var(--hk-e-5);padding-bottom:var(--hk-e-2);border-bottom:2px solid var(--hk-encre);display:inline-block}
+  .sg-note{font-size:var(--hk-t--1);color:var(--hk-texte-doux);max-width:74ch;margin:0 0 var(--hk-e-5)}
+  .sg-src{font-family:var(--hk-font-donnee);font-size:11px;color:var(--hk-texte-doux);display:block;margin-top:var(--hk-e-2)}
+  .sg-ech{display:flex;flex-wrap:wrap;gap:var(--hk-e-5);align-items:baseline;margin-bottom:var(--hk-e-5)}
+  .sg-jeton{font-family:var(--hk-font-donnee);font-size:11px;color:var(--hk-texte-doux);white-space:nowrap}
+  .sg-couleurs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--hk-e-4)}
+  .sg-couleur{border:var(--hk-filet);border-radius:var(--hk-rayon);overflow:hidden;background:#fff}
+  .sg-aplat{height:76px}
+  .sg-meta{padding:var(--hk-e-3);font-family:var(--hk-font-donnee);font-size:11px;line-height:1.5;color:var(--hk-texte-doux)}
+  .sg-meta b{display:block;font-family:var(--hk-font-texte);font-size:13px;color:var(--hk-encre);font-weight:600;margin-bottom:2px}
+  .sg-contraste{width:100%;border-collapse:collapse;font-size:var(--hk-t--1);max-width:640px}
+  .sg-contraste th,.sg-contraste td{text-align:left;padding:var(--hk-e-2) var(--hk-e-3);border-bottom:var(--hk-filet)}
+  .sg-contraste th{font-weight:600;color:var(--hk-texte-doux);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+  .sg-contraste td:nth-child(2),.sg-contraste td:nth-child(3){font-family:var(--hk-font-donnee)}
+  .sg-champ{display:block;max-width:420px;margin-bottom:var(--hk-e-4)}
+  .sg-champ span{display:block;font-size:var(--hk-t--1);font-weight:600;margin-bottom:var(--hk-e-2)}
+  .sg-champ input{width:100%;min-height:var(--hk-cible);padding:var(--hk-e-3);font:inherit;font-size:var(--hk-t-0);color:var(--hk-encre);background:#fff;border:1px solid var(--hk-bordure-forte);border-radius:var(--hk-rayon)}
+  .sg-emoji{font-size:22px;line-height:1;display:block;margin-bottom:var(--hk-e-3)}
+</style>
+</head>
+<body>
+
+<div class="sg-bandeau">
+  <div class="hk-conteneur">
+    <p><strong>Page de démonstration interne — étape 1.</strong> Elle n'appartient pas aux 16 routes du site et n'est reliée à aucune d'elles. Les pages existantes conservent `styles.css` inchangé.
+    Les textes encadrés ci-dessous sont des <strong>extraits du comité repris mot pour mot</strong> depuis la référence R01 du corpus du 25/09/2026 ; ils servent uniquement d'échantillon typographique. Les intitulés gris en capitales sont des étiquettes de cette page, pas du contenu éditorial.</p>
+  </div>
+</div>
+
+<main class="hk-conteneur">
+
+  <!-- ================= TITRES ================= -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Titres et surtitres</p>
+    <p class="sg-note">Spectral 600/700. Titres fluides entre 320 et 1440 px. Le surtitre est décoratif : il ne porte jamais seul une information.</p>
+
+    <p class="hk-surtitre">Justice • Indépendance • Vérité</p>
+    <h1 class="hk-h1">Soutien au juge Hakim Karki</h1>
+    <span class="sg-src">R01 — surtitre et titre du hero, repris mot pour mot</span>
+
+    <hr class="hk-filet">
+
+    <p class="hk-surtitre">Pourquoi ce site ?</p>
+    <h2 class="hk-h2">Informer avec clarté. Soutenir avec dignité.</h2>
+    <span class="sg-src">R01 — section 2</span>
+
+    <hr class="hk-filet">
+
+    <h2 class="hk-h2">Une procédure longue, une condamnation contestée.</h2>
+    <span class="sg-src">R01 — section 3</span>
+
+    <hr class="hk-filet">
+
+    <h3 class="hk-h3">Une expertise médicale peu catégorique</h3>
+    <h4 class="hk-h4">Une instruction de près de 7 ans</h4>
+    <span class="sg-src">R01 — cartes 1 et 2 de « Les points qui interrogent »</span>
+
+    <hr class="hk-filet">
+    <div class="sg-ech">
+      <span class="sg-jeton">--hk-t-5 / h1</span><span class="sg-jeton">--hk-t-4 / h2</span><span class="sg-jeton">--hk-t-3 / h3</span>
+      <span class="sg-jeton">--hk-t-2 / h4</span><span class="sg-jeton">--hk-t-1 / chapeau</span><span class="sg-jeton">--hk-t-0 / 16 px</span><span class="sg-jeton">--hk-t--1 / 12,8 px</span>
+    </div>
+  </section>
+
+  <!-- ================= TEXTE ================= -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Paragraphes</p>
+    <p class="sg-note">Inter 400/500/600, interligne 1,65, mesure limitée à 64 caractères.</p>
+
+    <p class="hk-texte"><strong>Ancien juge d'instruction à Mayotte, Hakim Karki a été condamné à 10 ans de prison pour viol</strong>, accusation qu'il nie et dénonce comme une machination destinée à l'éliminer.</p>
+    <p class="hk-texte">Son indépendance et son refus des compromissions lui ont valu l'hostilité de sa hiérarchie.</p>
+    <span class="sg-src">R01 — hero, deux paragraphes dans leur ordre d'origine</span>
+
+    <hr class="hk-filet">
+
+    <p class="hk-texte hk-texte--chapeau">Le comité rappelle que la condamnation s’appuie, selon lui, sur un dossier fragile, une instruction incomplète et des éléments qui auraient dû nourrir le doute.</p>
+    <span class="sg-src">R01 — chapeau de « Les points qui interrogent »</span>
+
+    <hr class="hk-filet">
+
+    <p class="hk-texte">Le comité souhaite rendre accessibles les éléments de contexte, les dates clés, les articles et les démarches de soutien. L’objectif n’est pas de créer du bruit, mais de permettre à chacun de se faire une idée à partir d’un dossier structuré.</p>
+    <p class="hk-texte hk-texte--secondaire">Un site d’information, de soutien et de mobilisation citoyenne.</p>
+    <span class="sg-src">R01 — section 2 et pied de page</span>
+  </section>
+
+  <!-- ================= CITATIONS ================= -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Citations</p>
+    <p class="sg-note">Filet ocre à gauche, Spectral 600. Les guillemets font partie du texte source et ne sont pas ajoutés par le style.</p>
+
+    <figure class="hk-citation">
+      <p>« Une nouvelle affaire Dreyfus ? »</p>
+      <figcaption>R01 — hero. Formulation du comité, reprise telle quelle.</figcaption>
+    </figure>
+
+    <figure class="hk-citation">
+      <p>« Je suis innocent »</p>
+      <figcaption>R01 — repère clé, légende source : « déclaration constante de Hakim Karki »</figcaption>
+    </figure>
+  </section>
+
+  <!-- ================= BOUTONS ================= -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Boutons</p>
+    <p class="sg-note">Hauteur minimale 44 px. Libellés repris mot pour mot, flèches comprises. Aucune destination n'est active sur cette page.</p>
+
+    <div class="hk-boutons" style="margin-bottom:var(--hk-e-5)">
+      <span class="hk-bouton hk-bouton--principal" role="button" tabindex="0">Comprendre l’affaire</span>
+      <span class="hk-bouton hk-bouton--secondaire" role="button" tabindex="0">Consulter la revue de presse</span>
+      <span class="hk-bouton hk-bouton--discret" role="button" tabindex="0">Faire connaître le site</span>
+    </div>
+    <div class="hk-boutons" style="margin-bottom:var(--hk-e-5)">
+      <span class="hk-bouton hk-bouton--principal" role="button" tabindex="0">Devenir membre</span>
+      <span class="hk-bouton hk-bouton--secondaire" role="button" tabindex="0">Écrire à Hakim</span>
+      <span class="hk-bouton hk-bouton--discret" role="button" tabindex="0">Partager le site</span>
+    </div>
+    <p><a class="hk-lien hk-lien--action" href="#">Consulter la revue de presse →</a></p>
+    <p class="sg-note">Lien textuel autonome : flèche du source conservée, zone cliquable portée à 44 px.</p>
+    <span class="sg-src">R01 — hero, « Notre appel » et « Comment agir ? »</span>
+
+    <hr class="hk-filet">
+    <label class="sg-champ">
+      <span>Champ de formulaire — bordure fonctionnelle 3,53:1</span>
+      <input type="text" placeholder="Exemple de saisie" aria-describedby="sg-champ-note">
+    </label>
+    <p class="sg-note" id="sg-champ-note">Gabarit technique seulement. Les libellés réels des formulaires restent ceux des références R12 et R14 et ne sont pas reproduits ici.</p>
+  </section>
+
+  <!-- ================= REPERES / DONNEES ================= -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Repères chiffrés et données</p>
+    <p class="sg-note">Valeurs en Spectral 700, libellés en Inter, dates et références en IBM Plex Mono 500 avec chiffres tabulaires.</p>
+
+    <div class="hk-grille hk-grille--4" style="margin-bottom:var(--hk-e-6)">
+      <div class="hk-repere"><span class="hk-repere__valeur">10 ans</span><span class="hk-repere__libelle">de prison prononcés en appel</span></div>
+      <div class="hk-repere"><span class="hk-repere__valeur">7 ans</span><span class="hk-repere__libelle">d’instruction avant renvoi aux assises</span></div>
+      <div class="hk-repere"><span class="hk-repere__valeur">2025</span><span class="hk-repere__libelle">pourvoi rejeté par la Cour de cassation</span></div>
+      <div class="hk-repere"><span class="hk-repere__valeur">« Je suis innocent »</span><span class="hk-repere__libelle">déclaration constante de Hakim Karki</span></div>
+    </div>
+    <span class="sg-src">R01 — les quatre repères clés du hero, dans leur ordre</span>
+
+    <hr class="hk-filet">
+    <p class="hk-donnee">15 janvier 2011 — 2012 — 2014 — 2021 — 2022 — 2024</p>
+    <p class="sg-note">Dates de la chronologie R01, rendues en police de données.</p>
+  </section>
+
+  <!-- ================= ALERTE ET CARTES ================= -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Encadré signalé et cartes</p>
+    <p class="sg-note">Les emojis du source sont conservés à l'identique pour cette première proposition, comme demandé.</p>
+
+    <div class="hk-alerte" style="margin-bottom:var(--hk-e-6)">
+      <p class="hk-texte">Une affaire grave, sensible, qui interroge le fonctionnement de la justice et la protection réelle de l’indépendance des magistrats.</p>
+    </div>
+    <span class="sg-src">R01 — bandeau d'alerte du hero</span>
+
+    <hr class="hk-filet">
+
+    <div class="hk-grille hk-grille--3">
+      <article class="hk-carte">
+        <span class="sg-emoji" aria-hidden="true">⚕️</span>
+        <h3 class="hk-h4">Une expertise médicale peu catégorique</h3>
+        <p class="hk-texte">Le comité rappelle que la mise en accusation puis la condamnation s’appuient essentiellement sur une expertise médicale qu’il considère comme peu catégorique.</p>
+      </article>
+      <article class="hk-carte">
+        <span class="sg-emoji" aria-hidden="true">⌛</span>
+        <h3 class="hk-h4">Une instruction de près de 7 ans</h3>
+        <p class="hk-texte">Une durée exceptionnelle qui, selon le comité, n’a pas permis de dissiper les zones d’ombre du dossier.</p>
+      </article>
+      <article class="hk-carte">
+        <span class="sg-emoji" aria-hidden="true">🔎</span>
+        <h3 class="hk-h4">Une enquête jugée lacunaire</h3>
+        <p class="hk-texte">Absence de reconstitution, confrontation tardive, zones d’ombre non investiguées : autant d’éléments que le comité juge problématiques.</p>
+      </article>
+    </div>
+    <span class="sg-src">R01 — cartes 1 à 3 sur 6, emojis ⚕️ ⌛ 🔎 conservés ; les cartes 4 à 6 (🗣️ ⚖️ 🚪) ne sont pas reprises ici, cet échantillon ne remplace pas la page</span>
+  </section>
+
+  <!-- ================= COULEURS ================= -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Couleurs</p>
+    <p class="sg-note">Palette documentaire, sans or et sans dégradé.</p>
+
+    <div class="sg-couleurs" style="margin-bottom:var(--hk-e-6)">
+      <div class="sg-couleur"><div class="sg-aplat" style="background:#10192B"></div><div class="sg-meta"><b>Encre</b>#10192B<br>--hk-encre</div></div>
+      <div class="sg-couleur"><div class="sg-aplat" style="background:#46536B"></div><div class="sg-meta"><b>Ardoise</b>#46536B<br>--hk-ardoise</div></div>
+      <div class="sg-couleur"><div class="sg-aplat" style="background:#FBFAF7;border-bottom:1px solid #E0DCD3"></div><div class="sg-meta"><b>Papier</b>#FBFAF7<br>--hk-papier</div></div>
+      <div class="sg-couleur"><div class="sg-aplat" style="background:#F1EDE4"></div><div class="sg-meta"><b>Parchemin</b>#F1EDE4<br>--hk-parchemin</div></div>
+      <div class="sg-couleur"><div class="sg-aplat" style="background:#E0DCD3"></div><div class="sg-meta"><b>Trait</b>#E0DCD3<br>--hk-trait</div></div>
+      <div class="sg-couleur"><div class="sg-aplat" style="background:#8A8578"></div><div class="sg-meta"><b>Trait fort</b>#8A8578<br>--hk-trait-fort</div></div>
+      <div class="sg-couleur"><div class="sg-aplat" style="background:#23407F"></div><div class="sg-meta"><b>Bleu</b>#23407F<br>--hk-bleu</div></div>
+      <div class="sg-couleur"><div class="sg-aplat" style="background:#8A6220"></div><div class="sg-meta"><b>Ocre</b>#8A6220<br>--hk-ocre</div></div>
+      <div class="sg-couleur"><div class="sg-aplat" style="background:#8C2F22"></div><div class="sg-meta"><b>Brique</b>#8C2F22<br>--hk-brique</div></div>
+    </div>
+
+    <table class="sg-contraste">
+      <caption class="sg-note" style="text-align:left;caption-side:top">Contrastes mesurés (WCAG 2.1). Seuil texte courant : 4,5:1.</caption>
+      <thead><tr><th>Couple utilisé</th><th>Ratio</th><th>Niveau</th></tr></thead>
+      <tbody>
+        <tr><td>Encre sur papier</td><td>16,82</td><td>AAA</td></tr>
+        <tr><td>Ardoise sur papier</td><td>7,42</td><td>AAA</td></tr>
+        <tr><td>Bleu sur papier</td><td>9,53</td><td>AAA</td></tr>
+        <tr><td>Brique sur papier</td><td>7,91</td><td>AAA</td></tr>
+        <tr><td>Ocre sur papier</td><td>5,23</td><td>AA</td></tr>
+        <tr><td>Encre sur parchemin</td><td>15,03</td><td>AAA</td></tr>
+        <tr><td>Ardoise sur parchemin</td><td>6,63</td><td>AA</td></tr>
+        <tr><td>Blanc sur bleu (bouton)</td><td>9,95</td><td>AAA</td></tr>
+        <tr><td>Blanc sur bleu survolé</td><td>12,39</td><td>AAA</td></tr>
+        <tr><td>Trait fort sur papier (bordure)</td><td>3,53</td><td>AA (non-texte, seuil 3:1)</td></tr>
+      </tbody>
+    </table>
+    <p class="sg-note" style="margin-top:var(--hk-e-4)">Le jeton <span class="hk-donnee">--hk-trait</span> (1,31:1) est réservé aux filets décoratifs. Toute bordure porteuse d'information utilise <span class="hk-donnee">--hk-trait-fort</span>. L'ocre reste réservé aux fonds clairs : il ne satisfait pas le seuil sur fond sombre.</p>
+  </section>
+
+  <!-- ================= ESPACEMENTS ================= -->
+  <section class="sg-bloc" style="border-bottom:0">
+    <p class="sg-etiquette">Espacements et gabarits</p>
+    <div class="sg-ech">
+      <span class="sg-jeton">4</span><span class="sg-jeton">8</span><span class="sg-jeton">12</span><span class="sg-jeton">16</span><span class="sg-jeton">24</span>
+      <span class="sg-jeton">32</span><span class="sg-jeton">48</span><span class="sg-jeton">64</span><span class="sg-jeton">96</span><span class="sg-jeton">128 px</span>
+    </div>
+    <p class="sg-note">Conteneur 1120 px, colonne de lecture 720 px, mesure de texte 64 caractères. Respiration de section : 48 px en dessous de 768 px, 64 px à partir de 768 px, 96 px à partir de 1024 px. Cible tactile minimale 44 px.</p>
+  </section>
+
+</main>
+
+<div class="sg-bandeau" style="background:var(--hk-ardoise)">
+  <div class="hk-conteneur">
+    <p>Fin de la démonstration. Aucun raccordement aux 16 routes n'est effectué à ce stade ; le dispositif cookies et analytics n'est pas implémenté et ne figure pas encore au plan.</p>
+  </div>
+</div>
+
+</body>
+</html>

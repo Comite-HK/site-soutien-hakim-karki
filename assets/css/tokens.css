@@ -1,0 +1,84 @@
+/* Socle de refonte — jetons de style. Étape 1.
+ * Aucune des 16 routes existantes n'est raccordée à ce fichier.
+ * Valeurs issues du § 3.1 du plan de refonte.
+ */
+
+:root {
+  /* Palette documentaire */
+  --hk-encre: #10192B;
+  --hk-ardoise: #46536B;
+  --hk-papier: #FBFAF7;
+  --hk-parchemin: #F1EDE4;
+  --hk-trait: #E0DCD3;
+  /* Bordure fonctionnelle (champs, contrôles) : >= 3:1 sur papier, parchemin et blanc. */
+  --hk-trait-fort: #8A8578;
+  --hk-bleu: #23407F;
+  --hk-ocre: #8A6220;
+  --hk-brique: #8C2F22;
+  --hk-blanc: #FFFFFF;
+
+  /* Rôles */
+  --hk-fond: var(--hk-papier);
+  --hk-fond-alt: var(--hk-parchemin);
+  --hk-texte: var(--hk-encre);
+  --hk-texte-doux: var(--hk-ardoise);
+  --hk-bordure: var(--hk-trait);
+  --hk-bordure-forte: var(--hk-trait-fort);
+  --hk-lien: var(--hk-bleu);
+  --hk-accent: var(--hk-ocre);
+  --hk-alerte: var(--hk-brique);
+
+  /* Familles. Replis système si une police ne charge pas. */
+  --hk-font-titre: 'Spectral', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
+  --hk-font-texte: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --hk-font-donnee: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+
+  /* Échelle typographique : base 16 px, ratio 1,25. Titres fluides. */
+  --hk-t--1: 0.8rem;    /* 12.8 */
+  --hk-t-0: 1rem;       /* 16   */
+  --hk-t-1: 1.25rem;    /* 20   */
+  --hk-t-2: clamp(1.375rem, 1.24rem + 0.58vw, 1.5625rem);
+  --hk-t-3: clamp(1.625rem, 1.41rem + 0.92vw, 1.953rem);
+  --hk-t-4: clamp(1.875rem, 1.50rem + 1.60vw, 2.441rem);
+  --hk-t-5: clamp(2.125rem, 1.55rem + 2.46vw, 3.052rem);
+
+  --hk-lh-serre: 1.15;
+  --hk-lh-titre: 1.22;
+  --hk-lh-texte: 1.65;
+  --hk-ls-titre: -0.011em;
+  --hk-ls-surtitre: 0.08em;
+
+  /* Espacements */
+  --hk-e-1: 4px;
+  --hk-e-2: 8px;
+  --hk-e-3: 12px;
+  --hk-e-4: 16px;
+  --hk-e-5: 24px;
+  --hk-e-6: 32px;
+  --hk-e-7: 48px;
+  --hk-e-8: 64px;
+  --hk-e-9: 96px;
+  --hk-e-10: 128px;
+
+  /* Respiration de section : 56 px mobile, 96 px ordinateur. */
+  --hk-respiration: var(--hk-e-7);
+
+  /* Gabarits */
+  --hk-conteneur: 1120px;
+  --hk-lecture: 720px;
+  --hk-marge: var(--hk-e-5);
+  --hk-cible: 44px;
+
+  --hk-filet: 1px solid var(--hk-bordure);
+  --hk-rayon: 2px;
+  --hk-focus: 2px solid var(--hk-bleu);
+  --hk-focus-ecart: 2px;
+}
+
+@media (min-width: 768px) {
+  :root { --hk-respiration: var(--hk-e-8); --hk-marge: var(--hk-e-6); }
+}
+
+@media (min-width: 1024px) {
+  :root { --hk-respiration: var(--hk-e-9); }
+}
