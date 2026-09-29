@@ -1,0 +1,318 @@
+/* ==========================================================================
+   Maquette accueil — proposition de direction visuelle « dynamique »
+   Feuille dédiée : ne remplace ni base.css ni tokens.css.
+   Inter gras pour les titres ; Spectral réservée aux citations.
+   Dominante blanc/ivoire, bleu profond #234778 en zones ciblées,
+   accents ocre doré. Aucune animation décorative.
+   ========================================================================== */
+
+:root {
+  --mq-bleu: #234778;
+  --mq-bleu-fonce: #1B3760;
+  --mq-blanc: #FFFFFF;
+  --mq-ivoire: #F7F3EC;
+  --mq-encre: #10192B;
+  --mq-ardoise: #46536B;
+  --mq-ocre: #8A6220;
+  --mq-or-clair: #E4C789;
+  --mq-trait: #DCD8CC;
+  --mq-bordure: #D8DDE6;
+  --mq-rayon: 10px;
+  --mq-ombre: 0 1px 2px rgba(16, 25, 43, 0.06), 0 6px 20px rgba(16, 25, 43, 0.07);
+  --mq-ombre-legere: 0 1px 2px rgba(16, 25, 43, 0.05), 0 3px 10px rgba(16, 25, 43, 0.05);
+  --mq-conteneur: 1120px;
+  --mq-cible: 44px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--mq-blanc);
+  color: var(--mq-encre);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+img, svg { max-width: 100%; }
+
+.mq-conteneur { max-width: var(--mq-conteneur); margin-inline: auto; padding-inline: clamp(20px, 4vw, 40px); }
+
+/* Liens : soulignés par défaut, cibles >= 44 px */
+a { color: var(--mq-bleu); text-decoration-line: underline; text-underline-offset: 0.18em; }
+a:hover { color: var(--mq-bleu-fonce); }
+
+:focus-visible { outline: 2px solid var(--mq-bleu); outline-offset: 2px; }
+.mq-sur-fond-bleu :focus-visible { outline-color: var(--mq-or-clair); }
+
+/* --------------------------------------------------------------------------
+   Bandeau d'appel — filet bleu ciblé en ouverture
+   -------------------------------------------------------------------------- */
+.mq-bandeau {
+  background: var(--mq-bleu);
+  color: var(--mq-blanc);
+  font-size: 14px;
+}
+.mq-bandeau a {
+  display: block;
+  max-width: var(--mq-conteneur);
+  margin-inline: auto;
+  padding: 12px clamp(20px, 4vw, 40px);
+  min-height: var(--mq-cible);
+  color: var(--mq-blanc);
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.mq-bandeau a:hover { color: var(--mq-or-clair); }
+
+/* --------------------------------------------------------------------------
+   En-tête et navigation — structure validée (variante 1)
+   -------------------------------------------------------------------------- */
+.mq-entete { background: var(--mq-blanc); border-bottom: 1px solid var(--mq-trait); }
+.mq-entete__rangee { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; }
+
+.mq-logo { display: inline-flex; align-items: center; gap: 12px; color: var(--mq-encre); text-decoration: none; }
+.mq-logo__marque {
+  display: inline-grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--mq-bleu); color: var(--mq-blanc);
+  font-size: 22px; line-height: 1;
+}
+.mq-logo__nom { display: block; font-weight: 700; font-size: 17px; line-height: 1.2; }
+.mq-logo__sous { display: block; color: var(--mq-ardoise); font-size: 14px; line-height: 1.3; }
+
+.mq-nav { display: flex; align-items: center; gap: 4px; }
+.mq-nav__lien {
+  display: inline-flex; align-items: center; min-height: var(--mq-cible);
+  padding: 0 14px; border-radius: 8px;
+  color: var(--mq-encre); font-size: 15px; font-weight: 500;
+  text-decoration: none;
+}
+.mq-nav__lien:hover { color: var(--mq-bleu); box-shadow: inset 0 -2px 0 var(--mq-ocre); }
+.mq-nav__lien[aria-current="page"] { color: var(--mq-bleu); box-shadow: inset 0 -2px 0 var(--mq-ocre); }
+
+.mq-bouton {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: var(--mq-cible); padding: 0 20px;
+  border: 1px solid transparent; border-radius: 9px;
+  font-family: inherit; font-size: 15px; font-weight: 600;
+  text-decoration: none; cursor: pointer;
+}
+.mq-bouton--principal { background: var(--mq-bleu); color: var(--mq-blanc); border-color: var(--mq-bleu); }
+.mq-bouton--principal:hover { background: var(--mq-bleu-fonce); border-color: var(--mq-bleu-fonce); color: var(--mq-blanc); }
+.mq-bouton--secondaire { background: var(--mq-blanc); color: var(--mq-bleu); border-color: var(--mq-bleu); }
+.mq-bouton--secondaire:hover { background: var(--mq-ivoire); color: var(--mq-bleu-fonce); }
+.mq-nav .mq-bouton { margin-left: 8px; }
+
+.mq-nav__bascule { display: none; }
+
+@media (max-width: 1023px) {
+  .mq-nav__bascule {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: var(--mq-cible); height: var(--mq-cible);
+    border: 1px solid var(--mq-bordure); border-radius: 9px;
+    background: var(--mq-blanc); color: var(--mq-encre);
+    font-size: 20px; cursor: pointer;
+  }
+  .js .mq-nav {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch;
+    padding: 12px clamp(20px, 4vw, 40px) 20px;
+    background: var(--mq-blanc); border-bottom: 1px solid var(--mq-trait);
+    box-shadow: 0 12px 24px rgba(16, 25, 43, 0.08);
+    z-index: 20;
+  }
+  .js .mq-nav.mq-ouvert { display: flex; }
+  .mq-entete { position: relative; }
+  .mq-nav__lien { border-radius: 8px; }
+  .mq-nav .mq-bouton { margin: 8px 0 0; }
+}
+
+/* --------------------------------------------------------------------------
+   Hero — ouverture ciblée : zone claire, repères en carte bleue
+   -------------------------------------------------------------------------- */
+.mq-hero { background: var(--mq-ivoire); border-bottom: 1px solid var(--mq-trait); }
+.mq-hero__grille {
+  display: grid; gap: 40px;
+  padding-block: clamp(40px, 6vw, 72px);
+}
+@media (min-width: 960px) {
+  .mq-hero__grille { grid-template-columns: minmax(0, 1.55fr) minmax(320px, 1fr); align-items: center; gap: 56px; }
+}
+
+.mq-surtitre {
+  display: flex; align-items: center; gap: 10px;
+  margin: 0 0 18px;
+  color: var(--mq-ocre);
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+.mq-surtitre::before { content: ""; width: 26px; height: 3px; border-radius: 2px; background: var(--mq-ocre); }
+
+.mq-h1 {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 4.6vw, 52px);
+  font-weight: 800; line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.mq-h1__l { display: block; }
+
+/* Citation d'ouverture — Spectral */
+.mq-hero__question {
+  margin: 0 0 22px;
+  font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+  font-size: clamp(22px, 2.4vw, 29px);
+  font-weight: 600; line-height: 1.3;
+  color: var(--mq-bleu);
+}
+
+.mq-hero__texte { margin: 0; max-width: 58ch; font-size: 17px; }
+.mq-hero__texte + .mq-hero__texte { margin-top: 12px; color: var(--mq-ardoise); }
+.mq-hero__texte strong { font-weight: 700; }
+
+.mq-hero__alerte {
+  display: flex; gap: 14px; align-items: flex-start;
+  margin: 22px 0 0; padding: 16px 18px;
+  background: var(--mq-blanc);
+  border: 1px solid var(--mq-trait); border-left: 3px solid var(--mq-ocre);
+  border-radius: var(--mq-rayon);
+  box-shadow: var(--mq-ombre-legere);
+}
+.mq-hero__alerte-marque {
+  flex: none;
+  display: inline-grid; place-items: center;
+  width: 26px; height: 26px; margin-top: 2px;
+  border-radius: 50%; background: var(--mq-ocre);
+  color: var(--mq-blanc); font-weight: 800; font-size: 14px; line-height: 1;
+}
+.mq-hero__alerte p { margin: 0; font-size: 15.5px; line-height: 1.55; }
+
+.mq-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.mq-hero__actions .mq-bouton { padding: 0 24px; min-height: 50px; font-size: 16px; }
+
+/* Carte des repères — zone bleue ciblée, blocs délimités */
+.mq-reperes {
+  background: var(--mq-bleu); color: var(--mq-blanc);
+  border-radius: 14px;
+  padding: 26px;
+  box-shadow: var(--mq-ombre);
+}
+.mq-reperes__titre {
+  margin: 0 0 16px;
+  color: var(--mq-or-clair);
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+}
+/* Trois repères chiffrés : 2 cartes égales, puis une carte pleine largeur. */
+.mq-reperes__grille { display: grid; gap: 10px; }
+@media (min-width: 560px) {
+  .mq-reperes__grille { grid-template-columns: 1fr 1fr; }
+  .mq-repere--pleine { grid-column: 1 / -1; }
+}
+
+.mq-repere {
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--mq-rayon);
+  background: rgba(255, 255, 255, 0.05);
+}
+.mq-repere strong {
+  display: block;
+  font-size: 26px; font-weight: 800; line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.mq-repere span { display: block; margin-top: 4px; color: #D8DFEC; font-size: 14px; line-height: 1.45; }
+
+/* Citation sortie des repères : encart indépendant, même largeur, accent ocre. */
+.mq-hero__col { display: grid; gap: 16px; align-content: start; }
+
+.mq-encart-citation {
+  margin: 0;
+  padding: 18px 20px;
+  background: var(--mq-blanc);
+  border: 1px solid var(--mq-trait); border-left: 3px solid var(--mq-ocre);
+  border-radius: var(--mq-rayon);
+  box-shadow: var(--mq-ombre-legere);
+}
+.mq-encart-citation blockquote { margin: 0; }
+.mq-encart-citation p {
+  margin: 0;
+  font-family: 'Spectral', Georgia, 'Times New Roman', serif;
+  font-size: 22px; font-weight: 600; line-height: 1.3;
+  color: var(--mq-bleu);
+}
+.mq-encart-citation figcaption { margin-top: 6px; color: var(--mq-ardoise); font-size: 14px; }
+
+/* --------------------------------------------------------------------------
+   Section « Pourquoi ce site ? » — claire, espaces contenus
+   -------------------------------------------------------------------------- */
+/* Lecture verticale : surtitre, titre sur deux lignes, paragraphe présent. */
+.mq-section { padding-block: clamp(44px, 6vw, 76px); background: var(--mq-blanc); }
+
+.mq-h2 {
+  margin: 0;
+  font-size: clamp(27px, 3vw, 36px);
+  font-weight: 700; line-height: 1.18;
+  letter-spacing: -0.015em;
+}
+.mq-h2__l { display: block; }
+.mq-section__texte {
+  margin: 24px 0 0;
+  max-width: 65ch;
+  font-size: clamp(17.5px, 0.8rem + 0.9vw, 20px);
+  line-height: 1.7;
+  color: var(--mq-bleu);
+}
+
+/* --------------------------------------------------------------------------
+   Pied de page — structure validée : tête, 3 groupes, séparateur, légal
+   -------------------------------------------------------------------------- */
+.mq-pied { background: var(--mq-bleu); color: var(--mq-blanc); }
+.mq-pied .mq-conteneur { padding-block: clamp(40px, 5vw, 60px) clamp(28px, 4vw, 40px); }
+
+.mq-pied__tete { margin-bottom: 34px; }
+.mq-pied__nom { display: block; font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+.mq-pied__tete p { margin: 8px 0 0; color: #D8DFEC; font-size: 15.5px; }
+
+.mq-pied__nav { display: grid; gap: 32px 24px; }
+@media (min-width: 640px) { .mq-pied__nav { grid-template-columns: repeat(2, 1fr); gap: 36px 40px; } }
+@media (min-width: 1024px) { .mq-pied__nav { grid-template-columns: repeat(3, 1fr); } }
+
+.mq-pied__titre {
+  margin: 0 0 14px; padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--mq-or-clair);
+  font-size: 12.5px; font-weight: 700;
+  letter-spacing: 0.13em; text-transform: uppercase;
+}
+
+.mq-pied__liens { list-style: none; margin: 0; padding: 0; }
+.mq-pied__liens li + li { margin-top: 2px; }
+.mq-pied__liens a {
+  display: inline-flex; align-items: center;
+  min-height: var(--mq-cible);
+  color: var(--mq-blanc); font-size: 15px;
+  text-decoration-line: underline; text-underline-offset: 0.18em;
+}
+.mq-pied__liens a:hover { color: var(--mq-or-clair); }
+
+.mq-pied__bas { margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.22); }
+.mq-pied__legaux { display: flex; flex-wrap: wrap; gap: 8px 28px; list-style: none; margin: 0; padding: 0; }
+.mq-pied__legaux a {
+  display: inline-flex; align-items: center; min-height: var(--mq-cible);
+  color: #D8DFEC; font-size: 14px;
+  text-decoration-line: underline; text-underline-offset: 0.18em;
+}
+.mq-pied__legaux a:hover { color: var(--mq-or-clair); }
+
+/* Accessibilité : texte pour lecteurs d'écran */
+.mq-sr {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}

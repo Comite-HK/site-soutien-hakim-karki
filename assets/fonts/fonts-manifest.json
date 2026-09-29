@@ -1,6 +1,6 @@
 {
   "generated_at_utc": "2026-09-28T07:45:29.675Z",
-  "note": "Sous-ensembles latin + latin-ext servis par Google Fonts, rapatriés localement. Aucune requête vers fonts.googleapis.com ou fonts.gstatic.com au chargement des pages. Inter est livrée en police variable : un seul fichier par sous-ensemble couvre les graisses 400 à 600.",
+  "note": "Sous-ensembles latin + latin-ext servis par Google Fonts, rapatriés localement. Aucune requête vers fonts.googleapis.com ou fonts.gstatic.com au chargement des pages. Inter est livrée en police variable : un seul fichier par sous-ensemble couvre les graisses 400 à 900 (axe wght vérifié dans le fichier le 2026-09-28 ; la plage déclarée a été étendue de 400 600 à 400 900 pour les titres en gras).",
   "licenses": {
     "spectral": {
       "file": "OFL-spectral.txt",
@@ -78,11 +78,14 @@
       "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
       "sourceUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
       "variable": true,
-      "weightRange": "400 600",
+      "weightRange": "400 900",
       "coveredWeights": [
         400,
         500,
-        600
+        600,
+        700,
+        800,
+        900
       ]
     },
     {
@@ -94,11 +97,14 @@
       "sha256": "34b9c504cab7a73e37b746343a449132e56cf7b5481af2cb81dc74dcff25c956",
       "sourceUrl": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2",
       "variable": true,
-      "weightRange": "400 600",
+      "weightRange": "400 900",
       "coveredWeights": [
         400,
         500,
-        600
+        600,
+        700,
+        800,
+        900
       ]
     },
     {

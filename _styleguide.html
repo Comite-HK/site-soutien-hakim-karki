@@ -32,6 +32,9 @@
   .sg-champ span{display:block;font-size:var(--hk-t--1);font-weight:600;margin-bottom:var(--hk-e-2)}
   .sg-champ input{width:100%;min-height:var(--hk-cible);padding:var(--hk-e-3);font:inherit;font-size:var(--hk-t-0);color:var(--hk-encre);background:#fff;border:1px solid var(--hk-bordure-forte);border-radius:var(--hk-rayon)}
   .sg-emoji{font-size:22px;line-height:1;display:block;margin-bottom:var(--hk-e-3)}
+  .sg-cadre{border:1px dashed var(--hk-bordure-forte);border-radius:var(--hk-rayon);overflow:hidden;margin-bottom:var(--hk-e-3)}
+  .sg-alerte-bloc{border-left:3px solid var(--hk-brique);padding:var(--hk-e-3) var(--hk-e-4);background:#fff;max-width:78ch}
+  .sg-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 </style>
 </head>
 <body>
@@ -229,7 +232,7 @@
   </section>
 
   <!-- ================= ESPACEMENTS ================= -->
-  <section class="sg-bloc" style="border-bottom:0">
+  <section class="sg-bloc">
     <p class="sg-etiquette">Espacements et gabarits</p>
     <div class="sg-ech">
       <span class="sg-jeton">4</span><span class="sg-jeton">8</span><span class="sg-jeton">12</span><span class="sg-jeton">16</span><span class="sg-jeton">24</span>
@@ -238,13 +241,370 @@
     <p class="sg-note">Conteneur 1120 px, colonne de lecture 720 px, mesure de texte 64 caractères. Respiration de section : 48 px en dessous de 768 px, 64 px à partir de 768 px, 96 px à partir de 1024 px. Cible tactile minimale 44 px.</p>
   </section>
 
+  <!-- ============================================================ -->
+  <!-- ==================== ÉTAPE 2 — COMPOSANTS ==================== -->
+  <!-- ============================================================ -->
+
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Étape 2 — bibliothèque de composants</p>
+    <p class="sg-note" style="max-width:78ch"><strong>Avertissement de lecture.</strong> Chaque composant réutilise des textes existants repris mot pour mot, avec sa référence indiquée. Les <span class="hk-donnee">libellés de navigation regroupée</span> sont des <strong>propositions F-8 non validées</strong>, visibles uniquement dans cette démonstration : elles ne sont appliquées à aucune page. Aucun formulaire n'est actif — il n'y a pas d'élément <span class="hk-donnee">&lt;form&gt;</span> dans cette page, donc aucune soumission n'est possible.</p>
+  </section>
+
+  <!-- ---------- EN-TÊTE ET NAVIGATION ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">En-tête et navigation</p>
+    <p class="sg-note"><strong>Navigation validée le 28/09/2026 :</strong> la navigation actuelle du prototype est conservée, avec ses six libellés. La variante de regroupement en quatre familles, précédemment présentée à titre de proposition F-8, <strong>n'est pas retenue</strong> et a été retirée de cette démonstration.</p>
+    <div class="sg-cadre">
+      <div class="hk-bandeau-haut"><div class="hk-conteneur"><a href="#sg-nav1">Faites connaître le site →</a></div></div>
+      <header class="hk-entete">
+        <div class="hk-conteneur hk-entete__rangee">
+          <a class="hk-logo" href="#sg-nav1">
+            <span class="hk-logo__marque" aria-hidden="true">⚖</span>
+            <span><span class="hk-logo__nom">Comité de soutien</span><span class="hk-logo__sous">au juge Hakim Karki</span></span>
+          </a>
+          <button class="hk-nav__bascule" type="button" data-cible="sg-nav1" aria-expanded="false" aria-controls="sg-nav1"><span aria-hidden="true">☰</span><span class="sg-sr">Ouvrir le menu</span></button>
+          <nav class="hk-nav" id="sg-nav1" aria-label="Navigation actuelle (démonstration)">
+            <a class="hk-nav__lien" href="#sg-nav1" aria-current="page">Accueil</a>
+            <a class="hk-nav__lien" href="#sg-nav1">Le comité</a>
+            <a class="hk-nav__lien" href="#sg-nav1">Chronologie</a>
+            <a class="hk-nav__lien" href="#sg-nav1">Revue de presse</a>
+            <a class="hk-nav__lien" href="#sg-nav1">Agir</a>
+            <a class="hk-bouton hk-bouton--principal" href="#sg-nav1">Écrire à Hakim</a>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <span class="sg-src">R01 — bandeau, logotype et six entrées de menu, textes et emoji ⚖ conservés</span>
+    <p class="sg-note">Sous 1024 px, la navigation se replie derrière le bouton ☰, avec <span class="hk-donnee">aria-expanded</span> et <span class="hk-donnee">aria-controls</span>. Essayez le bouton aux largeurs réduites.</p>
+  </section>
+
+  <!-- ---------- FIL D'ARIANE ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Fil d'Ariane</p>
+    <p class="sg-note">Le prototype affiche déjà « Accueil / Chronologie » sur ses pages internes : le composant reprend ce fil existant, il ne l'invente pas. Toute extension à d'autres routes relève de F-8.</p>
+
+    <nav class="hk-ariane" aria-label="Fil d'Ariane (démonstration)">
+      <ol>
+        <li><a href="#">Accueil</a></li>
+        <li aria-current="page">Chronologie</li>
+      </ol>
+    </nav>
+    <span class="sg-src">État local R04 — « Accueil / Chronologie », séparateur conservé</span>
+  </section>
+
+  <!-- ---------- REPÈRES ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Repères</p>
+    <p class="sg-note">Deux traitements : les repères chiffrés du hero (déjà présentés plus haut) et les repères numérotés de la revue de presse.</p>
+
+    <div class="hk-grille hk-grille--3">
+      <div class="hk-repere">
+        <span class="hk-donnee" style="font-size:var(--hk-t-2)">01</span>
+        <h3 class="hk-h4" style="margin:var(--hk-e-2) 0">L’affaire Roukia</h3>
+        <p class="hk-texte">L’affaire Roukia débute le 15 janvier 2011 à Mayotte, lorsque le corps de Roukia Soundi, 18 ans, est découvert sur une plage de Trévani. L’autopsie révèle une overdose d’héroïne, une drogue rare sur l’île.</p>
+      </div>
+      <div class="hk-repere">
+        <span class="hk-donnee" style="font-size:var(--hk-t-2)">02</span>
+        <h3 class="hk-h4" style="margin:var(--hk-e-2) 0">Un juge soumis à des pressions</h3>
+        <p class="hk-texte">Le juge Hakim Karki, à Mayotte, a été confronté à de nombreuses pressions institutionnelles, régulièrement évoquées dans la presse locale et nationale.</p>
+      </div>
+      <div class="hk-repere">
+        <span class="hk-donnee" style="font-size:var(--hk-t-2)">03</span>
+        <h3 class="hk-h4" style="margin:var(--hk-e-2) 0">La départementalisation</h3>
+        <p class="hk-texte">La départementalisation de Mayotte en 2011 a révélé de graves dysfonctionnements institutionnels, administratifs et judiciaires.</p>
+      </div>
+    </div>
+    <span class="sg-src">R03 — les trois repères « Quelques repères », numéros, titres et textes conservés dans leur ordre</span>
+  </section>
+
+  <!-- ---------- CHRONOLOGIE ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Entrée de chronologie</p>
+    <p class="sg-note">Dates en police de données, filet vertical et repère circulaire. Cinq des sept entrées de la chronologie Systeme.io, dans leur ordre.</p>
+
+    <ol class="hk-chrono">
+      <li class="hk-chrono__entree">
+        <span class="hk-chrono__date">15 janvier 2011</span>
+        <p class="hk-chrono__texte">Découverte du corps de Roukia, 18 ans, morte d’une overdose sur une plage de Mayotte.</p>
+      </li>
+      <li class="hk-chrono__entree">
+        <span class="hk-chrono__date">2012</span>
+        <p class="hk-chrono__texte">Affaire du chrome hexavalent</p>
+      </li>
+      <li class="hk-chrono__entree">
+        <span class="hk-chrono__date">7 juillet 2014</span>
+        <p class="hk-chrono__texte">Le juge est mis en examen et placé en détention provisoire à La Réunion</p>
+      </li>
+      <li class="hk-chrono__entree">
+        <span class="hk-chrono__date">4 avril 2024</span>
+        <p class="hk-chrono__texte">La Cour d'appel alourdit la peine à dix ans de réclusion criminelle.</p>
+      </li>
+      <li class="hk-chrono__entree">
+        <span class="hk-chrono__date">23 janvier 2025</span>
+        <p class="hk-chrono__texte">La Cour de cassation rejette le pourvoi du juge Karki, rendant définitive sa condamnation à dix ans de prison.</p>
+      </li>
+    </ol>
+    <span class="sg-src">R04 — dates et énoncés séparés par la mise en forme, sans modification des mots. La chronologie R04 et celle de l'accueil R01 diffèrent : elles ne sont pas fusionnées ici</span>
+  </section>
+
+  <!-- ---------- CARTES ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Cartes</p>
+    <p class="sg-note">Les trois missions du comité. Emojis du source conservés.</p>
+
+    <div class="hk-grille hk-grille--3">
+      <article class="hk-carte">
+        <span class="sg-emoji" aria-hidden="true">🤝</span>
+        <h3 class="hk-h4">Soutenir</h3>
+        <p class="hk-texte">Apporter un soutien moral, humain et concret à Hakim Karki durant l’épreuve de son incarcération.</p>
+      </article>
+      <article class="hk-carte">
+        <span class="sg-emoji" aria-hidden="true">📚</span>
+        <h3 class="hk-h4">Documenter</h3>
+        <p class="hk-texte">Rassembler les éléments utiles : chronologie, revue de presse, faits troublants et ressources publiques.</p>
+      </article>
+      <article class="hk-carte">
+        <span class="sg-emoji" aria-hidden="true">📣</span>
+        <h3 class="hk-h4">Faire connaître</h3>
+        <p class="hk-texte">Permettre au public de comprendre les enjeux et de partager le site avec sobriété et responsabilité.</p>
+      </article>
+    </div>
+    <span class="sg-src">R02 — trois missions du comité, emojis 🤝 📚 📣 conservés</span>
+  </section>
+
+  <!-- ---------- CITATION ATTRIBUÉE ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Citation et position attribuée</p>
+    <p class="sg-note">Deux traitements distincts, exigés par le sujet : la citation, et le bloc de position du comité, qui rend visible l'attribution déjà présente dans le texte source (« selon lui », « le comité estime »). Le gabarit n'ajoute aucune qualification qui ne soit dans le texte.</p>
+
+    <figure class="hk-citation">
+      <p>« Une nouvelle affaire Dreyfus ? »</p>
+      <figcaption>R01 — hero, formulation du comité</figcaption>
+    </figure>
+
+    <div class="hk-alerte" style="border-left-color:var(--hk-bleu)">
+      <p class="hk-surtitre" style="margin-bottom:var(--hk-e-2)">Position du comité</p>
+      <p class="hk-texte">Le comité rappelle que la condamnation s’appuie, selon lui, sur un dossier fragile, une instruction incomplète et des éléments qui auraient dû nourrir le doute.</p>
+    </div>
+    <span class="sg-src">R01 — chapeau de « Les points qui interrogent ». Le surtitre « Position du comité » est un libellé d'interface proposé, non un texte du comité</span>
+  </section>
+
+  <!-- ---------- FICHE DOCUMENT ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Fiche document</p>
+    <p class="sg-note">Textes de la page PV-AG repris mot pour mot, y compris la mention de poids.</p>
+
+    <article class="hk-document">
+      <div class="hk-document__vignette" aria-hidden="true">📄</div>
+      <div>
+        <h3 class="hk-h3 hk-document__titre">Procès-Verbal d'Assemblée Générale</h3>
+        <p class="hk-document__meta">Format PDF • Taille : ~2MB • Date : 21 Décembre 2025</p>
+        <p class="hk-texte">Le document PDF est prêt pour le téléchargement.</p>
+        <div class="hk-boutons">
+          <span class="hk-bouton hk-bouton--principal" role="button" tabindex="0">📥 Télécharger le PDF complet</span>
+        </div>
+        <p class="hk-texte hk-texte--secondaire" style="margin-top:var(--hk-e-4);font-size:var(--hk-t--1)">Ce document est officiel et authentifié par le bureau de l'association</p>
+      </div>
+    </article>
+    <span class="sg-src">R15 — titre, métadonnées, phrase, libellé de téléchargement et mention d'authentification, emojis 📄 📥 conservés</span>
+    <p class="sg-note sg-alerte-bloc"><strong>Blocage F-1 / L-3 rappelé :</strong> la mention « Taille : ~2MB » est reproduite telle quelle, sans correction. Le fichier signé mesuré en production fait 297 Ko. Cette page ne peut pas être finalisée avant validation conjointe du fichier signé et de la mention de poids. Le bouton n'est relié à aucun fichier dans cette démonstration.</p>
+  </section>
+
+  <!-- ---------- ENTRÉE DE PRESSE ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Entrée de presse</p>
+    <p class="sg-note">Deux états : article avec lien de lecture, et archive sans lien. L'absence de lien est <strong>signalée, jamais masquée</strong> — les 10 notices concernées restent visibles.</p>
+
+    <ul class="hk-presse">
+      <li class="hk-presse__entree">
+        <span class="hk-presse__date">15/07/2011</span>
+        <div>
+          <h3 class="hk-presse__titre">Des gendarmes dans le viseur du juge</h3>
+          <span class="hk-presse__source">Africa Intelligence</span> <span class="hk-etiquette">Afrique Intelligence</span>
+        </div>
+        <a class="hk-lien hk-lien--action" href="#" rel="noopener">Lire</a>
+      </li>
+      <li class="hk-presse__entree">
+        <span class="hk-presse__date">01/02/2012</span>
+        <div>
+          <h3 class="hk-presse__titre">Mayotte : le juge, les gendarmes et les indics</h3>
+          <span class="hk-presse__source">Le Point</span> <span class="hk-etiquette">Presse nationale</span>
+        </div>
+        <a class="hk-lien hk-lien--action" href="#" rel="noopener">Lire</a>
+      </li>
+      <li class="hk-presse__entree">
+        <span class="hk-presse__date">20/02/2013</span>
+        <div>
+          <h3 class="hk-presse__titre">Affaire Roukia - La Cour de cassation saisie pour dessaisir le juge Karki</h3>
+          <span class="hk-presse__source">Les Nouvelles de Mayotte</span> <span class="hk-etiquette">Presse locale</span> <span class="hk-etiquette">Archive</span>
+        </div>
+        <span class="hk-presse__absent">Archive à intégrer</span>
+      </li>
+    </ul>
+    <span class="sg-src">R03 — deux notices avec lien et une notice « Archive à intégrer », dates, sources, titres et étiquettes conservés</span>
+  </section>
+
+  <!-- ---------- APPELS À L'ACTION ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Appels à l'action</p>
+    <p class="sg-note">Un bloc d'appel principal et une rangée d'actions secondaires. Aucune destination active ici.</p>
+
+    <div class="hk-appel" style="margin-bottom:var(--hk-e-6)">
+      <h3 class="hk-h3 hk-appel__titre">Rejoignez le Comité de soutien d’Hakim Karki</h3>
+      <p class="hk-texte">Participez à une mobilisation citoyenne pour soutenir Hakim Karki et défendre les principes fondamentaux de l’État de droit.</p>
+      <div class="hk-boutons" style="margin-top:var(--hk-e-4)">
+        <span class="hk-bouton hk-bouton--principal" role="button" tabindex="0">Rejoindre le comité →</span>
+      </div>
+    </div>
+    <span class="sg-src">R02 — titre, paragraphe et libellé du bouton HelloAsso, flèche conservée</span>
+
+    <hr class="hk-filet">
+
+    <div class="hk-boutons">
+      <span class="hk-bouton hk-bouton--secondaire" role="button" tabindex="0">Faire connaître le site</span>
+      <span class="hk-bouton hk-bouton--secondaire" role="button" tabindex="0">Contacter le comité</span>
+      <span class="hk-bouton hk-bouton--discret" role="button" tabindex="0">Devenir membre</span>
+      <span class="hk-bouton hk-bouton--discret" role="button" tabindex="0">Partager le site</span>
+    </div>
+    <span class="sg-src">R01 — « Notre appel » et « Comment agir ? », libellés dans leur ordre d'origine</span>
+  </section>
+
+  <!-- ---------- CHAMPS ---------- -->
+  <section class="sg-bloc">
+    <p class="sg-etiquette">Champs de formulaire</p>
+    <p class="sg-note sg-alerte-bloc"><strong>Aucun formulaire actif.</strong> Cette page ne contient aucun élément <span class="hk-donnee">&lt;form&gt;</span>, aucune <span class="hk-donnee">action</span> et aucun bouton de soumission : rien ne peut être envoyé. Les libellés, aides, options et texte d'exemple ci-dessous sont ceux de la référence R14, reproduits mot pour mot — ils restent protégés par le contrôle de conservation. Le remplacement du mécanisme d'envoi relève de F-2, non traité ici.</p>
+
+    <div role="group" aria-label="Gabarits de champs (démonstration, sans envoi)">
+      <label class="hk-champ">
+        <span class="hk-champ__libelle">Prénom</span>
+        <input class="hk-champ__saisie" type="text" autocomplete="off">
+      </label>
+
+      <label class="hk-champ">
+        <span class="hk-champ__libelle">Ville (optionnel)</span>
+        <input class="hk-champ__saisie" type="text" placeholder="Votre ville" autocomplete="off">
+        <span class="hk-champ__aide">Le texte d'aide « Votre ville » est le placeholder de la référence.</span>
+      </label>
+
+      <label class="hk-champ">
+        <span class="hk-champ__libelle">Type de message</span>
+        <select>
+          <option>Message de soutien personnel</option>
+          <option>Témoignage professionnel</option>
+          <option>Encouragement</option>
+          <option>Message de solidarité</option>
+        </select>
+      </label>
+
+      <label class="hk-champ">
+        <span class="hk-champ__libelle">Votre message</span>
+        <textarea rows="6" placeholder="Cher Hakim Karki,
+
+Je vous écris pour vous exprimer mon soutien dans cette épreuve difficile..."></textarea>
+        <span class="hk-champ__aide">Le texte d'exemple complet de la référence est conservé dans le corpus ; il est tronqué ici pour la lisibilité de la démonstration, et non réécrit.</span>
+      </label>
+
+      <label class="hk-case">
+        <input type="checkbox">
+        <span>Oui, j'aimerais recevoir une réponse d'Hakim Karki</span>
+      </label>
+
+      <label class="hk-case">
+        <input type="checkbox">
+        <span>J'accepte que mon message soit transmis à Hakim Karki par le Comité de Soutien *</span>
+      </label>
+
+      <label class="hk-case">
+        <input type="checkbox">
+        <span>J'accepte d'être tenu informé des actualités du Comité de Soutien (optionnel)</span>
+      </label>
+
+      <div class="hk-boutons" style="margin-top:var(--hk-e-5)">
+        <button class="hk-bouton hk-bouton--principal" type="button" disabled style="opacity:.55;cursor:not-allowed">📤 ENVOYER VOTRE COURRIER AU COMITÉ</button>
+      </div>
+      <p class="sg-note" style="margin-top:var(--hk-e-3)">Bouton volontairement désactivé : <span class="hk-donnee">type="button"</span> et <span class="hk-donnee">disabled</span>.</p>
+    </div>
+    <span class="sg-src">R14 — libellés, placeholder, options, consentements et libellé du bouton, emoji 📤 conservé</span>
+  </section>
+
+  <!-- ---------- PIED DE PAGE ---------- -->
+  <section class="sg-bloc" style="border-bottom:0">
+    <p class="sg-etiquette">Pied de page</p>
+    <p class="sg-note">Organisation demandée et validée : nom et phrase du comité en tête, puis <strong>trois colonnes d'un lien par ligne, alignées en haut</strong>. Les 16 routes restent atteignables, libellés et destinations inchangés. <strong>Les trois titres de regroupement sont des propositions à valider dans cette démonstration uniquement.</strong></p>
+    <div class="sg-cadre">
+      <footer class="hk-pied">
+        <div class="hk-conteneur">
+          <div class="hk-pied__tete">
+            <span class="hk-pied__nom">Comité de soutien au juge Hakim Karki</span>
+            <p>Un site d’information, de soutien et de mobilisation citoyenne.</p>
+          </div>
+          <nav class="hk-pied__nav" aria-label="Toutes les pages (démonstration)">
+            <section class="hk-pied__groupe">
+              <h3 class="hk-pied__titre">Comprendre l’affaire</h3>
+              <ul class="hk-pied__liens">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Chronologie</a></li>
+                <li><a href="#">Des faits troublants</a></li>
+                <li><a href="#">L’affaire Roukia</a></li>
+                <li><a href="#">Un juge soumis à des pressions</a></li>
+                <li><a href="#">La départementalisation à Mayotte</a></li>
+              </ul>
+            </section>
+            <section class="hk-pied__groupe">
+              <h3 class="hk-pied__titre">Sources et documents</h3>
+              <ul class="hk-pied__liens">
+                <li><a href="#">Revue de presse</a></li>
+                <li><a href="#">PV-AG</a></li>
+                <li><a href="#"><span class="hk-donnee" style="color:inherit">/posts/</span></a></li>
+              </ul>
+            </section>
+            <section class="hk-pied__groupe">
+              <h3 class="hk-pied__titre">Le comité et agir</h3>
+              <ul class="hk-pied__liens">
+                <li><a href="#">Le comité</a></li>
+                <li><a href="#">ÉVÈNEMENTS</a></li>
+                <li><a href="#">Les besoins</a></li>
+                <li><a href="#">Écrire à Hakim</a></li>
+                <li><a href="#">Partager le site</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </section>
+          </nav>
+          <div class="hk-pied__bas">
+            <ul class="hk-pied__legaux">
+              <li><a href="#">Mentions légales</a></li>
+              <!-- Emplacement réservé : « Politique de confidentialité » (F-10, page inexistante — aucun lien inactif affiché) -->
+              <!-- Emplacement réservé : « Gestion des cookies » (§ 12.5, dispositif non implémenté — aucun lien inactif affiché) -->
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <span class="sg-src">R01 — nom, phrase et liens « Contact » / « Mentions légales ». Les autres intitulés proviennent des références de chaque route (R03, R15, R02…)</span>
+    <p class="sg-note">Décompte : 16 liens, un par route, aucune omission — 6 + 3 + 6 en colonnes, puis « Mentions légales » après le séparateur. Les emplacements des futurs liens « Politique de confidentialité » et « Gestion des cookies » sont réservés en commentaires du code, sans lien inactif affiché.</p>
+    <p class="sg-note sg-alerte-bloc"><strong>Deux constats à ne pas corriger en silence.</strong> « ÉVÈNEMENTS » apparaît en capitales parce que c'est la <em>seule</em> forme existant dans les sources : aucune variante en bas de casse n'a été trouvée. L'harmoniser serait un changement de libellé, donc B ou F-8. Et la route <span class="hk-donnee">/posts/</span> <strong>n'a aucun libellé éditorial</strong> dans les références : son adresse est affichée faute de titre validé, plutôt qu'un intitulé inventé (L-2).</p>
+  </section>
+
 </main>
 
 <div class="sg-bandeau" style="background:var(--hk-ardoise)">
   <div class="hk-conteneur">
-    <p>Fin de la démonstration. Aucun raccordement aux 16 routes n'est effectué à ce stade ; le dispositif cookies et analytics n'est pas implémenté et ne figure pas encore au plan.</p>
+    <p>Fin de la démonstration. Aucun raccordement aux 16 routes n'est effectué à ce stade. Le dispositif cookies et analytics est désormais décrit au § 12 du plan, mais n'est pas implémenté.</p>
   </div>
 </div>
+
+<script>
+  // Démonstration seule : bascule du menu sous 1024 px. Aucun autre comportement.
+  for (const bouton of document.querySelectorAll('.hk-nav__bascule')) {
+    bouton.addEventListener('click', () => {
+      const nav = document.getElementById(bouton.dataset.cible);
+      const ouvert = nav.hasAttribute('data-ouvert');
+      nav.toggleAttribute('data-ouvert', !ouvert);
+      bouton.setAttribute('aria-expanded', String(!ouvert));
+      bouton.querySelector('.sg-sr').textContent = ouvert ? 'Ouvrir le menu' : 'Fermer le menu';
+    });
+  }
+</script>
 
 </body>
 </html>
