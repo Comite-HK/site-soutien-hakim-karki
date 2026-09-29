@@ -4,78 +4,150 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chronologie | Comité de soutien au juge Hakim Karki</title>
-  <meta name="description" content="Les grandes étapes de l’affaire Hakim Karki seront présentées ici." />
-  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="LA CHRONOLOGIE — Comité de soutien au juge Hakim Karki" />
+  <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="../assets/css/maquette-accueil.css" />
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="topbar">
-      <a class="topbar-link" href="../partager/">Faites connaître le site →</a>
-    </div>
-    <nav class="navbar" aria-label="Navigation principale">
-      <a class="brand" href="../" aria-label="Accueil">
-        <span class="brand-mark">⚖</span>
+  <div class="mq-bandeau mq-sur-fond-bleu">
+    <a href="../partager/">Faites connaître le site →</a>
+  </div>
+
+  <header class="mq-entete">
+    <div class="mq-conteneur mq-entete__rangee">
+      <a class="mq-logo" href="../" aria-label="Accueil">
+        <span class="mq-logo__marque" aria-hidden="true">⚖</span>
         <span>
-          <strong>Comité de soutien</strong>
-          <small>au juge Hakim Karki</small>
+          <span class="mq-logo__nom">Comité de soutien</span>
+          <span class="mq-logo__sous">au juge Hakim Karki</span>
         </span>
       </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="menu" id="main-menu">
-        <a href="../">Accueil</a>
-        <a href="../comite-de-soutien/">Le comité</a>
-        <a href="../chronologie/" class="active-link">Chronologie</a>
-        <a href="../revue-presse/">Revue de presse</a>
-        <a href="../partager/">Agir</a>
-        <a class="menu-cta" href="../ecrire-a-hakim-karki/">Écrire à Hakim</a>
-      </div>
-    </nav>
+      <button class="mq-nav__bascule" type="button" id="mq-bascule" aria-expanded="false" aria-controls="mq-nav" aria-label="Ouvrir le menu">☰</button>
+      <nav class="mq-nav" id="mq-nav" aria-label="Navigation principale">
+        <a class="mq-nav__lien" href="../">Accueil</a>
+        <a class="mq-nav__lien" href="../comite-de-soutien/">Le comité</a>
+        <a class="mq-nav__lien" href="../chronologie/" aria-current="page">Chronologie</a>
+        <a class="mq-nav__lien" href="../revue-presse/">Revue de presse</a>
+        <a class="mq-nav__lien" href="../partager/">Agir</a>
+        <a class="mq-bouton mq-bouton--principal" href="../ecrire-a-hakim-karki/">Écrire à Hakim</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="page-main">
-    <section class="page-hero">
-      <div class="container">
-        <span class="breadcrumb">Accueil / Chronologie</span>
-        <h1>Chronologie</h1>
-        <p>Les grandes étapes de l’affaire Hakim Karki seront présentées ici.</p>
+  <main>
+    <section class="mq-entete-page">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <h1 class="mq-h1 mq-entete-page__titre">LA CHRONOLOGIE</h1>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="placeholder-panel">
-          <p class="section-kicker">Page en construction</p>
-          <h2>Page en cours de réalisation.</h2>
-          <p>Cette section sera prochainement enrichie avec les contenus officiels du comité, repris depuis Systeme.io puis réécrits, structurés et intégrés dans le nouveau site GitHub.</p>
-          <ul class="placeholder-list">
-            <li>Contenu actuel à récupérer depuis Systeme.io</li>
-            <li>Réécriture et hiérarchisation éditoriale</li>
-            <li>Intégration HTML/CSS responsive</li>
-          </ul>
-          <div class="page-actions">
-            <a class="btn primary" href="../">Retour à l’accueil</a>
-            <a class="btn secondary" href="../chronologie/">Voir la chronologie</a>
-          </div>
+    <section class="mq-section mq-fond-ivoire mq-section--collee">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <ol class="mq-etapes">
+          <li class="mq-etapes__item">
+            <p><time>15 janvier 2011</time>: Découverte du corps de Roukia, 18 ans, morte d’une overdose sur une plage de Mayotte.</p>
+          </li>
+          <li class="mq-etapes__item">
+            <p><time>2012</time>: Affaire du chrome hexavalent</p>
+          </li>
+          <li class="mq-etapes__item">
+            <p><time>1er au 2 juillet 2014</time>: Une enseignante porte plainte pour viol contre le juge Karki</p>
+          </li>
+          <li class="mq-etapes__item">
+            <p><time>7 juillet 2014</time>: Le juge est mis en examen et placé en détention provisoire à La Réunion</p>
+          </li>
+          <li class="mq-etapes__item">
+            <p><time>16 décembre 2022</time>: Le juge Karki est condamné à huit ans de prison pour viol par la cour d'assises de Paris</p>
+          </li>
+          <li class="mq-etapes__item">
+            <p><time>4 avril 2024</time>: La Cour d'appel alourdit la peine à dix ans de réclusion criminelle.</p>
+          </li>
+          <li class="mq-etapes__item">
+            <p><time>23 janvier 2025</time>: La Cour de cassation rejette le pourvoi du juge Karki, rendant définitive sa condamnation à dix ans de prison.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="mq-section">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-adhesion">
+          <h2 class="mq-h2 mq-adhesion__titre">Bulletin d'adhésion au comité de soutien du juge Hakim Karki</h2>
+          <p>Pour adhérer</p>
+          <a class="mq-bouton mq-bouton--principal" href="https://www.helloasso.com/associations/comite-de-soutien-a-hakim-karki/adhesions/bulletin-d-adhesion-au-comite-de-soutien-de-hakim-karki" target="_blank" rel="noopener">Cliquez ici 👆</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section mq-section--collee mq-section--fin">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-actions-fin">
+          <a class="mq-lien-fleche" href="../ecrire-a-hakim-karki/">Écrivez à Hakim karki -&gt;</a>
+          <a class="mq-lien-fleche" href="../partager/">PARTAGEZ LE SITE -&gt;</a>
         </div>
       </div>
     </section>
   </main>
 
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Comité de soutien au juge Hakim Karki</strong>
+  <footer class="mq-pied mq-sur-fond-bleu">
+    <div class="mq-conteneur">
+      <div class="mq-pied__tete">
+        <span class="mq-pied__nom">Comité de soutien au juge Hakim Karki</span>
         <p>Un site d’information, de soutien et de mobilisation citoyenne.</p>
       </div>
-      <div class="footer-links">
-        <a href="../contact/">Contact</a>
-        <a href="../mentions-legales/">Mentions légales</a>
+      <nav class="mq-pied__nav" aria-label="Toutes les pages">
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Comprendre l’affaire</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../">Accueil</a></li>
+            <li><a href="../chronologie/">Chronologie</a></li>
+            <li><a href="../faits-troublants/">Des faits troublants</a></li>
+            <li><a href="../l-affaire-roukia/">L’affaire Roukia</a></li>
+            <li><a href="../un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="../departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Sources et documents</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../revue-presse/">Revue de presse</a></li>
+            <li><a href="../pvag/">PV-AG</a></li>
+            <li><a href="../posts/">/posts/</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Le comité et agir</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../comite-de-soutien/">Le comité</a></li>
+            <li><a href="../evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="../les-besoins/">Les besoins</a></li>
+            <li><a href="../ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="../partager/">Partager le site</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+      <div class="mq-pied__bas">
+        <ul class="mq-pied__legaux">
+          <li><a href="../mentions-legales/">Mentions légales</a></li>
+          <!-- Emplacement réservé : « Politique de confidentialité » (F-10, page inexistante — aucun lien inactif affiché) -->
+          <!-- Emplacement réservé : « Gestion des cookies » (§ 12.5, dispositif non implémenté — aucun lien inactif affiché) -->
+        </ul>
       </div>
     </div>
   </footer>
-  <script src="../script.js"></script>
+
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      var b = document.getElementById('mq-bascule');
+      var n = document.getElementById('mq-nav');
+      b.addEventListener('click', function () {
+        var ouvert = n.classList.toggle('mq-ouvert');
+        b.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+        b.setAttribute('aria-label', ouvert ? 'Fermer le menu' : 'Ouvrir le menu');
+      });
+    })();
+  </script>
 </body>
 </html>
