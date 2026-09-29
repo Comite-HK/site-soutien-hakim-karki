@@ -428,6 +428,21 @@ a:hover { color: var(--mq-bleu-fonce); }
   padding-block: clamp(36px, 5vw, 60px);
 }
 .mq-entete-page__titre { font-size: clamp(28px, 3.6vw, 42px); margin: 0; }
+/* Titre en deux lignes maîtrisées (saut après « conviction : »), jamais de mot isolé */
+.mq-entete-page__titre--long { font-size: clamp(24px, 3vw, 36px); max-width: 30ch; }
+
+/* Texte d'introduction : lecture confortable, phrase d'engagement marquée */
+.mq-intro { max-width: 68ch; }
+.mq-intro p { margin: 0; font-size: 17.5px; line-height: 1.75; color: var(--mq-ardoise); }
+.mq-intro p + p { margin-top: 18px; }
+.mq-intro__fort {
+  padding: 16px 20px;
+  background: var(--mq-ivoire);
+  border-left: 4px solid var(--mq-ocre);
+  border-radius: 0 var(--mq-rayon) var(--mq-rayon) 0;
+  color: var(--mq-bleu) !important;
+  font-weight: 600;
+}
 
 /* Section accolée à l'en-tête de page */
 .mq-section--collee { padding-top: clamp(32px, 4vw, 48px); }
@@ -468,3 +483,27 @@ a:hover { color: var(--mq-bleu-fonce); }
 /* Actions de fin de page : liens renvoyant vers les autres pages */
 .mq-actions-fin { display: grid; gap: 6px; }
 .mq-actions-fin .mq-lien-fleche { margin-top: 0; font-size: 16px; }
+
+/* ---------- Page comité : liste des soutiens ---------- */
+.mq-consentement { margin-top: 12px !important; color: var(--mq-ocre) !important; font-weight: 700; font-size: 15px !important; }
+
+.mq-soutiens {
+  display: grid; gap: 12px;
+  grid-template-columns: 1fr;
+  list-style: none; margin: 0; padding: 0;
+}
+@media (min-width: 620px) { .mq-soutiens { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .mq-soutiens { grid-template-columns: repeat(3, 1fr); } }
+
+.mq-soutien {
+  padding: 14px 18px;
+  background: var(--mq-blanc);
+  border: 1px solid var(--mq-trait); border-radius: var(--mq-rayon);
+  box-shadow: var(--mq-ombre-legere);
+}
+.mq-soutien h3 { margin: 0; font-size: 15.5px; font-weight: 700; line-height: 1.3; }
+.mq-soutien p { margin: 4px 0 0; color: var(--mq-ardoise); font-size: 14px; line-height: 1.5; }
+.mq-soutien--suite {
+  display: flex; flex-direction: column; justify-content: center;
+  border-style: dashed; background: transparent; box-shadow: none;
+}
