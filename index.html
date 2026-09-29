@@ -5,158 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Comité de soutien au juge Hakim Karki</title>
   <meta name="description" content="Site du Comité de soutien au juge Hakim Karki : comprendre une affaire judiciaire majeure, consulter la chronologie, la revue de presse et les actions de soutien." />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="assets/css/maquette-accueil.css" />
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="topbar">
-      <a class="topbar-link" href="partager/">Faites connaître le site →</a>
-    </div>
+  <div class="mq-bandeau mq-sur-fond-bleu">
+    <a href="partager/">Faites connaître le site →</a>
+  </div>
 
-    <nav class="navbar" aria-label="Navigation principale">
-      <a class="brand" href="./" aria-label="Accueil">
-        <span class="brand-mark">⚖</span>
+  <header class="mq-entete">
+    <div class="mq-conteneur mq-entete__rangee">
+      <a class="mq-logo" href="./" aria-label="Accueil">
+        <span class="mq-logo__marque" aria-hidden="true">⚖</span>
         <span>
-          <strong>Comité de soutien</strong>
-          <small>au juge Hakim Karki</small>
+          <span class="mq-logo__nom">Comité de soutien</span>
+          <span class="mq-logo__sous">au juge Hakim Karki</span>
         </span>
       </a>
-
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <div class="menu" id="main-menu">
-        <a href="./">Accueil</a>
-        <a href="comite-de-soutien/">Le comité</a>
-        <a href="chronologie/">Chronologie</a>
-        <a href="revue-presse/">Revue de presse</a>
-        <a href="partager/">Agir</a>
-        <a class="menu-cta" href="ecrire-a-hakim-karki/">Écrire à Hakim</a>
-      </div>
-    </nav>
+      <button class="mq-nav__bascule" type="button" id="mq-bascule" aria-expanded="false" aria-controls="mq-nav" aria-label="Ouvrir le menu">☰</button>
+      <nav class="mq-nav" id="mq-nav" aria-label="Navigation principale">
+        <a class="mq-nav__lien" href="./" aria-current="page">Accueil</a>
+        <a class="mq-nav__lien" href="comite-de-soutien/">Le comité</a>
+        <a class="mq-nav__lien" href="chronologie/">Chronologie</a>
+        <a class="mq-nav__lien" href="revue-presse/">Revue de presse</a>
+        <a class="mq-nav__lien" href="partager/">Agir</a>
+        <a class="mq-bouton mq-bouton--principal" href="ecrire-a-hakim-karki/">Écrire à Hakim</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero" id="accueil">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Justice • Indépendance • Vérité</p>
-          <h1>Soutien au juge Hakim Karki</h1>
-          <p class="hero-question">« Une nouvelle affaire Dreyfus ? »</p>
-          <div class="hero-statement" aria-label="Résumé de l'affaire">
-            <p><strong>Ancien juge d'instruction à Mayotte, Hakim Karki a été condamné à 10 ans de prison pour viol</strong>, accusation qu'il nie et dénonce comme une machination destinée à l'éliminer.</p>
-            <p>Son indépendance et son refus des compromissions lui ont valu l'hostilité de sa hiérarchie.</p>
-          </div>
-          <div class="hero-alert">
-            <span class="alert-mark">!</span>
+    <section class="mq-hero">
+      <div class="mq-conteneur mq-hero__grille">
+        <div>
+          <p class="mq-surtitre">Justice • Indépendance • Vérité</p>
+          <h1 class="mq-h1"><span class="mq-h1__l">Soutien au juge</span>
+<span class="mq-h1__l">Hakim Karki</span></h1>
+          <p class="mq-hero__question">« Une nouvelle affaire Dreyfus ? »</p>
+          <p class="mq-hero__texte"><strong>Ancien juge d'instruction à Mayotte, Hakim Karki a été condamné à 10 ans de prison pour viol</strong>, accusation qu'il nie et dénonce comme une machination destinée à l'éliminer.</p>
+          <p class="mq-hero__texte">Son indépendance et son refus des compromissions lui ont valu l'hostilité de sa hiérarchie.</p>
+          <div class="mq-hero__alerte">
+            <span class="mq-hero__alerte-marque" aria-hidden="true">!</span>
             <p>Une affaire grave, sensible, qui interroge le fonctionnement de la justice et la protection réelle de l’indépendance des magistrats.</p>
           </div>
-          <div class="hero-actions">
-            <a class="btn primary" href="chronologie/">Comprendre l’affaire</a>
-            <a class="btn secondary" href="revue-presse/">Consulter la revue de presse</a>
+          <div class="mq-hero__actions">
+            <a class="mq-bouton mq-bouton--principal" href="chronologie/">Comprendre l’affaire</a>
+            <a class="mq-bouton mq-bouton--secondaire" href="revue-presse/">Consulter la revue de presse</a>
           </div>
         </div>
-        <aside class="hero-card" aria-label="Repères essentiels">
-          <span class="card-label">Repères clés</span>
-          <div class="stat"><strong>10 ans</strong><span>de prison prononcés en appel</span></div>
-          <div class="stat"><strong>7 ans</strong><span>d’instruction avant renvoi aux assises</span></div>
-          <div class="stat"><strong>2025</strong><span>pourvoi rejeté par la Cour de cassation</span></div>
-          <div class="stat quote-stat"><strong>« Je suis innocent »</strong><span>déclaration constante de Hakim Karki</span></div>
-        </aside>
+
+        <div class="mq-hero__col">
+          <aside class="mq-reperes mq-sur-fond-bleu" aria-label="Repères essentiels">
+            <p class="mq-reperes__titre">Repères clés</p>
+            <div class="mq-reperes__grille">
+              <div class="mq-repere">
+                <strong>10 ans</strong>
+                <span>de prison prononcés en appel</span>
+              </div>
+              <div class="mq-repere">
+                <strong>7 ans</strong>
+                <span>d’instruction avant renvoi aux assises</span>
+              </div>
+              <div class="mq-repere mq-repere--pleine">
+                <strong>2025</strong>
+                <span>pourvoi rejeté par la Cour de cassation</span>
+              </div>
+            </div>
+          </aside>
+          <figure class="mq-encart-citation">
+            <blockquote><p>« Je suis innocent »</p></blockquote>
+            <figcaption>déclaration constante de Hakim Karki</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <section class="intro section">
-      <div class="container split">
-        <div>
-          <p class="section-kicker">Pourquoi ce site ?</p>
-          <h2>Informer avec clarté. Soutenir avec dignité.</h2>
-        </div>
-        <p>Le comité souhaite rendre accessibles les éléments de contexte, les dates clés, les articles et les démarches de soutien. L’objectif n’est pas de créer du bruit, mais de permettre à chacun de se faire une idée à partir d’un dossier structuré.</p>
+    <section class="mq-section">
+      <div class="mq-conteneur">
+        <p class="mq-surtitre">Pourquoi ce site ?</p>
+        <h2 class="mq-h2"><span class="mq-h2__l">Informer avec clarté.</span>
+<span class="mq-h2__l">Soutenir avec dignité.</span></h2>
+        <p class="mq-section__texte">Le comité souhaite rendre accessibles les éléments de contexte, les dates clés, les articles et les démarches de soutien. L’objectif n’est pas de créer du bruit, mais de permettre à chacun de se faire une idée à partir d’un dossier structuré.</p>
       </div>
     </section>
 
-    <section class="section timeline-section">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Le parcours judiciaire</p>
-          <h2>Une procédure longue, une condamnation contestée.</h2>
-          <p>
-            Le comité rappelle les étapes majeures d’un dossier qui, selon lui, reste marqué par de nombreuses zones d’ombre.
-          </p>
+    <section class="mq-section mq-fond-ivoire">
+      <div class="mq-conteneur">
+        <div class="mq-section-head">
+          <p class="mq-surtitre">Le parcours judiciaire</p>
+          <h2 class="mq-h2">Une procédure longue, une condamnation contestée.</h2>
+          <p>Le comité rappelle les étapes majeures d’un dossier qui, selon lui, reste marqué par de nombreuses zones d’ombre.</p>
         </div>
-        <div class="timeline committee-timeline">
-          <article class="timeline-item">
+        <ol class="mq-chrono">
+          <li class="mq-chrono__item">
             <time>2010</time>
             <p>Mayotte devient département français. Hakim Karki y exerce comme juge d’instruction dans le contexte exigeant de l’entrée pleine et entière du territoire dans la République.</p>
-          </article>
-          <article class="timeline-item">
+          </li>
+          <li class="mq-chrono__item">
             <time>15 janvier 2011</time>
             <p><strong>Découverte du corps de Roukia.</strong> Roukia, 18 ans, est retrouvée morte d’une overdose sur une plage de Mayotte.</p>
-          </article>
-          <article class="timeline-item">
+          </li>
+          <li class="mq-chrono__item">
             <time>2012</time>
             <p><strong>Affaire du chrome hexavalent.</strong> Nouvelle enquête sensible menée par le juge Hakim Karki.</p>
-          </article>
-          <article class="timeline-item">
+          </li>
+          <li class="mq-chrono__item">
             <time>2014</time>
             <p>Hakim Karki est accusé d’un viol, accusation qu’il conteste.</p>
-          </article>
-          <article class="timeline-item">
+          </li>
+          <li class="mq-chrono__item">
             <time>2021</time>
             <p>Après près de sept années d’instruction, il est renvoyé devant une cour d’Assises.</p>
-          </article>
-          <article class="timeline-item">
+          </li>
+          <li class="mq-chrono__item">
             <time>2022</time>
             <p>Première condamnation à 8 ans de prison.</p>
-          </article>
-          <article class="timeline-item">
+          </li>
+          <li class="mq-chrono__item">
             <time>2024</time>
             <p>Condamnation en appel à 10 ans de prison. Hakim Karki purge actuellement cette peine en détention.</p>
-          </article>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-kicker">Les points qui interrogent</p>
-          <h2>Ce que le comité estime nécessaire de porter au débat public.</h2>
-          <p>
-            Le comité rappelle que la condamnation s’appuie, selon lui, sur un dossier fragile, une instruction incomplète et des éléments qui auraient dû nourrir le doute.
-          </p>
+    <section class="mq-section">
+      <div class="mq-conteneur">
+        <div class="mq-section-head">
+          <p class="mq-surtitre">Les points qui interrogent</p>
+          <h2 class="mq-h2">Ce que le comité estime nécessaire de porter au débat public.</h2>
+          <p>Le comité rappelle que la condamnation s’appuie, selon lui, sur un dossier fragile, une instruction incomplète et des éléments qui auraient dû nourrir le doute.</p>
         </div>
-        <div class="cards issue-grid">
-          <article class="card issue-card">
-            <span class="icon">⚕️</span>
+        <div class="mq-points">
+          <article class="mq-point">
+            <span class="mq-point__icone" aria-hidden="true">⚕️</span>
             <h3>Une expertise médicale peu catégorique</h3>
             <p>Le comité rappelle que la mise en accusation puis la condamnation s’appuient essentiellement sur une expertise médicale qu’il considère comme peu catégorique.</p>
           </article>
-          <article class="card issue-card">
-            <span class="icon">⌛</span>
+          <article class="mq-point">
+            <span class="mq-point__icone" aria-hidden="true">⌛</span>
             <h3>Une instruction de près de 7 ans</h3>
             <p>Une durée exceptionnelle qui, selon le comité, n’a pas permis de dissiper les zones d’ombre du dossier.</p>
           </article>
-          <article class="card issue-card">
-            <span class="icon">🔎</span>
+          <article class="mq-point">
+            <span class="mq-point__icone" aria-hidden="true">🔎</span>
             <h3>Une enquête jugée lacunaire</h3>
             <p>Absence de reconstitution, confrontation tardive, zones d’ombre non investiguées : autant d’éléments que le comité juge problématiques.</p>
           </article>
-          <article class="card issue-card">
-            <span class="icon">🗣️</span>
+          <article class="mq-point">
+            <span class="mq-point__icone" aria-hidden="true">🗣️</span>
             <h3>Des témoignages écartés</h3>
             <p>Le comité estime que de nombreux témoignages et éléments de preuve embarrassants pour la version de la plaignante ont été occultés.</p>
           </article>
-          <article class="card issue-card">
-            <span class="icon">⚖️</span>
+          <article class="mq-point">
+            <span class="mq-point__icone" aria-hidden="true">⚖️</span>
             <h3>Des délibérés exceptionnellement longs</h3>
             <p>Les deux jurys d’Assises auraient délibéré plus de 10 heures chacun sur une seule question, indice selon le comité d’un doute qui aurait dû bénéficier à l’accusé.</p>
           </article>
-          <article class="card issue-card">
-            <span class="icon">🚪</span>
+          <article class="mq-point">
+            <span class="mq-point__icone" aria-hidden="true">🚪</span>
             <h3>Le huis clos des procès</h3>
             <p>Le huis clos a empêché la presse et l’opinion publique d’en savoir davantage sur une affaire qui touche à l’État de droit.</p>
           </article>
@@ -164,70 +171,114 @@
       </div>
     </section>
 
-    <section class="section statement-section">
-      <div class="container">
-        <div class="statement-panel">
-          <p class="section-kicker">Notre appel</p>
-          <h2>Faire connaître les preuves de l’innocence d’Hakim Karki.</h2>
-          <p>
-            À l’issue de deux procès de plusieurs semaines chacun, le comité considère que la motivation des deux jugements n’a retenu aucun des arguments de la défense, comme si le débat contradictoire n’avait pas eu lieu.
-          </p>
-          <p>
-            C’est donc à la presse, à l’opinion publique et aux citoyens attachés au respect effectif de l’État de droit que nous nous adressons aujourd’hui.
-          </p>
-          <div class="page-actions">
-            <a class="btn primary" href="partager/">Faire connaître le site</a>
-            <a class="btn secondary" href="contact/">Contacter le comité</a>
+    <section class="mq-section">
+      <div class="mq-conteneur">
+        <div class="mq-appel mq-sur-fond-bleu">
+          <p class="mq-surtitre">Notre appel</p>
+          <h2 class="mq-h2">Faire connaître les preuves de l’innocence d’Hakim Karki.</h2>
+          <p>À l’issue de deux procès de plusieurs semaines chacun, le comité considère que la motivation des deux jugements n’a retenu aucun des arguments de la défense, comme si le débat contradictoire n’avait pas eu lieu.</p>
+          <p>C’est donc à la presse, à l’opinion publique et aux citoyens attachés au respect effectif de l’État de droit que nous nous adressons aujourd’hui.</p>
+          <div class="mq-appel__actions">
+            <a class="mq-bouton mq-bouton--blanc" href="partager/">Faire connaître le site</a>
+            <a class="mq-bouton mq-bouton--fantome" href="contact/">Contacter le comité</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section press-section" id="presse">
-      <div class="container press-grid">
-        <div>
-          <p class="section-kicker">Revue de presse</p>
-          <h2>Replacer l’affaire dans son contexte</h2>
+    <section class="mq-section mq-fond-ivoire" id="presse">
+      <div class="mq-conteneur mq-presse">
+        <div class="mq-presse__texte">
+          <p class="mq-surtitre">Revue de presse</p>
+          <h2 class="mq-h2">Replacer l’affaire dans son contexte</h2>
           <p>La revue de presse permet de comprendre les événements, les enquêtes sensibles et le contexte mahorais dans lequel s’inscrit le parcours du juge Hakim Karki.</p>
-          <a class="text-link" href="revue-presse/">Consulter la revue de presse →</a>
+          <a class="mq-lien-fleche" href="revue-presse/">Consulter la revue de presse →</a>
         </div>
-        <div class="press-list">
-          <a href="l-affaire-roukia/">L’affaire Roukia</a>
-          <a href="un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a>
-          <a href="departementalisation-a-mayotte/">La départementalisation à Mayotte</a>
+        <div class="mq-presse__liens">
+          <a class="mq-lien-carte" href="l-affaire-roukia/">L’affaire Roukia</a>
+          <a class="mq-lien-carte" href="un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a>
+          <a class="mq-lien-carte" href="departementalisation-a-mayotte/">La départementalisation à Mayotte</a>
         </div>
       </div>
     </section>
 
-    <section class="section action-section" id="agir">
-      <div class="container action-card">
-        <div>
-          <p class="section-kicker">Comment agir ?</p>
-          <h2>Chaque geste utile doit être simple à comprendre</h2>
-          <p>Rejoindre le comité, écrire à Hakim Karki, relayer le site ou participer aux événements : la page d’accueil doit guider le visiteur sans l’égarer.</p>
-        </div>
-        <div class="action-buttons">
-          <a class="btn primary" href="comite-de-soutien/">Devenir membre</a>
-          <a class="btn secondary" href="ecrire-a-hakim-karki/">Écrire à Hakim</a>
-          <a class="btn ghost" href="partager/">Partager le site</a>
+    <section class="mq-section" id="agir">
+      <div class="mq-conteneur">
+        <div class="mq-agir">
+          <div>
+            <p class="mq-surtitre">Comment agir ?</p>
+            <h2 class="mq-h2">Chaque geste utile doit être simple à comprendre</h2>
+            <p style="margin-top:14px">Rejoindre le comité, écrire à Hakim Karki, relayer le site ou participer aux événements : la page d’accueil doit guider le visiteur sans l’égarer.</p>
+          </div>
+          <div class="mq-agir__boutons">
+            <a class="mq-bouton mq-bouton--principal" href="comite-de-soutien/">Devenir membre</a>
+            <a class="mq-bouton mq-bouton--secondaire" href="ecrire-a-hakim-karki/">Écrire à Hakim</a>
+            <a class="mq-bouton mq-bouton--secondaire" href="partager/">Partager le site</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Comité de soutien au juge Hakim Karki</strong>
+  <footer class="mq-pied mq-sur-fond-bleu">
+    <div class="mq-conteneur">
+      <div class="mq-pied__tete">
+        <span class="mq-pied__nom">Comité de soutien au juge Hakim Karki</span>
         <p>Un site d’information, de soutien et de mobilisation citoyenne.</p>
       </div>
-      <div class="footer-links">
-        <a href="contact/">Contact</a>
-        <a href="mentions-legales/">Mentions légales</a>
+      <nav class="mq-pied__nav" aria-label="Toutes les pages">
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Comprendre l’affaire</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="./">Accueil</a></li>
+            <li><a href="chronologie/">Chronologie</a></li>
+            <li><a href="faits-troublants/">Des faits troublants</a></li>
+            <li><a href="l-affaire-roukia/">L’affaire Roukia</a></li>
+            <li><a href="un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Sources et documents</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="revue-presse/">Revue de presse</a></li>
+            <li><a href="pvag/">PV-AG</a></li>
+            <li><a href="posts/">/posts/</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Le comité et agir</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="comite-de-soutien/">Le comité</a></li>
+            <li><a href="evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="les-besoins/">Les besoins</a></li>
+            <li><a href="ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="partager/">Partager le site</a></li>
+            <li><a href="contact/">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+      <div class="mq-pied__bas">
+        <ul class="mq-pied__legaux">
+          <li><a href="mentions-legales/">Mentions légales</a></li>
+          <!-- Emplacement réservé : « Politique de confidentialité » (F-10, page inexistante — aucun lien inactif affiché) -->
+          <!-- Emplacement réservé : « Gestion des cookies » (§ 12.5, dispositif non implémenté — aucun lien inactif affiché) -->
+        </ul>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.documentElement.classList.add('js');
+    (function () {
+      var b = document.getElementById('mq-bascule');
+      var n = document.getElementById('mq-nav');
+      b.addEventListener('click', function () {
+        var ouvert = n.classList.toggle('mq-ouvert');
+        b.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
+        b.setAttribute('aria-label', ouvert ? 'Fermer le menu' : 'Ouvrir le menu');
+      });
+    })();
+  </script>
 </body>
 </html>
