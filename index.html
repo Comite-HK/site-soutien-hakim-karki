@@ -7,6 +7,7 @@
   <meta name="description" content="Site du Comité de soutien au juge Hakim Karki : comprendre une affaire judiciaire majeure, consulter la chronologie, la revue de presse et les actions de soutien." />
   <link rel="stylesheet" href="assets/fonts/fonts.css" />
   <link rel="stylesheet" href="assets/css/maquette-accueil.css" />
+  <link rel="stylesheet" href="assets/css/navigation.css" />
 </head>
 <body>
   <div class="mq-bandeau mq-sur-fond-bleu">
@@ -22,14 +23,45 @@
           <span class="mq-logo__sous">au juge Hakim Karki</span>
         </span>
       </a>
-      <button class="mq-nav__bascule" type="button" id="mq-bascule" aria-expanded="false" aria-controls="mq-nav" aria-label="Ouvrir le menu">☰</button>
+      <a class="mq-bouton mq-bouton--principal mq-nav__action-mobile" href="ecrire-a-hakim-karki/">Écrire à Hakim</a>
+      <button class="mq-nav__bascule" type="button" id="mq-bascule" aria-expanded="false" aria-controls="mq-nav">Menu</button>
       <nav class="mq-nav" id="mq-nav" aria-label="Navigation principale">
         <a class="mq-nav__lien" href="./" aria-current="page">Accueil</a>
-        <a class="mq-nav__lien" href="comite-de-soutien/">Le comité</a>
-        <a class="mq-nav__lien" href="chronologie/">Chronologie</a>
+
+        <div class="mq-nav__groupe">
+          <button class="mq-nav__parent" type="button" aria-expanded="false" aria-controls="mq-sous-affaire">Comprendre l’affaire</button>
+          <ul class="mq-nav__sous" id="mq-sous-affaire">
+            <li><a href="chronologie/">Chronologie</a></li>
+            <li><a href="faits-troublants/">Des faits troublants</a></li>
+            <li><a href="l-affaire-roukia/">L’affaire Roukia</a></li>
+            <li><a href="un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </div>
+
         <a class="mq-nav__lien" href="revue-presse/">Revue de presse</a>
-        <a class="mq-nav__lien" href="partager/">Agir</a>
+
+        <div class="mq-nav__groupe">
+          <button class="mq-nav__parent" type="button" aria-expanded="false" aria-controls="mq-sous-comite">Le comité</button>
+          <ul class="mq-nav__sous" id="mq-sous-comite">
+            <li><a href="comite-de-soutien/">Le comité</a></li>
+            <li><a href="pvag/">PV-AG</a></li>
+          </ul>
+        </div>
+
+        <div class="mq-nav__groupe">
+          <button class="mq-nav__parent" type="button" aria-expanded="false" aria-controls="mq-sous-agir">Agir</button>
+          <ul class="mq-nav__sous" id="mq-sous-agir">
+            <li><a href="ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="partager/">Partager le site</a></li>
+            <li><a href="les-besoins/">Les besoins</a></li>
+            <li><a href="evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="contact/">Contact</a></li>
+          </ul>
+        </div>
+
         <a class="mq-bouton mq-bouton--principal" href="ecrire-a-hakim-karki/">Écrire à Hakim</a>
+        <button class="mq-nav__fermer mq-bouton mq-bouton--secondaire" type="button">Fermer le menu</button>
       </nav>
     </div>
   </header>
@@ -268,17 +300,6 @@
     </div>
   </footer>
 
-  <script>
-    document.documentElement.classList.add('js');
-    (function () {
-      var b = document.getElementById('mq-bascule');
-      var n = document.getElementById('mq-nav');
-      b.addEventListener('click', function () {
-        var ouvert = n.classList.toggle('mq-ouvert');
-        b.setAttribute('aria-expanded', ouvert ? 'true' : 'false');
-        b.setAttribute('aria-label', ouvert ? 'Fermer le menu' : 'Ouvrir le menu');
-      });
-    })();
-  </script>
+  <script src="assets/js/navigation.js"></script>
 </body>
 </html>

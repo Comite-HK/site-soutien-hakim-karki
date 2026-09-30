@@ -6,32 +6,64 @@
   <title>L’affaire Roukia | Comité de soutien au juge Hakim Karki</title>
   <meta name="description" content="Page de contexte sur l’affaire Roukia et ses liens avec le parcours judiciaire." />
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="../assets/css/navigation.css" />
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="topbar">
-      <a class="topbar-link" href="../partager/">Faites connaître le site →</a>
-    </div>
-    <nav class="navbar" aria-label="Navigation principale">
-      <a class="brand" href="../" aria-label="Accueil">
-        <span class="brand-mark">⚖</span>
+  <div class="mq-bandeau mq-sur-fond-bleu">
+    <a href="../partager/">Faites connaître le site →</a>
+  </div>
+
+  <header class="mq-entete" id="top">
+    <div class="mq-conteneur mq-entete__rangee">
+      <a class="mq-logo" href="../" aria-label="Accueil">
+        <span class="mq-logo__marque" aria-hidden="true">⚖</span>
         <span>
-          <strong>Comité de soutien</strong>
-          <small>au juge Hakim Karki</small>
+          <span class="mq-logo__nom">Comité de soutien</span>
+          <span class="mq-logo__sous">au juge Hakim Karki</span>
         </span>
       </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="menu" id="main-menu">
-        <a href="../">Accueil</a>
-        <a href="../comite-de-soutien/">Le comité</a>
-        <a href="../chronologie/">Chronologie</a>
-        <a href="../revue-presse/">Revue de presse</a>
-        <a href="../partager/">Agir</a>
-        <a class="menu-cta" href="../ecrire-a-hakim-karki/">Écrire à Hakim</a>
-      </div>
-    </nav>
+      <a class="mq-bouton mq-bouton--principal mq-nav__action-mobile" href="../ecrire-a-hakim-karki/">Écrire à Hakim</a>
+      <button class="mq-nav__bascule" type="button" id="mq-bascule" aria-expanded="false" aria-controls="mq-nav">Menu</button>
+      <nav class="mq-nav" id="mq-nav" aria-label="Navigation principale">
+        <a class="mq-nav__lien" href="../">Accueil</a>
+
+        <div class="mq-nav__groupe">
+          <button class="mq-nav__parent" type="button" aria-expanded="false" aria-controls="mq-sous-affaire">Comprendre l’affaire</button>
+          <ul class="mq-nav__sous" id="mq-sous-affaire">
+            <li><a href="../chronologie/">Chronologie</a></li>
+            <li><a href="../faits-troublants/">Des faits troublants</a></li>
+            <li><a href="../l-affaire-roukia/" aria-current="page">L’affaire Roukia</a></li>
+            <li><a href="../un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="../departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </div>
+
+        <a class="mq-nav__lien" href="../revue-presse/">Revue de presse</a>
+
+        <div class="mq-nav__groupe">
+          <button class="mq-nav__parent" type="button" aria-expanded="false" aria-controls="mq-sous-comite">Le comité</button>
+          <ul class="mq-nav__sous" id="mq-sous-comite">
+            <li><a href="../comite-de-soutien/">Le comité</a></li>
+            <li><a href="../pvag/">PV-AG</a></li>
+          </ul>
+        </div>
+
+        <div class="mq-nav__groupe">
+          <button class="mq-nav__parent" type="button" aria-expanded="false" aria-controls="mq-sous-agir">Agir</button>
+          <ul class="mq-nav__sous" id="mq-sous-agir">
+            <li><a href="../ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="../partager/">Partager le site</a></li>
+            <li><a href="../les-besoins/">Les besoins</a></li>
+            <li><a href="../evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <a class="mq-bouton mq-bouton--principal" href="../ecrire-a-hakim-karki/">Écrire à Hakim</a>
+        <button class="mq-nav__fermer mq-bouton mq-bouton--secondaire" type="button">Fermer le menu</button>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main">
@@ -76,6 +108,6 @@
       </div>
     </div>
   </footer>
-  <script src="../script.js"></script>
+  <script src="../assets/js/navigation.js"></script>
 </body>
 </html>

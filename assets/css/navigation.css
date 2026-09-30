@@ -1,0 +1,169 @@
+/* ==========================================================================
+   Navigation principale — composant partagé des 16 routes.
+   Autonome : définit les jetons dont il a besoin pour les pages qui ne
+   chargent pas maquette-accueil.css. Chargée en dernier, elle fait
+   prévaloir les groupes dépliants et le panneau mobile validés.
+   ========================================================================== */
+
+:root {
+  --mq-bleu: #234778;
+  --mq-bleu-fonce: #1B3760;
+  --mq-blanc: #FFFFFF;
+  --mq-ivoire: #F7F3EC;
+  --mq-encre: #10192B;
+  --mq-ardoise: #46536B;
+  --mq-ocre: #8A6220;
+  --mq-or-clair: #E4C789;
+  --mq-trait: #DCD8CC;
+  --mq-bordure: #D8DDE6;
+  --mq-conteneur: 1120px;
+  --mq-cible: 44px;
+}
+
+[hidden] { display: none !important; }
+
+/* Bandeau d'appel — filet bleu en ouverture */
+.mq-bandeau { background: var(--mq-bleu); color: var(--mq-blanc); font-size: 14px; }
+.mq-bandeau a {
+  display: block;
+  max-width: var(--mq-conteneur);
+  margin-inline: auto;
+  padding: 12px clamp(20px, 4vw, 40px);
+  min-height: var(--mq-cible);
+  color: var(--mq-blanc);
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+.mq-bandeau a:hover { color: var(--mq-or-clair); text-decoration: underline; }
+.mq-sur-fond-bleu :focus-visible { outline: 2px solid var(--mq-or-clair); outline-offset: 2px; }
+
+/* En-tête */
+.mq-entete { position: relative; z-index: 50; background: var(--mq-blanc); border-bottom: 1px solid var(--mq-trait); }
+.mq-conteneur { max-width: var(--mq-conteneur); margin-inline: auto; padding-inline: clamp(20px, 4vw, 40px); }
+.mq-entete__rangee { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 76px; }
+
+.mq-logo { display: inline-flex; align-items: center; gap: 12px; color: var(--mq-encre); text-decoration: none; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+.mq-logo__marque {
+  display: inline-grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--mq-bleu); color: var(--mq-blanc);
+  font-size: 22px; line-height: 1;
+}
+.mq-logo__nom { display: block; font-weight: 700; font-size: 17px; line-height: 1.2; }
+.mq-logo__sous { display: block; color: var(--mq-ardoise); font-size: 14px; line-height: 1.3; }
+
+/* Navigation */
+.mq-nav { display: flex; align-items: center; gap: 4px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+.mq-nav__lien {
+  display: inline-flex; align-items: center; min-height: var(--mq-cible);
+  padding: 0 14px; border-radius: 8px;
+  color: var(--mq-encre); font-size: 15px; font-weight: 500;
+  text-decoration: none;
+}
+.mq-nav__lien:hover { color: var(--mq-bleu); box-shadow: inset 0 -2px 0 var(--mq-ocre); }
+.mq-nav__lien[aria-current="page"] { color: var(--mq-bleu); box-shadow: inset 0 -2px 0 var(--mq-ocre); }
+
+.mq-bouton {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: var(--mq-cible); padding: 0 20px;
+  border: 1px solid transparent; border-radius: 9px;
+  font-family: inherit; font-size: 15px; font-weight: 600;
+  text-decoration: none; cursor: pointer;
+}
+.mq-bouton--principal { background: var(--mq-bleu); color: var(--mq-blanc); border-color: var(--mq-bleu); }
+.mq-bouton--principal:hover { background: var(--mq-bleu-fonce); border-color: var(--mq-bleu-fonce); color: var(--mq-blanc); }
+.mq-bouton--secondaire { background: var(--mq-blanc); color: var(--mq-bleu); border-color: var(--mq-bleu); }
+.mq-bouton--secondaire:hover { background: var(--mq-ivoire); color: var(--mq-bleu-fonce); }
+.mq-nav .mq-bouton { margin-left: 8px; }
+
+.mq-nav__bascule { display: none; }
+.mq-nav__groupe { position: relative; display: flex; }
+.mq-nav__action-mobile, .mq-nav__fermer { display: none; }
+
+/* Bouton parent de sous-menu : même gabarit que les liens */
+.mq-nav__parent {
+  display: inline-flex; align-items: center; justify-content: space-between; gap: 10px;
+  min-height: var(--mq-cible); padding: 10px 14px;
+  border: 0; border-radius: 8px;
+  background: none; color: var(--mq-encre);
+  font-family: inherit; font-size: 15px; font-weight: 600; line-height: 1.5;
+  text-align: left; cursor: pointer;
+}
+.mq-nav__parent:hover { color: var(--mq-bleu); background: var(--mq-ivoire); }
+.mq-nav__parent::after {
+  content: ""; flex: none;
+  width: 7px; height: 7px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+}
+.mq-nav__parent[aria-expanded="true"] { color: var(--mq-bleu); box-shadow: inset 0 -2px 0 var(--mq-ocre); }
+.mq-nav__parent[aria-expanded="true"]::after { transform: rotate(-135deg) translateY(-2px); }
+
+/* Panneau déroulant (ordinateur) */
+.mq-nav__sous {
+  position: absolute; top: 100%; left: 0; z-index: 3;
+  width: 330px;
+  margin: 0; padding: 8px; list-style: none;
+  background: var(--mq-blanc);
+  border: 1px solid var(--mq-trait); border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(16, 25, 43, 0.08), 0 16px 40px rgba(16, 25, 43, 0.12);
+}
+.mq-nav__groupe:last-of-type .mq-nav__sous { left: auto; right: 0; }
+.mq-nav__sous a {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 2px 12px;
+  min-height: var(--mq-cible); padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--mq-encre); font-size: 15px; font-weight: 500; line-height: 1.5;
+  text-decoration: none;
+}
+.mq-nav__sous a:hover { background: var(--mq-ivoire); color: var(--mq-bleu); text-decoration: underline; }
+.mq-nav__sous a[aria-current="page"] { color: var(--mq-bleu); font-weight: 700; background: #EDF2F8; box-shadow: inset 3px 0 var(--mq-ocre); }
+.mq-nav__sous a[aria-current="page"]::after { content: "Page courante"; font-size: 12px; font-weight: 500; }
+.mq-nav :focus-visible { outline: 2px solid var(--mq-bleu); outline-offset: 2px; }
+
+/* Sans JavaScript : tout reste accessible, déplié dans le flux */
+html:not(.js) .mq-nav { flex-wrap: wrap; }
+html:not(.js) .mq-nav__sous { position: static; }
+html:not(.js) .mq-nav__groupe { flex-direction: column; }
+html:not(.js) .mq-nav__parent { display: none; }
+
+/* Mobile / tablette : panneau dans le flux, rubriques en accordéons */
+@media (max-width: 1199px) {
+  .mq-entete__rangee { display: grid; grid-template-columns: 1fr auto auto; gap: 12px; padding-block: 14px; }
+  .mq-nav__action-mobile { display: inline-flex; }
+  .mq-nav__bascule {
+    display: none; align-items: center; justify-content: center;
+    width: auto; min-width: 78px; min-height: 44px; padding: 10px 12px;
+    border: 1px solid var(--mq-bleu); border-radius: 9px;
+    background: var(--mq-blanc); color: var(--mq-bleu);
+    font: 600 15px/1.5 'Inter', system-ui, sans-serif; cursor: pointer;
+  }
+  .js .mq-nav__bascule { display: inline-flex; }
+  .mq-nav, .js .mq-nav {
+    grid-column: 1 / -1; position: static; width: 100%;
+    flex-direction: column; align-items: stretch;
+    padding: 12px 0 0; border: 0; border-top: 1px solid var(--mq-trait);
+    box-shadow: none; gap: 8px;
+  }
+  .js .mq-nav { display: none; }
+  .js .mq-nav.mq-ouvert { display: flex; }
+  .mq-nav__groupe { flex-direction: column; }
+  .mq-nav__sous {
+    position: static; width: auto; min-width: 0;
+    margin: 8px 0 0 8px; padding: 0 0 0 8px;
+    border: 0; border-left: 2px solid var(--mq-trait);
+    border-radius: 0; box-shadow: none;
+  }
+  .mq-nav__parent { width: 100%; background: var(--mq-ivoire); }
+  .mq-nav__parent[aria-expanded="true"] { background: #EDF2F8; }
+  .mq-nav > .mq-bouton--principal { display: none; }
+  .js .mq-nav__fermer { display: inline-flex; align-self: flex-start; margin: 8px 0 0; }
+  .mq-nav__lien { padding-block: 10px; }
+}
+@media (max-width: 559px) {
+  .mq-entete__rangee { grid-template-columns: 1fr auto; }
+  .mq-logo { grid-column: 1 / -1; }
+  .mq-nav__action-mobile { justify-self: start; }
+}
