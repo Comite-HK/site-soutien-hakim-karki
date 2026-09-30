@@ -520,3 +520,64 @@ a:hover { color: var(--mq-bleu-fonce); }
   display: flex; flex-direction: column; justify-content: center;
   border-style: dashed; background: transparent; box-shadow: none;
 }
+
+/* ==========================================================================
+   Page « Des faits troublants » (étape 9) + cartes « Dans la même rubrique »
+   Sélecteurs dédiés : aucune incidence sur les autres pages.
+   ========================================================================== */
+
+/* Phrase d'introduction de la liste (texte source souligné) */
+.mq-faits__intro { margin: 0; font-size: 17.5px; line-height: 1.7; color: var(--mq-encre); }
+
+/* Les 11 éléments : cartes sobres à puce de contrôle ocre, filet discret */
+.mq-faits { display: grid; gap: 14px; margin: 26px 0 0; padding: 0; list-style: none; }
+.mq-faits__item {
+  position: relative;
+  padding: 18px 20px 18px 54px;
+  background: var(--mq-blanc);
+  border: 1px solid var(--mq-trait); border-radius: var(--mq-rayon);
+  box-shadow: var(--mq-ombre-legere);
+}
+.mq-faits__item::before {
+  content: "✓";
+  position: absolute; left: 18px; top: 17px;
+  width: 22px; height: 22px;
+  display: grid; place-items: center;
+  border: 1.5px solid var(--mq-ocre); border-radius: 50%;
+  color: var(--mq-ocre); font-size: 13px; font-weight: 700; line-height: 1;
+}
+.mq-faits__item p { margin: 0; color: var(--mq-ardoise); font-size: 15.5px; line-height: 1.65; }
+.mq-faits__item strong { color: var(--mq-encre); font-weight: 700; }
+.mq-faits__item u { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.mq-faits__conclusion { margin: 26px 0 0; font-size: 17px; }
+@media (max-width: 560px) {
+  .mq-faits__item { padding: 16px 16px 16px 48px; }
+  .mq-faits__item::before { left: 14px; top: 15px; }
+}
+
+/* QR code d'adhésion : média source, taille maîtrisée */
+.mq-adhesion__qr {
+  display: block; width: 120px; height: 120px; margin-top: 18px;
+  border: 1px solid var(--mq-trait); border-radius: 8px;
+  background: var(--mq-blanc); padding: 6px;
+}
+
+/* Cartes « Dans la même rubrique » — reprise de la démonstration validée,
+   remplies depuis le sous-menu de la rubrique courante (assets/js/cartes-suite.js) */
+.mq-suite__grille { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; list-style: none; padding: 0; margin: 28px 0 0; }
+.mq-suite__grille li { display: flex; min-width: 0; }
+.mq-suite__carte {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  width: 100%; min-height: 116px; padding: 24px;
+  border: 1px solid var(--mq-trait); border-left: 3px solid var(--mq-ocre);
+  border-radius: 10px; box-shadow: var(--mq-ombre-legere);
+  color: var(--mq-bleu); background: var(--mq-blanc);
+  font-size: 20px; font-weight: 700; line-height: 1.4; text-decoration: none;
+}
+.mq-suite__carte::after { content: "→"; flex: none; color: var(--mq-ocre); font-size: 22px; font-weight: 500; }
+.mq-suite__carte:hover { background: var(--mq-ivoire); border-color: var(--mq-ocre); text-decoration: underline; }
+.mq-suite__carte:focus-visible { outline: 3px solid var(--mq-bleu); outline-offset: 3px; }
+@media (max-width: 639px) {
+  .mq-suite__grille { grid-template-columns: 1fr; gap: 12px; }
+  .mq-suite__carte { min-height: 76px; padding: 16px; gap: 16px; font-size: 17px; }
+}
