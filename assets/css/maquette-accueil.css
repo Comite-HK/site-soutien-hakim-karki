@@ -581,3 +581,18 @@ a:hover { color: var(--mq-bleu-fonce); }
   .mq-suite__grille { grid-template-columns: 1fr; gap: 12px; }
   .mq-suite__carte { min-height: 76px; padding: 16px; gap: 16px; font-size: 17px; }
 }
+
+/* ---------- Page « L'affaire Roukia » (étape 10) ---------- */
+/* Lien retour vers la Revue de presse : bloc bleu, libellé + sous-libellé */
+.mq-retour {
+  display: grid; gap: 6px; padding: 22px 26px;
+  background: var(--mq-bleu); color: var(--mq-blanc);
+  border-radius: var(--mq-rayon); box-shadow: var(--mq-ombre-legere);
+  text-decoration: none;
+}
+.mq-retour__titre { font-size: 19px; font-weight: 700; line-height: 1.35; }
+.mq-retour__sous { font-size: 14px; color: #D8DFEC; }
+.mq-retour:hover { background: var(--mq-bleu-fonce); }
+.mq-retour:focus-visible { outline: 3px solid var(--mq-ocre); outline-offset: 3px; }
+/* Les URL longues citées dans le texte (ex. article de presse) peuvent rompre */
+.mq-intro a { overflow-wrap: anywhere; }
