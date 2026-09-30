@@ -146,13 +146,21 @@ a:hover { color: var(--mq-bleu-fonce); }
 }
 
 .mq-surtitre {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px;
   margin: 0 0 18px;
   color: var(--mq-ocre);
   font-size: 13px; font-weight: 700;
   letter-spacing: 0.14em; text-transform: uppercase;
 }
 .mq-surtitre::before { content: ""; width: 26px; height: 3px; border-radius: 2px; background: var(--mq-ocre); }
+/* Groupes insécables : une puce ne finit jamais une ligne, un mot n'est jamais isolé */
+.mq-surtitre__g { white-space: nowrap; }
+
+.mq-nobr { white-space: nowrap; }
+
+@media (max-width: 420px) {
+  .mq-surtitre { font-size: 12.5px; letter-spacing: 0.1em; }
+}
 
 .mq-h1 {
   margin: 0 0 14px;
@@ -430,6 +438,11 @@ a:hover { color: var(--mq-bleu-fonce); }
 .mq-entete-page__titre { font-size: clamp(28px, 3.6vw, 42px); margin: 0; }
 /* Titre en deux lignes maîtrisées (saut après « conviction : »), jamais de mot isolé */
 .mq-entete-page__titre--long { font-size: clamp(24px, 3vw, 36px); max-width: 30ch; }
+/* Sur mobile : retour au flux continu, césure équilibrée, aucune ponctuation isolée */
+@media (max-width: 560px) {
+  .mq-entete-page__titre--long { max-width: none; text-wrap: balance; }
+  .mq-entete-page__titre--long .mq-h1__l { display: inline; }
+}
 
 /* Texte d'introduction : lecture confortable, phrase d'engagement marquée */
 .mq-intro { max-width: 68ch; }
