@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maquette menu — proposition non validée | Comité de soutien au juge Hakim Karki</title>
+  <meta name="description" content="Démonstration de la proposition de navigation. Libellés et regroupements non validés." />
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="assets/css/maquette-accueil.css" />
+  <link rel="stylesheet" href="assets/css/maquette-menu.css" />
+</head>
+<body>
+  <div class="mq-bandeau mq-sur-fond-bleu">
+    <a href="partager/">Faites connaître le site →</a>
+  </div>
+
+  <header class="mq-entete">
+    <div class="mq-conteneur mq-entete__rangee">
+      <a class="mq-logo" href="./" aria-label="Accueil">
+        <span class="mq-logo__marque" aria-hidden="true">⚖</span>
+        <span>
+          <span class="mq-logo__nom">Comité de soutien</span>
+          <span class="mq-logo__sous">au juge Hakim Karki</span>
+        </span>
+      </a>
+      <a class="mq-bouton mq-bouton--principal mq-nav__action-mobile" href="ecrire-a-hakim-karki/">Écrire à Hakim</a>
+      <button class="mq-nav__bascule" type="button" id="mq-bascule" aria-expanded="false" aria-controls="mq-nav">Menu</button>
+      <nav class="mq-nav" id="mq-nav" aria-label="Navigation principale">
+        <a class="mq-nav__lien" href="./">Accueil</a>
+
+        <div class="mq-nav__groupe">
+          <button class="mq-nav__parent" type="button" aria-expanded="false" aria-controls="mq-sous-affaire">Comprendre l’affaire</button>
+          <ul class="mq-nav__sous" id="mq-sous-affaire">
+            <li><a href="chronologie/" aria-current="page">Chronologie</a></li>
+            <li><a href="faits-troublants/">Des faits troublants</a></li>
+            <li><a href="l-affaire-roukia/">L’affaire Roukia</a></li>
+            <li><a href="un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </div>
+
+        <a class="mq-nav__lien" href="revue-presse/">Revue de presse</a>
+
+        <div class="mq-nav__groupe">
+          <button class="mq-nav__parent" type="button" aria-expanded="false" aria-controls="mq-sous-comite">Le comité</button>
+          <ul class="mq-nav__sous" id="mq-sous-comite">
+            <li><a href="comite-de-soutien/">Le comité</a></li>
+            <li><a href="pvag/">PV-AG</a></li>
+          </ul>
+        </div>
+
+        <div class="mq-nav__groupe">
+          <button class="mq-nav__parent" type="button" aria-expanded="false" aria-controls="mq-sous-agir">Agir</button>
+          <ul class="mq-nav__sous" id="mq-sous-agir">
+            <li><a href="ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="partager/">Partager le site</a></li>
+            <li><a href="les-besoins/">Les besoins</a></li>
+            <li><a href="evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <a class="mq-bouton mq-bouton--principal" href="ecrire-a-hakim-karki/">Écrire à Hakim</a>
+        <button class="mq-nav__fermer mq-bouton mq-bouton--secondaire" type="button">Fermer le menu</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="mq-entete-page">
+      <div class="mq-conteneur">
+        <p class="mq-surtitre">Démonstration — non validée</p>
+        <h1 class="mq-h1 mq-entete-page__titre mq-entete-page__titre--long">Proposition de navigation révisée</h1>
+      </div>
+    </section>
+
+    <section class="mq-section">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-hero__alerte" role="note">
+          <span class="mq-hero__alerte-marque" aria-hidden="true">!</span>
+          <p>Simulation explicite : consultation de Chronologie. Vous êtes sur /_maquette-menu, pas sur /chronologie/. Fred valide le principe des rubriques, sous réserve de l’examen de cette expérience mobile et des cartes de fin de page. Aucune navigation des pages du site n’est modifiée.</p>
+        </div>
+
+        <div class="mq-intro" style="margin-top:28px">
+          <p><strong>Changement proposé.</strong> « Chronologie » quitte le premier niveau pour rejoindre les pages de fond sous « Comprendre l’affaire ». « Le comité » et « Agir » deviennent des groupes dépliables qui font remonter PV-AG, ÉVÈNEMENTS et Contact.</p>
+          <p><strong>Destination réelle de « Agir ».</strong> Aujourd’hui, « Agir » ouvre la page <a href="partager/">/partager/</a>, qui est une page de partage (réseaux sociaux, email). Dans cette proposition, « Agir » devient un groupe : la page de partage reste accessible via « Partager le site », le bandeau haut et le pied de page. Aucune destination supposée n’est créée : chaque entrée pointe vers une route existante.</p>
+          <p><strong>Sur ordinateur.</strong> Cliquez sur une rubrique, ou utilisez Entrée/Espace puis Tab et Maj+Tab pour parcourir ses liens. Un seul sous-menu reste ouvert. Échap ferme et rend le focus au bouton ; un clic extérieur ferme aussi. Le survol signale les liens sans ouvrir ni fermer le panneau : aucun passage de souris ne risque de le faire disparaître.</p>
+          <p><strong>Sur mobile.</strong> « Menu » ouvre un panneau dans le flux de la page, sans superposition ni blocage du défilement. « Comprendre l’affaire » est ouvert par défaut et Chronologie repérée comme page courante simulée. Les rubriques sont des accordéons tactiles. « Écrire à Hakim » reste disponible à côté de « Menu » ; deux commandes de fermeture évitent de devoir remonter tout le panneau. Les cibles mesurent au moins 44&nbsp;px.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section mq-fond-ivoire mq-section--collee">
+      <div class="mq-conteneur">
+        <div class="mq-section-head">
+          <p class="mq-surtitre">Recensement</p>
+          <h2 class="mq-h2">Les 16 routes et leur place proposée</h2>
+        </div>
+        <table class="mq-table-routes" role="table">
+          <thead>
+            <tr role="row"><th scope="col" role="columnheader">Route</th><th scope="col" role="columnheader">Page</th><th scope="col" role="columnheader">Emplacement proposé</th></tr>
+          </thead>
+          <tbody>
+            <tr role="row"><td role="cell"><code>/</code></td><td role="cell">Accueil</td><td role="cell">Menu : « Accueil »</td></tr>
+            <tr role="row"><td role="cell"><code>/chronologie/</code></td><td role="cell">Chronologie</td><td role="cell">Sous-menu « Comprendre l’affaire » + pied « Comprendre l’affaire »</td></tr>
+            <tr role="row"><td role="cell"><code>/faits-troublants/</code></td><td role="cell">Des faits troublants</td><td role="cell">Sous-menu « Comprendre l’affaire » + pied</td></tr>
+            <tr role="row"><td role="cell"><code>/l-affaire-roukia/</code></td><td role="cell">L’affaire Roukia</td><td role="cell">Sous-menu « Comprendre l’affaire » + pied</td></tr>
+            <tr role="row"><td role="cell"><code>/un-juge-soumis-a-des-pressions/</code></td><td role="cell">Un juge soumis à des pressions</td><td role="cell">Sous-menu « Comprendre l’affaire » + pied</td></tr>
+            <tr role="row"><td role="cell"><code>/departementalisation-a-mayotte/</code></td><td role="cell">La départementalisation à Mayotte</td><td role="cell">Sous-menu « Comprendre l’affaire » + pied</td></tr>
+            <tr role="row"><td role="cell"><code>/revue-presse/</code></td><td role="cell">Revue de presse</td><td role="cell">Menu : « Revue de presse » + pied « Sources et documents »</td></tr>
+            <tr role="row"><td role="cell"><code>/comite-de-soutien/</code></td><td role="cell">Le comité</td><td role="cell">Sous-menu « Le comité » (1re entrée) + pied « Le comité et agir »</td></tr>
+            <tr role="row"><td role="cell"><code>/pvag/</code></td><td role="cell">PV-AG</td><td role="cell">Sous-menu « Le comité » + pied « Sources et documents »</td></tr>
+            <tr role="row"><td role="cell"><code>/partager/</code></td><td role="cell">Partager le site</td><td role="cell">Sous-menu « Agir » + bandeau haut + pied</td></tr>
+            <tr role="row"><td role="cell"><code>/ecrire-a-hakim-karki/</code></td><td role="cell">Écrire à Hakim</td><td role="cell">Bouton « Écrire à Hakim » (menu) + sous-menu « Agir » + pied</td></tr>
+            <tr role="row"><td role="cell"><code>/les-besoins/</code></td><td role="cell">Les besoins</td><td role="cell">Sous-menu « Agir » + pied</td></tr>
+            <tr role="row"><td role="cell"><code>/evenements/</code></td><td role="cell">ÉVÈNEMENTS</td><td role="cell">Sous-menu « Agir » + pied</td></tr>
+            <tr role="row"><td role="cell"><code>/contact/</code></td><td role="cell">Contact</td><td role="cell">Sous-menu « Agir » + pied</td></tr>
+            <tr role="row"><td role="cell"><code>/mentions-legales/</code></td><td role="cell">Mentions légales</td><td role="cell">Pied de page uniquement (pas dans le menu)</td></tr>
+            <tr role="row"><td role="cell"><code>/posts/</code></td><td role="cell">/posts/</td><td role="cell">Pied « Sources et documents » uniquement (pas dans le menu)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mq-section">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-section-head">
+          <p class="mq-surtitre">À valider</p>
+          <h2 class="mq-h2">Nouveaux libellés proposés</h2>
+        </div>
+        <ul class="mq-liste-propositions">
+          <li><strong>« Comprendre l’affaire »</strong> — groupe dépliable reprenant les 5 pages de fond (libellé déjà validé comme titre de groupe du pied de page).</li>
+          <li><strong>« Le comité »</strong> — groupe dépliable contenant « Le comité » (la page) et « PV-AG » ; l’intitulé de groupe réutilise le libellé validé.</li>
+          <li><strong>« Agir »</strong> — groupe dépliable contenant « Écrire à Hakim », « Partager le site », « Les besoins », « ÉVÈNEMENTS », « Contact ».</li>
+          <li><strong>« ÉVÈNEMENTS »</strong> — intitulé source conservé exactement ; la proposition de changement de casse est retirée.</li>
+          <li><strong>« Menu », « Fermer le menu »</strong> — commandes visibles du panneau mobile ; « Fermer » est la forme courte du bouton supérieur lorsque le panneau est ouvert.</li>
+          <li><strong>« Page courante »</strong> — repère visuel accompagnant le lien actif ; l’état est également exposé par <code>aria-current="page"</code>.</li>
+          <li><strong>« Poursuivre la lecture »</strong> — titre proposé pour les cartes de fin de page, à valider. Aucun résumé éditorial ajouté.</li>
+          <li>Les mentions de simulation, ce tableau et ces explications appartiennent uniquement à la démonstration, pas aux composants destinés au site public.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mq-section mq-fond-ivoire mq-demo-extrait">
+      <div class="mq-conteneur">
+        <p class="mq-demo-note">Exemple de fin de page — les deux dernières entrées de Chronologie, reprises de R04 sans reformulation. Cet extrait ne remplace pas la page complète.</p>
+        <article class="mq-demo-contenu" aria-labelledby="mq-extrait-titre">
+          <h2 class="mq-h2" id="mq-extrait-titre">LA CHRONOLOGIE</h2>
+          <ol class="mq-etapes">
+            <li class="mq-etapes__item"><p><time>4 avril 2024</time> : La Cour d'appel alourdit la peine à dix ans de réclusion criminelle.</p></li>
+            <li class="mq-etapes__item"><p><time>23 janvier 2025</time> : La Cour de cassation rejette le pourvoi du juge Karki, rendant définitive sa condamnation à dix ans de prison.</p></li>
+          </ol>
+        </article>
+      </div>
+    </section>
+    <section class="mq-section mq-suite" id="mq-suite" aria-labelledby="mq-suite-titre" hidden>
+      <div class="mq-conteneur">
+        <h2 class="mq-h2" id="mq-suite-titre">Poursuivre la lecture</h2>
+        <ul class="mq-suite__grille" id="mq-suite-liens"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mq-pied mq-sur-fond-bleu">
+    <div class="mq-conteneur">
+      <div class="mq-pied__tete">
+        <span class="mq-pied__nom">Comité de soutien au juge Hakim Karki</span>
+        <p>Un site d’information, de soutien et de mobilisation citoyenne.</p>
+      </div>
+      <nav class="mq-pied__nav" aria-label="Toutes les pages">
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Comprendre l’affaire</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="./">Accueil</a></li>
+            <li><a href="chronologie/">Chronologie</a></li>
+            <li><a href="faits-troublants/">Des faits troublants</a></li>
+            <li><a href="l-affaire-roukia/">L’affaire Roukia</a></li>
+            <li><a href="un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Sources et documents</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="revue-presse/">Revue de presse</a></li>
+            <li><a href="pvag/">PV-AG</a></li>
+            <li><a href="posts/">/posts/</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Le comité et agir</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="comite-de-soutien/">Le comité</a></li>
+            <li><a href="evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="les-besoins/">Les besoins</a></li>
+            <li><a href="ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="partager/">Partager le site</a></li>
+            <li><a href="contact/">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+      <div class="mq-pied__bas">
+        <ul class="mq-pied__legaux">
+          <li><a href="mentions-legales/">Mentions légales</a></li>
+          <!-- Emplacement réservé : « Politique de confidentialité » (F-10, page inexistante — aucun lien inactif affiché) -->
+          <!-- Emplacement réservé : « Gestion des cookies » (§ 12.5, dispositif non implémenté — aucun lien inactif affiché) -->
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var bascule = document.getElementById('mq-bascule');
+      var nav = document.getElementById('mq-nav');
+      var groupes = Array.from(nav.querySelectorAll('.mq-nav__groupe'));
+      var mobile = window.matchMedia('(max-width: 1199px)');
+      var courant = nav.querySelector('[aria-current="page"]');
+      var groupeCourant = courant.closest('.mq-nav__groupe');
+
+      function ouvrirGroupe(groupe, ouvert) {
+        groupe.classList.toggle('mq-ouvert', ouvert);
+        groupe.querySelector('.mq-nav__parent').setAttribute('aria-expanded', String(ouvert));
+        groupe.querySelector('.mq-nav__sous').hidden = !ouvert;
+      }
+      function fermerGroupes(sauf) {
+        groupes.forEach(function (groupe) {
+          if (groupe !== sauf) ouvrirGroupe(groupe, false);
+        });
+      }
+      function panneau(ouvert, retour) {
+        if (retour) bascule.focus();
+        nav.classList.toggle('mq-ouvert', ouvert);
+        bascule.setAttribute('aria-expanded', String(ouvert));
+        bascule.textContent = ouvert ? 'Fermer' : 'Menu';
+        fermerGroupes();
+        if (ouvert && groupeCourant) ouvrirGroupe(groupeCourant, true);
+      }
+      bascule.addEventListener('click', function () {
+        panneau(bascule.getAttribute('aria-expanded') !== 'true', false);
+      });
+      nav.querySelector('.mq-nav__fermer').addEventListener('click', function () {
+        panneau(false, true);
+      });
+      groupes.forEach(function (groupe) {
+        var bouton = groupe.querySelector('.mq-nav__parent');
+        bouton.addEventListener('click', function () {
+          var ouvert = bouton.getAttribute('aria-expanded') !== 'true';
+          fermerGroupes(groupe);
+          ouvrirGroupe(groupe, ouvert);
+        });
+        groupe.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && bouton.getAttribute('aria-expanded') === 'true') {
+            e.preventDefault();
+            e.stopPropagation();
+            bouton.focus();
+            ouvrirGroupe(groupe, false);
+          }
+        });
+        groupe.addEventListener('focusout', function (e) {
+          if (!mobile.matches && !groupe.contains(e.relatedTarget)) ouvrirGroupe(groupe, false);
+        });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobile.matches && nav.classList.contains('mq-ouvert')) {
+          e.preventDefault();
+          panneau(false, true);
+        }
+      });
+      document.addEventListener('click', function (e) {
+        if (nav.contains(e.target) || bascule.contains(e.target)) return;
+        if (mobile.matches && nav.classList.contains('mq-ouvert')) {
+          panneau(false, nav.contains(document.activeElement));
+        } else if (!mobile.matches) {
+          var actif = document.activeElement.closest('.mq-nav__sous');
+          if (actif) actif.parentElement.querySelector('.mq-nav__parent').focus();
+          fermerGroupes();
+        }
+      });
+      mobile.addEventListener('change', function () {
+        var actif = document.activeElement;
+        var groupe = actif.closest('.mq-nav__groupe');
+        panneau(false, false);
+        if (mobile.matches && nav.contains(actif)) bascule.focus();
+        else if (!mobile.matches && (actif === bascule || actif.matches('.mq-nav__action-mobile,.mq-nav__fermer'))) nav.querySelector('a').focus();
+        else if (groupe) groupe.querySelector('.mq-nav__parent').focus();
+      });
+
+      var suite = document.getElementById('mq-suite-liens');
+      groupeCourant.querySelectorAll('.mq-nav__sous a').forEach(function (lien) {
+        if (lien === courant) return;
+        var item = document.createElement('li');
+        var carte = lien.cloneNode(true);
+        carte.className = 'mq-suite__carte';
+        item.appendChild(carte);
+        suite.appendChild(item);
+      });
+      document.getElementById('mq-suite').hidden = false;
+      fermerGroupes();
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+</body>
+</html>
