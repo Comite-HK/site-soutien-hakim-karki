@@ -618,3 +618,64 @@ a:hover { color: var(--mq-bleu-fonce); }
   .mq-depart { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); column-gap: clamp(32px, 4vw, 56px); align-items: start; }
   .mq-depart .mq-figure { margin: 0; }
 }
+
+/* ---------- Page « Revue de presse » (étape 13) ---------- */
+/* Chapô, actions d'ancre et carte d'introduction */
+.mq-revue__chapo { max-width: 62ch; margin: 18px 0 0; color: var(--mq-ardoise); font-size: clamp(17px, 1.6vw, 19px); line-height: 1.65; }
+.mq-revue__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.mq-revue__intro { background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-radius: var(--mq-rayon); padding: clamp(24px, 3.5vw, 40px); box-shadow: 0 14px 34px rgba(27, 55, 96, 0.07); max-width: 76ch; }
+.mq-revue__intro .mq-h2 { margin-top: 0; }
+.mq-revue__intro p { margin: 0; color: var(--mq-ardoise); font-size: 17px; line-height: 1.7; }
+.mq-revue__intro p + p { margin-top: 14px; }
+.mq-revue__intro .mq-revue__lead { color: var(--mq-encre); font-size: clamp(18px, 1.8vw, 20px); }
+.mq-revue__intro .mq-intro__fort { margin-top: 20px; }
+
+/* Trois repères */
+.mq-revue__reperes { display: grid; gap: 18px; margin-top: 26px; }
+@media (min-width: 760px) { .mq-revue__reperes { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.mq-revue__repere { background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-radius: var(--mq-rayon); padding: 22px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-revue__num { display: inline-block; font-weight: 800; font-size: 15px; color: var(--mq-ocre); border: 1px solid var(--mq-or-clair); border-radius: 999px; padding: 4px 12px; margin-bottom: 14px; }
+.mq-revue__repere h3 { margin: 0 0 8px; color: var(--mq-bleu-fonce); font-size: 18px; }
+.mq-revue__repere p { margin: 0; color: var(--mq-ardoise); font-size: 15.5px; line-height: 1.65; }
+
+/* Filtres : panneau bleu, pastilles lisibles, résultat annoncé */
+.mq-revue__note-filtres { max-width: 68ch; margin: 0; color: var(--mq-ardoise); font-size: 17px; line-height: 1.7; }
+.mq-revue__filtres { background: var(--mq-bleu-fonce); border-radius: var(--mq-rayon); padding: clamp(18px, 3vw, 28px); margin-top: 24px; }
+.mq-revue__filtres .filters { display: flex; flex-wrap: wrap; gap: 10px; }
+.mq-revue__filtres .filter { min-height: var(--mq-cible); padding: 8px 16px; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: 999px; background: transparent; color: var(--mq-blanc); font: inherit; font-weight: 700; font-size: 15px; cursor: pointer; }
+.mq-revue__filtres .filter:hover { border-color: var(--mq-or-clair); color: var(--mq-or-clair); }
+.mq-revue__filtres .filter.active { background: var(--mq-or-clair); border-color: var(--mq-or-clair); color: var(--mq-encre); }
+.mq-revue__filtres .filter:focus-visible { outline-color: var(--mq-or-clair); }
+.mq-revue__filtres .filter-result { margin-top: 16px; color: rgba(255, 255, 255, 0.8); font-size: 14.5px; font-weight: 600; }
+
+/* Timeline : année collante à gauche, notices en cartes espacées */
+.mq-revue .timeline { display: grid; gap: clamp(28px, 4vw, 44px); margin-top: 30px; }
+.mq-revue .year { display: grid; gap: 18px; }
+@media (min-width: 760px) { .mq-revue .year { grid-template-columns: 118px minmax(0, 1fr); gap: 26px; align-items: start; } }
+.mq-revue .year-label { background: var(--mq-bleu); color: var(--mq-blanc); border-radius: var(--mq-rayon); padding: 14px 16px; }
+@media (min-width: 760px) { .mq-revue .year-label { position: sticky; top: 108px; text-align: center; } }
+.mq-revue .year-label strong { display: block; font-size: 24px; line-height: 1.1; color: var(--mq-or-clair); }
+.mq-revue .year-label span { font-size: 13px; color: rgba(255, 255, 255, 0.82); }
+.mq-revue .items { display: grid; gap: 12px; }
+.mq-revue .press-item { background: var(--mq-blanc); border: 1px solid var(--mq-bordure); border-radius: var(--mq-rayon); padding: 14px 18px; display: grid; gap: 10px; }
+@media (min-width: 760px) { .mq-revue .press-item { grid-template-columns: 96px minmax(0, 1fr) auto; gap: 18px; align-items: start; } }
+.mq-revue .date { font-weight: 800; color: var(--mq-bleu); font-size: 14px; padding-top: 2px; }
+.mq-revue .source { font-size: 12.5px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: var(--mq-ardoise); }
+.mq-revue .press-item .title { display: inline-block; margin-top: 3px; font-weight: 700; font-size: 16.5px; line-height: 1.45; }
+.mq-revue a.mq-lien-article { color: var(--mq-bleu); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--mq-or-clair); overflow-wrap: anywhere; padding-block: 10px; min-height: var(--mq-cible); box-sizing: border-box; }
+.mq-revue a.mq-lien-article:hover { color: var(--mq-bleu-fonce); }
+.mq-revue .press-item .mq-lien-article__fin { white-space: nowrap; }
+@media (max-width: 759.98px) { .mq-revue .press-item .title { text-wrap: balance; } }
+.mq-revue .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.mq-revue .badge { font-size: 11.5px; font-weight: 800; border-radius: 999px; padding: 4px 9px; background: #EAEFF7; color: var(--mq-bleu-fonce); }
+.mq-revue .badge.local { background: var(--mq-ivoire); color: var(--mq-ocre); }
+.mq-revue .badge.archive { background: #F3EFE2; color: var(--mq-ocre); }
+.mq-revue .badge.video { background: #F6E7E4; color: #8C3A2B; }
+.mq-revue .no-link { align-self: start; font-size: 12.5px; font-weight: 700; color: var(--mq-ardoise); border: 1px dashed var(--mq-bordure); border-radius: 999px; padding: 6px 12px; white-space: nowrap; }
+.mq-revue .is-hidden { display: none !important; }
+
+/* Bloc soutien : bleu profond, bouton blanc */
+.mq-revue__soutien { background: var(--mq-bleu-fonce); border-radius: var(--mq-rayon); padding: clamp(24px, 4vw, 38px); display: grid; gap: 18px; }
+@media (min-width: 760px) { .mq-revue__soutien { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 32px; } }
+.mq-revue__soutien .mq-h2 { color: var(--mq-blanc); margin: 0 0 8px; }
+.mq-revue__soutien p { margin: 0; color: rgba(255, 255, 255, 0.82); font-size: 16px; line-height: 1.6; max-width: 56ch; }

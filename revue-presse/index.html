@@ -5,46 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Revue de presse | Comité de soutien au juge Hakim Karki</title>
   <meta name="description" content="Revue de presse documentée autour de l'affaire Hakim Karki, de 2011 à aujourd'hui." />
-  <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="../assets/css/maquette-accueil.css" />
   <link rel="stylesheet" href="../assets/css/navigation.css" />
 
-  <style>
-    .press-page{background:var(--ivory,#f7f3e8)}
-    .press-hero{position:relative;overflow:hidden;padding:90px 22px 76px;color:#fff;background:radial-gradient(circle at top right,rgba(212,166,63,.22),transparent 32%),linear-gradient(135deg,#0b2454,#06152d)}
-    .press-hero:after{content:"";position:absolute;right:-120px;bottom:-160px;width:430px;height:430px;border:1px solid rgba(212,166,63,.24);border-radius:50%}
-    .press-hero .container{position:relative;z-index:1}
-    .press-hero .eyebrow,.press-page .section-kicker{color:var(--gold,#d4a63f);text-transform:uppercase;letter-spacing:.18em;font-weight:900;font-size:.78rem;margin-bottom:16px}
-    .press-hero h1{font-size:clamp(2.8rem,7vw,5.8rem);line-height:.92;margin:0 0 20px;letter-spacing:-.055em;color:#fff}
-    .press-hero p{max-width:860px;color:rgba(255,255,255,.86);font-size:clamp(1.05rem,2vw,1.28rem);margin:0 0 28px}
-    .press-page main{padding:52px 22px 80px}
-    .press-page .intro-card{background:#fffdf7;border:1px solid rgba(11,36,84,.10);border-radius:28px;padding:36px;box-shadow:0 18px 45px rgba(11,31,58,.10);margin-top:-86px;position:relative;z-index:5}
-    .press-page .intro-card h2,.press-page .section-title{font-size:clamp(1.7rem,3vw,2.7rem);line-height:1.08;margin:0 0 18px;color:var(--navy,#0b2454);letter-spacing:-.035em}
-    .press-page .lead{font-size:1.08rem;color:#344054}.press-page .note{border-left:4px solid var(--gold,#d4a63f);padding:18px 20px;background:#fbf7ea;border-radius:0 14px 14px 0;color:#344054;margin-top:22px}
-    .press-page .section{margin-top:58px}.press-page .grid{display:grid;gap:20px}.press-page .cards-3{grid-template-columns:repeat(3,1fr);margin-top:24px}
-    .press-page .repere,.press-page .press-item{background:#fff;border:1px solid rgba(11,36,84,.10);box-shadow:0 10px 26px rgba(11,31,58,.06)}
-    .press-page .repere{border-radius:22px;padding:24px}.press-page .repere .icon{width:44px;height:44px;border-radius:14px;background:rgba(212,166,63,.16);display:grid;place-items:center;color:var(--gold,#d4a63f);font-weight:900;margin-bottom:14px}
-    .press-page .repere h3{margin:0 0 8px;color:var(--navy,#0b2454);font-size:1.15rem}.press-page .repere p,.press-page .section p{color:#52627a}
-    .press-page .filter-box{background:var(--navy,#0b2454);color:#fff;border-radius:24px;padding:24px;margin-top:20px}.press-page .filters{display:flex;gap:10px;flex-wrap:wrap}
-    .press-page .filter{border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:9px 13px;background:rgba(255,255,255,.06);color:#fff;font-weight:800;font-size:.86rem;cursor:pointer}
-    .press-page .filter.active{background:var(--gold,#d4a63f);color:#101828;border-color:var(--gold,#d4a63f)}.press-page .filter-result{margin-top:16px;color:rgba(255,255,255,.78);font-weight:700;font-size:.92rem}
-    .press-page .timeline{margin-top:34px;display:grid;gap:34px}.press-page .year{display:grid;grid-template-columns:120px 1fr;gap:24px;align-items:start}
-    .press-page .year-label{position:sticky;top:112px;background:var(--navy,#0b2454);color:#fff;border-radius:18px;padding:18px;text-align:center;box-shadow:0 18px 45px rgba(11,31,58,.12)}
-    .press-page .year-label strong{display:block;font-size:1.7rem;line-height:1;color:var(--gold,#d4a63f)}.press-page .items{display:grid;gap:14px}
-    .press-page .press-item{border-radius:18px;padding:18px 18px 16px;display:grid;grid-template-columns:110px 1fr auto;gap:16px;align-items:center}.press-page .date{font-weight:900;color:var(--navy,#0b2454);font-size:.9rem}
-    .press-page .source{font-size:.84rem;color:#667085;font-weight:800;text-transform:uppercase;letter-spacing:.06em}.press-page .title{font-weight:900;color:#1d2939;margin-top:3px}
-    .press-page .badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.press-page .badge{font-size:.72rem;font-weight:900;border-radius:999px;padding:4px 8px;background:#eef2f6;color:#344054}
-    .press-page .badge.media{background:#e8f1ff;color:#164a7a}.press-page .badge.local{background:#f4ecdb;color:#76520b}.press-page .badge.archive{background:#fef3c7;color:#92400e}.press-page .badge.video{background:#fee4e2;color:#912018}
-    .press-page .read,.press-page .no-link{white-space:nowrap;border-radius:999px;padding:9px 12px;font-weight:900;font-size:.86rem}.press-page .read{text-decoration:none;border:1px solid rgba(11,36,84,.14);color:var(--navy,#0b2454)}
-    .press-page .read:hover{border-color:var(--gold,#d4a63f);color:#8a6820}.press-page .no-link{color:#667085}
-    .press-page .support{background:linear-gradient(135deg,var(--navy,#0b2454),#102b4c);color:#fff;border-radius:28px;padding:34px;margin-top:60px;display:grid;grid-template-columns:1.5fr .8fr;gap:24px;align-items:center}
-    .press-page .support h2{font-size:2rem;line-height:1.08;margin:0 0 12px;color:#fff}.press-page .support p{color:rgba(255,255,255,.8);margin:0}.press-page .support .btn{justify-self:end;background:#fff;color:var(--navy,#0b2454)}
-    .press-page .press-item.is-hidden,.press-page .year.is-hidden{display:none!important}
-    @media(max-width:900px){.press-page .cards-3{grid-template-columns:1fr}.press-page .year{grid-template-columns:1fr}.press-page .year-label{position:static;text-align:left}.press-page .press-item{grid-template-columns:1fr}.press-page .read{justify-self:start}.press-page .support{grid-template-columns:1fr}.press-page .support .btn{justify-self:start}.press-page .intro-card{margin-top:-50px;padding:24px}}
-  </style>
-
 </head>
-<body class="press-page">
+<body>
   <div class="mq-bandeau mq-sur-fond-bleu">
     <a href="../partager/">Faites connaître le site →</a>
   </div>
@@ -101,46 +67,53 @@
     </div>
   </header>
 
-  <section class="press-hero">
-<div class="container">
-<div class="eyebrow">Presse • Archives • Contexte</div>
-<h1>Revue de presse</h1>
-<p>Plus de dix années de publications autour de l’affaire Hakim Karki, pour replacer les faits dans leur contexte judiciaire, institutionnel et médiatique.</p>
-<div class="hero-actions">
-<a class="btn primary" href="#timeline">Consulter la timeline</a>
-<a class="btn secondary" href="#reperes">Voir les repères</a>
-</div>
-</div>
-</section>
+  <main class="mq-revue">
+    <section class="mq-entete-page">
+      <div class="mq-conteneur">
+        <p class="mq-surtitre">Presse • Archives • Contexte</p>
+        <h1 class="mq-h1 mq-entete-page__titre">Revue de presse</h1>
+        <p class="mq-revue__chapo">Plus de dix années de publications autour de l’affaire Hakim Karki, pour replacer les faits dans leur contexte judiciaire, institutionnel et médiatique.</p>
+        <div class="mq-revue__actions">
+          <a class="mq-bouton mq-bouton--principal" href="#timeline">Consulter la timeline</a>
+          <a class="mq-bouton mq-bouton--secondaire" href="#reperes">Voir les repères</a>
+        </div>
+      </div>
+    </section>
 
-  <main>
-    <div class="container">
-<section class="intro-card">
+    <section class="mq-section mq-section--collee">
+      <div class="mq-conteneur">
+        <div class="mq-revue__intro">
 <h2>Comprendre l’affaire dans son contexte</h2>
-<p class="lead">Le juge Hakim KARKI a été jugé pour une accusation de viol qui aurait été commis en 2014 alors qu’il était en fonction à Mayotte en tant que juge d’instruction.</p>
+<p class="mq-revue__lead">Le juge Hakim KARKI a été jugé pour une accusation de viol qui aurait été commis en 2014 alors qu’il était en fonction à Mayotte en tant que juge d’instruction.</p>
 <p>Il y est arrivé en 2010 pour mettre en œuvre la départementalisation de ce territoire. Les premiers articles rapportant son action en tant que juge datent de 2011.</p>
 <p>La revue de presse ci-dessous couvre une période large permettant de dresser le contexte général qui préside à l’affaire du viol proprement dite. Cette affaire n’a par ailleurs pas de sens si elle est retirée de son contexte. Or, la Justice a délibérément choisi de ne pas tenir compte de ce contexte.</p>
-<div class="note">Cette revue de presse, non filtrée, atteste de l’historique des publications concernant le juge de 2011 à aujourd’hui. À chacun d’en tirer ses propres conclusions.</div>
-</section>
-<section class="section" id="reperes">
-<h2 class="section-title">Quelques repères</h2>
-<div class="grid cards-3">
-<article class="repere"><div class="icon">01</div><h3>L’affaire Roukia</h3><p>L’affaire Roukia débute le 15 janvier 2011 à Mayotte, lorsque le corps de Roukia Soundi, 18 ans, est découvert sur une plage de Trévani. L’autopsie révèle une overdose d’héroïne, une drogue rare sur l’île.</p></article>
-<article class="repere"><div class="icon">02</div><h3>Un juge soumis à des pressions</h3><p>Le juge Hakim Karki, à Mayotte, a été confronté à de nombreuses pressions institutionnelles, régulièrement évoquées dans la presse locale et nationale.</p></article>
-<article class="repere"><div class="icon">03</div><h3>La départementalisation</h3><p>La départementalisation de Mayotte en 2011 a révélé de graves dysfonctionnements institutionnels, administratifs et judiciaires.</p></article>
+<p class="mq-intro__fort">Cette revue de presse, non filtrée, atteste de l’historique des publications concernant le juge de 2011 à aujourd’hui. À chacun d’en tirer ses propres conclusions.</p>
+        </div>
+      </div>
+    </section>
+<section class="mq-section mq-fond-ivoire" id="reperes">
+      <div class="mq-conteneur">
+<h2 class="mq-h2">Quelques repères</h2>
+<div class="mq-revue__reperes">
+<article class="mq-revue__repere"><span class="mq-revue__num">01</span><h3>L’affaire Roukia</h3><p>L’affaire Roukia débute le 15 janvier 2011 à Mayotte, lorsque le corps de Roukia Soundi, 18 ans, est découvert sur une plage de Trévani. L’autopsie révèle une overdose d’héroïne, une drogue rare sur l’île.</p></article>
+<article class="mq-revue__repere"><span class="mq-revue__num">02</span><h3>Un juge soumis à des pressions</h3><p>Le juge Hakim Karki, à Mayotte, a été confronté à de nombreuses pressions institutionnelles, régulièrement évoquées dans la presse locale et nationale.</p></article>
+<article class="mq-revue__repere"><span class="mq-revue__num">03</span><h3>La départementalisation</h3><p>La départementalisation de Mayotte en 2011 a révélé de graves dysfonctionnements institutionnels, administratifs et judiciaires.</p></article>
 </div>
-</section>
-<section class="section">
-<h2 class="section-title">Une revue de presse volontairement non filtrée</h2>
-<p>Cette page rassemble des articles favorables, critiques, locaux, nationaux, reportages, archives et réactions publiques afin de permettre une consultation directe des sources disponibles.</p>
-<div class="filter-box">
+      </div>
+    </section>
+<section class="mq-section">
+      <div class="mq-conteneur">
+<h2 class="mq-h2">Une revue de presse volontairement non filtrée</h2>
+<p class="mq-revue__note-filtres">Cette page rassemble des articles favorables, critiques, locaux, nationaux, reportages, archives et réactions publiques afin de permettre une consultation directe des sources disponibles.</p>
+<div class="mq-revue__filtres filter-box">
 <div aria-label="Filtres visuels" class="filters">
 <button class="filter active" data-filter="all" type="button">Tous</button><button class="filter" data-filter="presse-nationale" type="button">Presse nationale</button><button class="filter" data-filter="presse-locale" type="button">Presse locale</button><button class="filter" data-filter="afrique-intelligence" type="button">Afrique Intelligence</button><button class="filter" data-filter="roukia" type="button">Affaire Roukia</button><button class="filter" data-filter="proces" type="button">Procès</button><button class="filter" data-filter="videos" type="button">Vidéos</button><button class="filter" data-filter="archives" type="button">Archives</button>
 </div>
 <div class="filter-result" id="filterResult">Tous les articles sont affichés.</div></div>
-</section>
-<section class="section" id="timeline">
-<h2 class="section-title">Timeline des publications</h2>
+    </section>
+<section class="mq-section mq-fond-ivoire" id="timeline">
+      <div class="mq-conteneur">
+<h2 class="mq-h2">Timeline des publications</h2>
 <div class="timeline">
 <div class="year">
 <div class="year-label"><strong>2011</strong><span>4 publications</span></div>
@@ -149,37 +122,37 @@
 <div class="date">15/07/2011</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Des gendarmes dans le viseur du juge</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2011/07/16/des-gendarmes-dans-le-viseur-du-juge,91396882-art" target="_blank" rel="noopener">Des gendarmes dans le viseur du <span class="mq-lien-article__fin">juge<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2011/07/16/des-gendarmes-dans-le-viseur-du-juge,91396882-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="afrique-intelligence archives roukia">
 <div class="date">29/07/2011</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Des gendarmes piégés par les écoutes téléphoniques</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/alerte-aif/2011/07/29/des-gendarmes-pieges-par-les-ecoutes-telephoniques,91806548-art" target="_blank" rel="noopener">Des gendarmes piégés par les écoutes <span class="mq-lien-article__fin">téléphoniques<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/alerte-aif/2011/07/29/des-gendarmes-pieges-par-les-ecoutes-telephoniques,91806548-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="afrique-intelligence archives">
 <div class="date">30/07/2011</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Le juge Hakim Karki est un teigneux</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2011/07/30/le-juge-hakim-karki-est-un-teigneux,91800016-art" target="_blank" rel="noopener">Le juge <span class="mq-nobr">Hakim Karki</span> est un <span class="mq-lien-article__fin">teigneux<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2011/07/30/le-juge-hakim-karki-est-un-teigneux,91800016-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="afrique-intelligence archives">
 <div class="date">05/10/2011</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Le général Véchambre paye ses e-mails au juge Karki</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/alerte-aif/2011/10/05/le-general-vechambre-paye-ses-e-mails-au-juge-karki,93380295-art" target="_blank" rel="noopener">Le général Véchambre paye ses e-mails au juge <span class="mq-lien-article__fin">Karki<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/alerte-aif/2011/10/05/le-general-vechambre-paye-ses-e-mails-au-juge-karki,93380295-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 </div>
 </div>
@@ -190,73 +163,73 @@
 <div class="date">01/02/2012</div>
 <div>
 <div class="source">Le Point</div>
-<div class="title">Mayotte : le juge, les gendarmes et les indics</div>
+<a class="title mq-lien-article" href="https://www.lepoint.fr/societe/mayotte-le-juge-les-gendarmes-et-les-indics-01-02-2012-1426346_23.php" target="_blank" rel="noopener">Mayotte : le juge, les gendarmes et les <span class="mq-lien-article__fin">indics<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span></div>
 </div>
-<a class="read" href="https://www.lepoint.fr/societe/mayotte-le-juge-les-gendarmes-et-les-indics-01-02-2012-1426346_23.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale">
 <div class="date">06/03/2012</div>
 <div>
 <div class="source">Le Point</div>
-<div class="title">Mayotte : un juge aux abois</div>
+<a class="title mq-lien-article" href="https://www.lepoint.fr/societe/mayotte-un-juge-aux-abois-06-03-2012-1438424_23.php" target="_blank" rel="noopener">Mayotte : un juge aux <span class="mq-lien-article__fin">abois<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span></div>
 </div>
-<a class="read" href="https://www.lepoint.fr/societe/mayotte-un-juge-aux-abois-06-03-2012-1438424_23.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale">
 <div class="date">16/05/2012</div>
 <div>
 <div class="source">Libération</div>
-<div class="title">Le juge espion de Mayotte ciblait aussi des avocats</div>
+<a class="title mq-lien-article" href="https://www.liberation.fr/societe/2012/05/16/le-juge-espion-de-mayotte-ciblait-aussi-des-avocats_819273/" target="_blank" rel="noopener">Le juge espion de Mayotte ciblait aussi des <span class="mq-lien-article__fin">avocats<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span></div>
 </div>
-<a class="read" href="https://www.liberation.fr/societe/2012/05/16/le-juge-espion-de-mayotte-ciblait-aussi-des-avocats_819273/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="afrique-intelligence archives roukia">
 <div class="date">09/06/2012</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">D’étranges mutations de gendarmes</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2012/06/09/d-etranges-mutations-de-gendarmes,102944175-art" target="_blank" rel="noopener">D’étranges mutations de <span class="mq-lien-article__fin">gendarmes<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2012/06/09/d-etranges-mutations-de-gendarmes,102944175-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="afrique-intelligence archives">
 <div class="date">15/06/2012</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Paris veut mettre de l’ordre dans la justice locale</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/alerte-aif/2012/06/15/paris-veut-mettre-de-l-ordre-dans-la-justice-locale,103256407-art" target="_blank" rel="noopener">Paris veut mettre de l’ordre dans la justice <span class="mq-lien-article__fin">locale<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/alerte-aif/2012/06/15/paris-veut-mettre-de-l-ordre-dans-la-justice-locale,103256407-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="afrique-intelligence archives">
 <div class="date">22/06/2012</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Paris veut dessaisir le juge Karki</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2012/06/23/paris-veut-dessaisir-le-juge-karki,103485583-art" target="_blank" rel="noopener">Paris veut dessaisir le juge <span class="mq-lien-article__fin">Karki<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2012/06/23/paris-veut-dessaisir-le-juge-karki,103485583-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="afrique-intelligence archives">
 <div class="date">21/07/2012</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Le juge Hakim Karki maintient le cap</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2012/07/21/le-juge-hakim-karki-maintient-le-cap,104755067-art" target="_blank" rel="noopener">Le juge <span class="mq-nobr">Hakim Karki</span> maintient le <span class="mq-lien-article__fin">cap<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2012/07/21/le-juge-hakim-karki-maintient-le-cap,104755067-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="afrique-intelligence archives">
 <div class="date">17/11/2012</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">L’étrange TGI de Mamoudzou</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2012/11/17/l-etrange-tgi-de-mamoudzou,107932541-art" target="_blank" rel="noopener">L’étrange TGI de <span class="mq-lien-article__fin">Mamoudzou<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2012/11/17/l-etrange-tgi-de-mamoudzou,107932541-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 </div>
 </div>
@@ -276,19 +249,19 @@
 <div class="date">06/04/2013</div>
 <div>
 <div class="source">Imaz Press</div>
-<div class="title">Mort de Roukia : deux ans après, justice n’a toujours pas été rendue</div>
+<a class="title mq-lien-article" href="https://imazpress.com/photo-du-jour/mort-de-roukia-deux-ans-apres-justice-na-toujours-pas-ete-rendue" target="_blank" rel="noopener">Mort de Roukia : deux ans après, justice n’a toujours pas été <span class="mq-lien-article__fin">rendue<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge local">Affaire Roukia</span></div>
 </div>
-<a class="read" href="https://imazpress.com/photo-du-jour/mort-de-roukia-deux-ans-apres-justice-na-toujours-pas-ete-rendue" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="afrique-intelligence archives">
 <div class="date">17/05/2013</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Le juge Karki sous forte pression</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2013/05/17/le-juge-karki-sous-forte-pression,107960166-art" target="_blank" rel="noopener">Le juge Karki sous forte <span class="mq-lien-article__fin">pression<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2013/05/17/le-juge-karki-sous-forte-pression,107960166-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="archives presse-locale roukia">
 <div class="date">02/07/2013</div>
@@ -312,10 +285,10 @@
 <div class="date">30/08/2013</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Le juge Karki a fait ce qu’il a pu</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2013/08/30/le-juge-karki-a-fait-ce-qu-il-a-pu,107974012-art" target="_blank" rel="noopener">Le juge Karki a fait ce qu’il a <span class="mq-lien-article__fin">pu<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2013/08/30/le-juge-karki-a-fait-ce-qu-il-a-pu,107974012-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="archives presse-locale roukia">
 <div class="date">18/09/2013</div>
@@ -330,10 +303,10 @@
 <div class="date">27/09/2013</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Mamoudzou</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2013/09/27/mamoudzou,107978564-bre" target="_blank" rel="noopener"><span class="mq-lien-article__fin">Mamoudzou<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2013/09/27/mamoudzou,107978564-bre" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="archives presse-locale roukia">
 <div class="date">14/10/2013</div>
@@ -371,28 +344,28 @@
 <div class="date">24/01/2014</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Mamoudzou</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2014/01/24/mamoudzou,108004889-bre" target="_blank" rel="noopener"><span class="mq-lien-article__fin">Mamoudzou<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/afrique-est-et-australe_politique/2014/01/24/mamoudzou,108004889-bre" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale roukia">
 <div class="date">06/02/2014</div>
 <div>
 <div class="source">Imaz Press</div>
-<div class="title">Trafic de stupéfiants à Mayotte : ces nouveaux témoignages qui accablent le GIROIR</div>
+<a class="title mq-lien-article" href="https://imazpress.com/photo-du-jour/trafic-de-stupefiants-a-mayotte-ces-nouveaux-temoignages-qui-accablent-le-giroir" target="_blank" rel="noopener">Trafic de stupéfiants à Mayotte : ces nouveaux témoignages qui accablent le <span class="mq-lien-article__fin">GIROIR<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge local">Affaire Roukia</span></div>
 </div>
-<a class="read" href="https://imazpress.com/photo-du-jour/trafic-de-stupefiants-a-mayotte-ces-nouveaux-temoignages-qui-accablent-le-giroir" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale">
 <div class="date">08/04/2014</div>
 <div>
 <div class="source">Imaz Press</div>
-<div class="title">Mayotte : la drôle de note du parquet général</div>
+<a class="title mq-lien-article" href="https://imazpress.com/evenements/mayotte-la-drole-de-note-du-parquet-general" target="_blank" rel="noopener">Mayotte : la drôle de note du parquet <span class="mq-lien-article__fin">général<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span></div>
 </div>
-<a class="read" href="https://imazpress.com/evenements/mayotte-la-drole-de-note-du-parquet-general" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="archives presse-locale roukia">
 <div class="date">09/04/2014</div>
@@ -407,163 +380,163 @@
 <div class="date">16/06/2014</div>
 <div>
 <div class="source">Africa Intelligence</div>
-<div class="title">Le juge Karki encore ciblé par sa hiérarchie</div>
+<a class="title mq-lien-article" href="https://www.africaintelligence.fr/alerte-aif/2014/06/16/le-juge-karki-encore-cible-par-sa-hierarchie,108026965-art" target="_blank" rel="noopener">Le juge Karki encore ciblé par sa <span class="mq-lien-article__fin">hiérarchie<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Afrique Intelligence</span></div>
 </div>
-<a class="read" href="https://www.africaintelligence.fr/alerte-aif/2014/06/16/le-juge-karki-encore-cible-par-sa-hierarchie,108026965-art" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale">
 <div class="date">18/06/2014</div>
 <div>
 <div class="source">Le Point</div>
-<div class="title">Véritable pathologie de service dans les juridictions pénales de Mayotte</div>
+<a class="title mq-lien-article" href="https://www.lepoint.fr/societe/veritable-pathologie-de-service-dans-les-juridictions-penales-de-mayotte-18-06-2014-1837209_23.php" target="_blank" rel="noopener">Véritable pathologie de service dans les juridictions pénales de <span class="mq-lien-article__fin">Mayotte<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span></div>
 </div>
-<a class="read" href="https://www.lepoint.fr/societe/veritable-pathologie-de-service-dans-les-juridictions-penales-de-mayotte-18-06-2014-1837209_23.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="archives">
 <div class="date">22/06/2014</div>
 <div>
 <div class="source">AAMFG</div>
-<div class="title">Véritable pathologie de service dans les juridictions pénales de Mayotte</div>
+<a class="title mq-lien-article" href="https://www.aamfg.fr/veritable-pathologie-de-service-dans-les-juridictions-penales-de-mayotte/" target="_blank" rel="noopener">Véritable pathologie de service dans les juridictions pénales de <span class="mq-lien-article__fin">Mayotte<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge archive">Archive</span></div>
 </div>
-<a class="read" href="https://www.aamfg.fr/veritable-pathologie-de-service-dans-les-juridictions-penales-de-mayotte/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">05/07/2014</div>
 <div>
 <div class="source">Imaz Press</div>
-<div class="title">Mamoudzou : le juge Karki en garde à vue après une plainte pour viol</div>
+<a class="title mq-lien-article" href="https://imazpress.com/evenements/mamoudzou-le-juge-karki-en-garde-a-vue-apres-une-plainte-pour-viol" target="_blank" rel="noopener">Mamoudzou : le juge Karki en garde à vue après une plainte pour <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://imazpress.com/evenements/mamoudzou-le-juge-karki-en-garde-a-vue-apres-une-plainte-pour-viol" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">05/07/2014</div>
 <div>
 <div class="source">France TV Info La 1ère</div>
-<div class="title">Mayotte : le juge Hakim Karki en garde à vue</div>
+<a class="title mq-lien-article" href="https://la1ere.francetvinfo.fr/reunion/mayotte-juge-hakim-karki-garde-vue-166969.html" target="_blank" rel="noopener">Mayotte : le juge <span class="mq-nobr">Hakim Karki</span> en garde à <span class="mq-lien-article__fin">vue<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://la1ere.francetvinfo.fr/reunion/mayotte-juge-hakim-karki-garde-vue-166969.html" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">05/07/2014</div>
 <div>
 <div class="source">RTL</div>
-<div class="title">Mayotte : plainte pour viol contre un juge d’instruction</div>
+<a class="title mq-lien-article" href="https://www.rtl.fr/actu/justice-faits-divers/mayotte-plainte-pour-viol-contre-un-juge-d-instruction-7773068939" target="_blank" rel="noopener">Mayotte : plainte pour viol contre un juge <span class="mq-lien-article__fin">d’instruction<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.rtl.fr/actu/justice-faits-divers/mayotte-plainte-pour-viol-contre-un-juge-d-instruction-7773068939" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">06/07/2014</div>
 <div>
 <div class="source">20 Minutes</div>
-<div class="title">Mayotte : la garde à vue prolongée pour le juge accusé de viol</div>
+<a class="title mq-lien-article" href="https://www.20minutes.fr/societe/1415331-20140706-mayotte-garde-vue-prolongee-juge-accuse-viol" target="_blank" rel="noopener">Mayotte : la garde à vue prolongée pour le juge accusé de <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.20minutes.fr/societe/1415331-20140706-mayotte-garde-vue-prolongee-juge-accuse-viol" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">07/07/2014</div>
 <div>
 <div class="source">Le Parisien</div>
-<div class="title">Mayotte : un juge mis en examen pour viol et placé en détention</div>
+<a class="title mq-lien-article" href="https://www.leparisien.fr/faits-divers/mayotte-un-juge-mis-en-examen-pour-viol-et-place-en-detention-07-07-2014-3984715.php" target="_blank" rel="noopener">Mayotte : un juge mis en examen pour viol et placé en <span class="mq-lien-article__fin">détention<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.leparisien.fr/faits-divers/mayotte-un-juge-mis-en-examen-pour-viol-et-place-en-detention-07-07-2014-3984715.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">07/07/2014</div>
 <div>
 <div class="source">Libération</div>
-<div class="title">Un juge de Mayotte mis en examen pour viol</div>
+<a class="title mq-lien-article" href="https://www.liberation.fr/societe/2014/07/07/un-juge-de-mayotte-mis-en-examen-pour-viol_1059419/" target="_blank" rel="noopener">Un juge de Mayotte mis en examen pour <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.liberation.fr/societe/2014/07/07/un-juge-de-mayotte-mis-en-examen-pour-viol_1059419/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">07/07/2014</div>
 <div>
 <div class="source">L’Express</div>
-<div class="title">Mayotte : un juge mis en examen pour viol et placé en détention à La Réunion</div>
+<a class="title mq-lien-article" href="https://www.lexpress.fr/societe/mayotte-un-juge-mis-en-examen-pour-viol-et-place-en-detention-a-la-reunion_1557652.html" target="_blank" rel="noopener">Mayotte : un juge mis en examen pour viol et placé en détention à La <span class="mq-lien-article__fin">Réunion<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.lexpress.fr/societe/mayotte-un-juge-mis-en-examen-pour-viol-et-place-en-detention-a-la-reunion_1557652.html" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">08/07/2014</div>
 <div>
 <div class="source">TF1 Info</div>
-<div class="title">Un juge d’instruction de Mayotte mis en examen pour viol</div>
+<a class="title mq-lien-article" href="https://www.tf1info.fr/justice-faits-divers/un-juge-dinstruction-de-mayotte-mis-en-examen-pour-viol-1554053.html" target="_blank" rel="noopener">Un juge d’instruction de Mayotte mis en examen pour <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.tf1info.fr/justice-faits-divers/un-juge-dinstruction-de-mayotte-mis-en-examen-pour-viol-1554053.html" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale roukia">
 <div class="date">09/07/2014</div>
 <div>
 <div class="source">RFI</div>
-<div class="title">Affaire du juge accusé de viol à Mayotte : Roukia pourrait cacher drogue et GIR</div>
+<a class="title mq-lien-article" href="https://www.rfi.fr/fr/france/20140709-affaire-juge-accuse-viol-mayotte-roukia-pourrait-cacher-drogue-gir" target="_blank" rel="noopener">Affaire du juge accusé de viol à Mayotte : Roukia pourrait cacher drogue et <span class="mq-lien-article__fin">GIR<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge local">Affaire Roukia</span></div>
 </div>
-<a class="read" href="https://www.rfi.fr/fr/france/20140709-affaire-juge-accuse-viol-mayotte-roukia-pourrait-cacher-drogue-gir" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">10/07/2014</div>
 <div>
 <div class="source">Imaz Press</div>
-<div class="title">Le juge Hakim Karki remis en liberté</div>
+<a class="title mq-lien-article" href="https://imazpress.com/evenements/le-juge-hakim-karki-remis-en-liberte" target="_blank" rel="noopener">Le juge <span class="mq-nobr">Hakim Karki</span> remis en <span class="mq-lien-article__fin">liberté<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://imazpress.com/evenements/le-juge-hakim-karki-remis-en-liberte" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">11/07/2014</div>
 <div>
 <div class="source">Le Parisien</div>
-<div class="title">Le juge accusé de viol remis en liberté</div>
+<a class="title mq-lien-article" href="https://www.leparisien.fr/archives/le-juge-accuse-de-viol-remis-en-liberte-11-07-2014-3992901.php" target="_blank" rel="noopener">Le juge accusé de viol remis en <span class="mq-lien-article__fin">liberté<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.leparisien.fr/archives/le-juge-accuse-de-viol-remis-en-liberte-11-07-2014-3992901.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">17/07/2014</div>
 <div>
 <div class="source">Imaz Press</div>
-<div class="title">Direction Paris pour l’affaire Karki</div>
+<a class="title mq-lien-article" href="https://imazpress.com/evenements/direction-paris-pour-laffaire-karki" target="_blank" rel="noopener">Direction Paris pour l’affaire <span class="mq-lien-article__fin">Karki<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://imazpress.com/evenements/direction-paris-pour-laffaire-karki" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale">
 <div class="date">18/07/2014</div>
 <div>
 <div class="source">Atlantico</div>
-<div class="title">Les mésaventures peu banales d’un juge d’instruction de Mayotte</div>
+<a class="title mq-lien-article" href="https://atlantico.fr/article/decryptage/les-mesaventures-peu-banales-d-un-juge-d-instruction-de-mayotte-embastille-pendant-trois-jours-gilles-gaetner" target="_blank" rel="noopener">Les mésaventures peu banales d’un juge d’instruction de <span class="mq-lien-article__fin">Mayotte<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span></div>
 </div>
-<a class="read" href="https://atlantico.fr/article/decryptage/les-mesaventures-peu-banales-d-un-juge-d-instruction-de-mayotte-embastille-pendant-trois-jours-gilles-gaetner" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">23/07/2014</div>
 <div>
 <div class="source">Imaz Press</div>
-<div class="title">Le juge Karki suspendu de ses fonctions</div>
+<a class="title mq-lien-article" href="https://imazpress.com/actus-reunion/le-juge-karki-suspendu-de-ses-fonctions" target="_blank" rel="noopener">Le juge Karki suspendu de ses <span class="mq-lien-article__fin">fonctions<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://imazpress.com/actus-reunion/le-juge-karki-suspendu-de-ses-fonctions" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale">
 <div class="date">28/07/2014</div>
 <div>
 <div class="source">Le Figaro</div>
-<div class="title">Sexe, drogue et magistrature : le cocktail qui secoue l’île de Mayotte</div>
+<a class="title mq-lien-article" href="https://www.lefigaro.fr/actualite-france/2014/07/28/01016-20140728ARTFIG00229-sexe-drogue-et-magistrature-le-cocktail-qui-secoue-l-ile-de-mayotte.php" target="_blank" rel="noopener">Sexe, drogue et magistrature : le cocktail qui secoue l’île de <span class="mq-lien-article__fin">Mayotte<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span></div>
 </div>
-<a class="read" href="https://www.lefigaro.fr/actualite-france/2014/07/28/01016-20140728ARTFIG00229-sexe-drogue-et-magistrature-le-cocktail-qui-secoue-l-ile-de-mayotte.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 </div>
 </div>
@@ -574,28 +547,28 @@
 <div class="date">20/01/2016</div>
 <div>
 <div class="source">Le Journal de Mayotte</div>
-<div class="title">Affaire Roukia : 5 ans pour Belmer, homicide involontaire retenu pour 3 membres du GIR</div>
+<a class="title mq-lien-article" href="https://lejournaldemayotte.yt/2016/01/20/affaire-roukia-5-ans-pour-belmer-lhomicide-involontaire-retenu-pour-3-membres-du-gir/" target="_blank" rel="noopener">Affaire Roukia : 5 ans pour Belmer, homicide involontaire retenu pour 3 membres du <span class="mq-lien-article__fin">GIR<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge local">Affaire Roukia</span></div>
 </div>
-<a class="read" href="https://lejournaldemayotte.yt/2016/01/20/affaire-roukia-5-ans-pour-belmer-lhomicide-involontaire-retenu-pour-3-membres-du-gir/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale">
 <div class="date">25/02/2016</div>
 <div>
 <div class="source">DomTomActu</div>
-<div class="title">Le juge Hakim Karki passe à l’attaque</div>
+<a class="title mq-lien-article" href="https://www.domtomactu.com/2016/02/25/le-juge-hakim-karki-passe-a-lattaque/" target="_blank" rel="noopener">Le juge <span class="mq-nobr">Hakim Karki</span> passe à <span class="mq-lien-article__fin">l’attaque<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span></div>
 </div>
-<a class="read" href="https://www.domtomactu.com/2016/02/25/le-juge-hakim-karki-passe-a-lattaque/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces roukia">
 <div class="date">30/06/2016</div>
 <div>
 <div class="source">Le Journal de Mayotte</div>
-<div class="title">Procès Roukia en appel : les 3 anciens du GIR relaxés</div>
+<a class="title mq-lien-article" href="https://lejournaldemayotte.yt/2016/06/30/proces-roukia-en-appel-les-3-anciens-du-gir-relaxes-du-chef-dhomicide-involontaire/" target="_blank" rel="noopener">Procès Roukia en appel : les 3 anciens du GIR <span class="mq-lien-article__fin">relaxés<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge local">Affaire Roukia</span></div>
 </div>
-<a class="read" href="https://lejournaldemayotte.yt/2016/06/30/proces-roukia-en-appel-les-3-anciens-du-gir-relaxes-du-chef-dhomicide-involontaire/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 </div>
 </div>
@@ -620,46 +593,46 @@
 <div class="date">26/04/2019</div>
 <div>
 <div class="source">Le Parisien</div>
-<div class="title">Mayotte : le juge accusé de viol clame son innocence</div>
+<a class="title mq-lien-article" href="https://www.leparisien.fr/faits-divers/mayotte-le-juge-accuse-de-viol-clame-son-innocence-26-04-2019-8060559.php" target="_blank" rel="noopener">Mayotte : le juge accusé de viol clame son <span class="mq-lien-article__fin">innocence<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.leparisien.fr/faits-divers/mayotte-le-juge-accuse-de-viol-clame-son-innocence-26-04-2019-8060559.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">26/04/2019</div>
 <div>
 <div class="source">Le Parisien</div>
-<div class="title">Juge accusé de viol à Mayotte : complot ou manipulation grotesque ?</div>
+<a class="title mq-lien-article" href="https://www.leparisien.fr/faits-divers/juge-accuse-de-viol-a-mayotte-complot-ou-manipulation-grotesque-26-04-2019-8060556.php" target="_blank" rel="noopener">Juge accusé de viol à Mayotte : complot ou manipulation grotesque <span class="mq-lien-article__fin">?<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.leparisien.fr/faits-divers/juge-accuse-de-viol-a-mayotte-complot-ou-manipulation-grotesque-26-04-2019-8060556.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">27/04/2019</div>
 <div>
 <div class="source">Linfo.re</div>
-<div class="title">Mayotte : le juge accusé de viol s’est dit victime de complot</div>
+<a class="title mq-lien-article" href="https://www.linfo.re/ocean-indien/mayotte/mayotte-le-juge-accuse-de-viol-s-est-dit-victime-de-complot" target="_blank" rel="noopener">Mayotte : le juge accusé de viol s’est dit victime de <span class="mq-lien-article__fin">complot<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.linfo.re/ocean-indien/mayotte/mayotte-le-juge-accuse-de-viol-s-est-dit-victime-de-complot" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">29/04/2019</div>
 <div>
 <div class="source">Le Journal de Mayotte</div>
-<div class="title">Affaire Karki : un complot ?</div>
+<a class="title mq-lien-article" href="https://old1.lejournaldemayotte.com/2019/04/29/affaire-karki-un-complot/" target="_blank" rel="noopener">Affaire Karki : un complot <span class="mq-lien-article__fin">?<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://old1.lejournaldemayotte.com/2019/04/29/affaire-karki-un-complot/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="archives videos">
 <div class="date">22/10/2019</div>
 <div>
 <div class="source">Facebook</div>
-<div class="title">Création du comité de soutien mahorais – reportage vidéo</div>
+<a class="title mq-lien-article" href="https://www.facebook.com/watch/?v=386693525569282" target="_blank" rel="noopener">Création du comité de soutien mahorais – reportage <span class="mq-lien-article__fin">vidéo<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge video">Vidéo</span><span class="badge archive">Archive</span></div>
 </div>
-<a class="read" href="https://www.facebook.com/watch/?v=386693525569282" rel="noopener" target="_blank">Lire</a>
+
 </article>
 </div>
 </div>
@@ -670,7 +643,7 @@
 <div class="date">19/05/2020</div>
 <div>
 <div class="source">Les Nouvelles de Mayotte</div>
-<div class="title">Enquête - L’affaire Karki dans Vanity Fair</div>
+<div class="title">Enquête - L’affaire Karki dans <span class="mq-nobr">Vanity Fair</span></div>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge archive">Archive</span></div>
 </div>
 <span class="no-link">Archive à intégrer</span>
@@ -684,10 +657,10 @@
 <div class="date">06/09/2021</div>
 <div>
 <div class="source">Zinfos974</div>
-<div class="title">Mayotte : l’enquête du juge Karki contre deux gendarmes reposait sur du sable</div>
+<a class="title mq-lien-article" href="https://www.zinfos974.com/mayotte-lenquete-du-juge-karki-contre-deux-gendarmes-reposait-sur-du-sable/" target="_blank" rel="noopener">Mayotte : l’enquête du juge Karki contre deux gendarmes reposait sur du <span class="mq-lien-article__fin">sable<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span></div>
 </div>
-<a class="read" href="https://www.zinfos974.com/mayotte-lenquete-du-juge-karki-contre-deux-gendarmes-reposait-sur-du-sable/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 </div>
 </div>
@@ -698,91 +671,91 @@
 <div class="date">24/02/2022</div>
 <div>
 <div class="source">Le Parisien</div>
-<div class="title">Bientôt jugé pour viol, le juge se dit victime d’un complot</div>
+<a class="title mq-lien-article" href="https://www.leparisien.fr/faits-divers/bientot-juge-pour-viol-le-juge-se-dit-victime-dun-complot-24-02-2022-Z3NI3Z2GVBAINBT32EBIBET5TQ.php" target="_blank" rel="noopener">Bientôt jugé pour viol, le juge se dit victime d’un <span class="mq-lien-article__fin">complot<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.leparisien.fr/faits-divers/bientot-juge-pour-viol-le-juge-se-dit-victime-dun-complot-24-02-2022-Z3NI3Z2GVBAINBT32EBIBET5TQ.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">05/12/2022</div>
 <div>
 <div class="source">Le Parisien</div>
-<div class="title">Au procès du juge Hakim Karki accusé de viol à Mayotte, le complot en ligne de défense</div>
+<a class="title mq-lien-article" href="https://www.leparisien.fr/faits-divers/au-proces-du-juge-hakim-karki-accuse-de-viol-a-mayotte-le-complot-en-ligne-de-defense-05-12-2022-F2H2LVWLEZH4VMTKEITDN5EAYA.php" target="_blank" rel="noopener">Au procès du juge <span class="mq-nobr">Hakim Karki</span> accusé de viol à Mayotte, le complot en ligne de <span class="mq-lien-article__fin">défense<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.leparisien.fr/faits-divers/au-proces-du-juge-hakim-karki-accuse-de-viol-a-mayotte-le-complot-en-ligne-de-defense-05-12-2022-F2H2LVWLEZH4VMTKEITDN5EAYA.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">06/12/2022</div>
 <div>
 <div class="source">Vosges Matin</div>
-<div class="title">Jugé pour viol en 2014, un ex-juge d’instruction crie à la machination</div>
+<a class="title mq-lien-article" href="https://www.vosgesmatin.fr/faits-divers-justice/2022/12/06/juge-pour-viol-en-2014-un-ex-juge-d-instruction-crie-a-la-machination" target="_blank" rel="noopener">Jugé pour viol en 2014, un <span class="mq-nobr">ex-juge</span> d’instruction crie à la <span class="mq-lien-article__fin">machination<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.vosgesmatin.fr/faits-divers-justice/2022/12/06/juge-pour-viol-en-2014-un-ex-juge-d-instruction-crie-a-la-machination" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">08/12/2022</div>
 <div>
 <div class="source">Le Journal de Mayotte</div>
-<div class="title">Jugé pour viol, l’ex-magistrat Hakim Karki crie toujours au complot</div>
+<a class="title mq-lien-article" href="https://lejournaldemayotte.yt/2022/12/08/juge-pour-viol-lex-magistrat-hakim-karki-crie-toujours-au-complot/" target="_blank" rel="noopener">Jugé pour viol, l’ex-magistrat <span class="mq-nobr">Hakim Karki</span> crie toujours au <span class="mq-lien-article__fin">complot<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://lejournaldemayotte.yt/2022/12/08/juge-pour-viol-lex-magistrat-hakim-karki-crie-toujours-au-complot/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">09/12/2022</div>
 <div>
 <div class="source">France TV Info La 1ère</div>
-<div class="title">Nicolas Goinard : le juge Karki s’est servi de son étiquette de chevalier blanc</div>
+<a class="title mq-lien-article" href="https://la1ere.francetvinfo.fr/mayotte/nicolas-goinard-le-juge-karki-s-est-servi-de-son-etiquette-de-chevalier-blanc-1347696.html" target="_blank" rel="noopener">Nicolas Goinard : le juge Karki s’est servi de son étiquette de chevalier <span class="mq-lien-article__fin">blanc<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://la1ere.francetvinfo.fr/mayotte/nicolas-goinard-le-juge-karki-s-est-servi-de-son-etiquette-de-chevalier-blanc-1347696.html" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">16/12/2022</div>
 <div>
 <div class="source">Le Parisien</div>
-<div class="title">L’ex-juge d’instruction Hakim Karki condamné à huit ans de prison pour viol</div>
+<a class="title mq-lien-article" href="https://www.leparisien.fr/faits-divers/lex-juge-dinstruction-hakim-karki-condamne-a-huit-ans-de-prison-pour-viol-16-12-2022-RYWAJUGFDJGVJJNCUMT224UHXA.php" target="_blank" rel="noopener">L’<span class="mq-nobr">ex-juge</span> d’instruction <span class="mq-nobr">Hakim Karki</span> condamné à huit ans de prison pour <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.leparisien.fr/faits-divers/lex-juge-dinstruction-hakim-karki-condamne-a-huit-ans-de-prison-pour-viol-16-12-2022-RYWAJUGFDJGVJJNCUMT224UHXA.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">16/12/2022</div>
 <div>
 <div class="source">Le Figaro</div>
-<div class="title">Huit ans de prison pour un ex-juge de Mayotte jugé pour viol</div>
+<a class="title mq-lien-article" href="https://www.lefigaro.fr/flash-actu/huit-ans-de-prison-pour-un-ex-juge-de-mayotte-juge-pour-viol-20221216" target="_blank" rel="noopener">Huit ans de prison pour un <span class="mq-nobr">ex-juge</span> de Mayotte jugé pour <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.lefigaro.fr/flash-actu/huit-ans-de-prison-pour-un-ex-juge-de-mayotte-juge-pour-viol-20221216" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">17/12/2022</div>
 <div>
 <div class="source">Le Journal de Mayotte</div>
-<div class="title">Reconnu coupable de viol, l’ex-juge Hakim Karki condamné à 8 ans de prison</div>
+<a class="title mq-lien-article" href="https://lejournaldemayotte.yt/2022/12/17/reconnu-coupable-de-viol-lex-juge-hakim-karki-condamne-a-8-ans-de-prison-aux-assises/" target="_blank" rel="noopener">Reconnu coupable de viol, l’<span class="mq-nobr">ex-juge</span> <span class="mq-nobr">Hakim Karki</span> condamné à 8 ans de <span class="mq-lien-article__fin">prison<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://lejournaldemayotte.yt/2022/12/17/reconnu-coupable-de-viol-lex-juge-hakim-karki-condamne-a-8-ans-de-prison-aux-assises/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">17/12/2022</div>
 <div>
 <div class="source">Imaz Press</div>
-<div class="title">Le juge Karki condamné à huit ans de prison</div>
+<a class="title mq-lien-article" href="https://imazpress.com/actus-reunion/le-juge-karki-condamne-a-huit-ans-de-prison-pour-le-viol-dune-enseignante-a-mayotte" target="_blank" rel="noopener">Le juge Karki condamné à huit ans de <span class="mq-lien-article__fin">prison<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://imazpress.com/actus-reunion/le-juge-karki-condamne-a-huit-ans-de-prison-pour-le-viol-dune-enseignante-a-mayotte" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">18/12/2022</div>
 <div>
 <div class="source">Nice Matin</div>
-<div class="title">Un ex-juge condamné à huit ans de prison pour viol à Mayotte</div>
+<a class="title mq-lien-article" href="https://www.nicematin.com/justice/il-affirme-que-la-victime-lui-avait-saute-dessus-la-cour-dassises-condamne-un-ex-juge-a-huit-ans-de-prison-pour-viol-a-mayotte-815384" target="_blank" rel="noopener">Un <span class="mq-nobr">ex-juge</span> condamné à huit ans de prison pour viol à <span class="mq-lien-article__fin">Mayotte<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.nicematin.com/justice/il-affirme-que-la-victime-lui-avait-saute-dessus-la-cour-dassises-condamne-un-ex-juge-a-huit-ans-de-prison-pour-viol-a-mayotte-815384" rel="noopener" target="_blank">Lire</a>
+
 </article>
 </div>
 </div>
@@ -793,106 +766,145 @@
 <div class="date">19/03/2024</div>
 <div>
 <div class="source">France TV Info La 1ère</div>
-<div class="title">L’ancien juge de Mayotte Hakim Karki jugé en appel pour viol</div>
+<a class="title mq-lien-article" href="https://la1ere.francetvinfo.fr/mayotte/l-ancien-juge-de-mayotte-hakim-karki-juge-en-appel-pour-viol-a-partir-de-ce-mardi-1473573.html" target="_blank" rel="noopener">L’ancien juge de Mayotte <span class="mq-nobr">Hakim Karki</span> jugé en appel pour <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://la1ere.francetvinfo.fr/mayotte/l-ancien-juge-de-mayotte-hakim-karki-juge-en-appel-pour-viol-a-partir-de-ce-mardi-1473573.html" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">22/03/2024</div>
 <div>
 <div class="source">Zinfos974</div>
-<div class="title">L’ancien juge d’instruction Hakim Karki à la barre de la cour d’assises de Créteil en appel</div>
+<a class="title mq-lien-article" href="https://www.zinfos974.com/mayotte-lancien-juge-dinstruction-hakim-karki-a-la-barre-de-la-cour-dassises-de-creteil-en-appel/" target="_blank" rel="noopener">L’ancien juge d’instruction <span class="mq-nobr">Hakim Karki</span> à la barre de la cour d’assises de Créteil en <span class="mq-lien-article__fin">appel<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.zinfos974.com/mayotte-lancien-juge-dinstruction-hakim-karki-a-la-barre-de-la-cour-dassises-de-creteil-en-appel/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">04/04/2024</div>
 <div>
 <div class="source">Le Parisien</div>
-<div class="title">L’ex-juge d’instruction de Mayotte condamné en appel à 10 ans de réclusion criminelle</div>
+<a class="title mq-lien-article" href="https://www.leparisien.fr/faits-divers/lex-juge-dinstruction-de-mayotte-condamne-en-appel-a-10-ans-de-reclusion-criminelle-pour-viol-04-04-2024-CKBR7UENTVHG3EVK2V7JND56YA.php" target="_blank" rel="noopener">L’<span class="mq-nobr">ex-juge</span> d’instruction de Mayotte condamné en appel à 10 ans de réclusion <span class="mq-lien-article__fin">criminelle<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.leparisien.fr/faits-divers/lex-juge-dinstruction-de-mayotte-condamne-en-appel-a-10-ans-de-reclusion-criminelle-pour-viol-04-04-2024-CKBR7UENTVHG3EVK2V7JND56YA.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">04/04/2024</div>
 <div>
 <div class="source">Ouest-France</div>
-<div class="title">Un ancien juge de Mayotte condamné en appel à 10 ans de réclusion pour viol</div>
+<a class="title mq-lien-article" href="https://www.ouest-france.fr/faits-divers/violence-sexuelle/viol/un-ancien-juge-de-mayotte-condamne-en-appel-a-10-ans-de-reclusion-pour-viol-1c42222d-636b-4612-9521-f30054e97a93" target="_blank" rel="noopener">Un ancien juge de Mayotte condamné en appel à 10 ans de réclusion pour <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.ouest-france.fr/faits-divers/violence-sexuelle/viol/un-ancien-juge-de-mayotte-condamne-en-appel-a-10-ans-de-reclusion-pour-viol-1c42222d-636b-4612-9521-f30054e97a93" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">05/04/2024</div>
 <div>
 <div class="source">Le Parisien</div>
-<div class="title">Affaire Karki : condamné en appel pour viol, l’ancien juge se pourvoit en cassation</div>
+<a class="title mq-lien-article" href="https://www.leparisien.fr/faits-divers/affaire-karki-condamne-en-appel-pour-viol-lancien-juge-se-pourvoit-en-cassation-05-04-2024-FVQ3QCLVEBF5ZORJV6MVAW3SLY.php" target="_blank" rel="noopener">Affaire Karki : condamné en appel pour viol, l’ancien juge se pourvoit en <span class="mq-lien-article__fin">cassation<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.leparisien.fr/faits-divers/affaire-karki-condamne-en-appel-pour-viol-lancien-juge-se-pourvoit-en-cassation-05-04-2024-FVQ3QCLVEBF5ZORJV6MVAW3SLY.php" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">05/04/2024</div>
 <div>
 <div class="source">Mayotte Hebdo</div>
-<div class="title">L’ex-juge Hakim Karki condamné à dix ans de prison</div>
+<a class="title mq-lien-article" href="https://www.mayottehebdo.com/actualite/justice/lex-juge-hakim-karki-condamne-a-dix-ans-de-prison/" target="_blank" rel="noopener">L’<span class="mq-nobr">ex-juge</span> <span class="mq-nobr">Hakim Karki</span> condamné à dix ans de <span class="mq-lien-article__fin">prison<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.mayottehebdo.com/actualite/justice/lex-juge-hakim-karki-condamne-a-dix-ans-de-prison/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">05/04/2024</div>
 <div>
 <div class="source">Le Figaro</div>
-<div class="title">Un ancien juge de Mayotte condamné en appel à 10 ans de réclusion pour viol</div>
+<a class="title mq-lien-article" href="https://www.lefigaro.fr/faits-divers/un-ancien-juge-de-mayotte-condamne-en-appel-a-10-ans-de-reclusion-pour-viol-20240405" target="_blank" rel="noopener">Un ancien juge de Mayotte condamné en appel à 10 ans de réclusion pour <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.lefigaro.fr/faits-divers/un-ancien-juge-de-mayotte-condamne-en-appel-a-10-ans-de-reclusion-pour-viol-20240405" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-locale proces">
 <div class="date">05/04/2024</div>
 <div>
 <div class="source">Imaz Press</div>
-<div class="title">Mayotte : l’ex-juge Karki condamné en appel à 10 ans de réclusion</div>
+<a class="title mq-lien-article" href="https://imazpress.com/france-monde/mayotte-l-ex-juge-karki-condamne-en-appel-a-10-ans-de-reclusion-pour-viol" target="_blank" rel="noopener">Mayotte : l’<span class="mq-nobr">ex-juge</span> Karki condamné en appel à 10 ans de <span class="mq-lien-article__fin">réclusion<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge local">Presse locale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://imazpress.com/france-monde/mayotte-l-ex-juge-karki-condamne-en-appel-a-10-ans-de-reclusion-pour-viol" rel="noopener" target="_blank">Lire</a>
+
 </article>
 <article class="press-item" data-category="presse-nationale proces">
 <div class="date">28/04/2024</div>
 <div>
 <div class="source">Apar TV</div>
-<div class="title">10 ans de prison pour l’ex-juge d’instruction de Mayotte condamné pour viol</div>
+<a class="title mq-lien-article" href="https://www.apar.tv/societe/10-ans-de-prison-pour-lex-juge-dinstruction-de-mayotte-condamne-pour-viol/" target="_blank" rel="noopener">10 ans de prison pour l’<span class="mq-nobr">ex-juge</span> d’instruction de Mayotte condamné pour <span class="mq-lien-article__fin">viol<span class="mq-lien-src__ext" aria-hidden="true"> ↗</span></span><span class="mq-sr"> (nouvel onglet)</span></a>
 <div class="badges"><span class="badge media">Presse nationale</span><span class="badge media">Procès</span></div>
 </div>
-<a class="read" href="https://www.apar.tv/societe/10-ans-de-prison-pour-lex-juge-dinstruction-de-mayotte-condamne-pour-viol/" rel="noopener" target="_blank">Lire</a>
+
 </article>
 </div>
 </div>
 </div>
-</section>
-<section class="support">
+      </div>
+    </section>
+<section class="mq-section mq-section--fin">
+      <div class="mq-conteneur">
+        <div class="mq-revue__soutien mq-sur-fond-bleu">
 <div>
-<h2>Rejoindre le comité de soutien</h2>
+<h2 class="mq-h2">Rejoindre le comité de soutien</h2>
 <p>Pour soutenir l’action du comité, consulter les informations officielles et participer à la mobilisation citoyenne.</p>
 </div>
-<a class="btn" href="https://www.helloasso.com/associations/comite-de-soutien-a-hakim-karki/adhesions/bulletin-d-adhesion-au-comite-de-soutien-de-hakim-karki" rel="noopener" target="_blank">Adhérer au comité</a>
-</section>
-</div>
+<a class="mq-bouton mq-bouton--blanc" href="https://www.helloasso.com/associations/comite-de-soutien-a-hakim-karki/adhesions/bulletin-d-adhesion-au-comite-de-soutien-de-hakim-karki" rel="noopener" target="_blank">Adhérer au comité</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Comité de soutien au juge Hakim Karki</strong>
+  <footer class="mq-pied mq-sur-fond-bleu">
+    <div class="mq-conteneur">
+      <div class="mq-pied__tete">
+        <span class="mq-pied__nom">Comité de soutien au juge Hakim Karki</span>
         <p>Un site d’information, de soutien et de mobilisation citoyenne.</p>
       </div>
-      <div class="footer-links">
-        <a href="../contact/">Contact</a>
-        <a href="../mentions-legales/">Mentions légales</a>
+      <nav class="mq-pied__nav" aria-label="Toutes les pages">
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Comprendre l’affaire</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../">Accueil</a></li>
+            <li><a href="../chronologie/">Chronologie</a></li>
+            <li><a href="../faits-troublants/">Des faits troublants</a></li>
+            <li><a href="../l-affaire-roukia/">L’affaire Roukia</a></li>
+            <li><a href="../un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="../departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Sources et documents</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../revue-presse/">Revue de presse</a></li>
+            <li><a href="../pvag/">PV-AG</a></li>
+            <li><a href="../posts/">/posts/</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Le comité et agir</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../comite-de-soutien/">Le comité</a></li>
+            <li><a href="../evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="../les-besoins/">Les besoins</a></li>
+            <li><a href="../ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="../partager/">Partager le site</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+      <div class="mq-pied__bas">
+        <ul class="mq-pied__legaux">
+          <li><a href="../mentions-legales/">Mentions légales</a></li>
+          <!-- Emplacement réservé : « Politique de confidentialité » (F-10, page inexistante — aucun lien inactif affiché) -->
+          <!-- Emplacement réservé : « Gestion des cookies » (§ 12.5, dispositif non implémenté — aucun lien inactif affiché) -->
+        </ul>
       </div>
     </div>
   </footer>
