@@ -596,3 +596,12 @@ a:hover { color: var(--mq-bleu-fonce); }
 .mq-retour:focus-visible { outline: 3px solid var(--mq-ocre); outline-offset: 3px; }
 /* Les URL longues citées dans le texte (ex. article de presse) peuvent rompre */
 .mq-intro a { overflow-wrap: anywhere; }
+
+/* ---------- Page « Un juge soumis à des pressions » (étape 11) ---------- */
+/* Texte vocal uniquement (ex. « nouvel onglet »), masqué à l'écran */
+.mq-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* Lien de source presse : ligne dédiée sous son passage, libellé souligné ≥ 44 px */
+.mq-lien-src { display: block; margin: 4px 0 14px; }
+.mq-lien-src a { display: inline-block; min-height: var(--mq-cible); padding: 10px 2px; font-weight: 600; }
+.mq-lien-src__ext { font-size: 0.82em; }
+.mq-lien-src__fin { white-space: nowrap; }
