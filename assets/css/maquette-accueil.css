@@ -605,3 +605,16 @@ a:hover { color: var(--mq-bleu-fonce); }
 .mq-lien-src a { display: inline-block; min-height: var(--mq-cible); padding: 10px 2px; font-weight: 600; }
 .mq-lien-src__ext { font-size: 0.82em; }
 .mq-lien-src__fin { white-space: nowrap; }
+
+/* ---------- Page « La départementalisation à Mayotte » (étape 12) ---------- */
+/* Image d'ouverture avec légende, largeur source (344 px) plafonnée au conteneur */
+.mq-figure { margin: 0 0 26px; }
+.mq-figure__img { display: block; width: 344px; max-width: 100%; height: auto; border-radius: 8px; }
+.mq-figure__legende { margin-top: 8px; font-size: 13px; color: var(--mq-ardoise); }
+
+/* Composition bicolonne autorisée : image + légende à gauche, titre et 1er paragraphe à droite */
+.mq-depart__tete .mq-intro { margin-top: clamp(16px, 2vw, 22px); }
+@media (min-width: 900px) {
+  .mq-depart { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); column-gap: clamp(32px, 4vw, 56px); align-items: start; }
+  .mq-depart .mq-figure { margin: 0; }
+}
