@@ -679,3 +679,23 @@ a:hover { color: var(--mq-bleu-fonce); }
 @media (min-width: 760px) { .mq-revue__soutien { grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 32px; } }
 .mq-revue__soutien .mq-h2 { color: var(--mq-blanc); margin: 0 0 8px; }
 .mq-revue__soutien p { margin: 0; color: rgba(255, 255, 255, 0.82); font-size: 16px; line-height: 1.6; max-width: 56ch; }
+
+/* ---------- Page « Les besoins » (étape 14) ---------- */
+/* Items de besoins : cartes claires, repère ocre */
+.mq-besoins__liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.mq-besoins__item { position: relative; background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-radius: var(--mq-rayon); padding: 18px 20px 18px 46px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-besoins__item::before { content: ""; position: absolute; left: 20px; top: 25px; width: 9px; height: 9px; border-radius: 50%; background: var(--mq-ocre); }
+.mq-besoins__item p { margin: 0; color: var(--mq-ardoise); font-size: 16.5px; line-height: 1.65; }
+.mq-besoins__item strong { color: var(--mq-encre); }
+.mq-besoins__item p a:not(.mq-bouton) { padding-block: 13px; }
+.mq-besoins__item .mq-bouton { margin-top: 12px; }
+@media (min-width: 900px) {
+  .mq-besoins__item--action { display: flex; align-items: center; justify-content: flex-start; gap: 20px; }
+  .mq-besoins__item--action .mq-bouton { margin-top: 0; flex-shrink: 0; }
+}
+.mq-besoins__courrier { margin: 20px 0; }
+.mq-besoins__courrier > p { margin: 0 0 16px; color: var(--mq-ardoise); font-size: 17px; line-height: 1.7; }
+.mq-besoins__courrier > p strong { color: var(--mq-encre); }
+.mq-besoins__adresse { background: var(--mq-blanc); border: 1px solid var(--mq-or-clair); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 18px 22px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.06); }
+.mq-besoins__adresse p { margin: 0; font-weight: 700; color: var(--mq-encre); font-size: 16.5px; line-height: 1.55; }
+.mq-besoins__adresse p + p { margin-top: 4px; }

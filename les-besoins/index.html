@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Les besoins | Comité de soutien au juge Hakim Karki</title>
   <meta name="description" content="Page dédiée aux besoins du comité et aux formes de soutien utiles." />
-  <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="../assets/css/maquette-accueil.css" />
   <link rel="stylesheet" href="../assets/css/navigation.css" />
 </head>
 <body>
@@ -66,48 +66,112 @@
     </div>
   </header>
 
-  <main class="page-main">
-    <section class="page-hero">
-      <div class="container">
-        <span class="breadcrumb">Accueil / Les besoins</span>
-        <h1>Les besoins</h1>
-        <p>Page dédiée aux besoins du comité et aux formes de soutien utiles.</p>
+  <main>
+    <section class="mq-entete-page">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <h1 class="mq-h1 mq-entete-page__titre">Les besoins</h1>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="placeholder-panel">
-          <p class="section-kicker">Page en construction</p>
-          <h2>Page en cours de réalisation.</h2>
-          <p>Cette section sera prochainement enrichie avec les contenus officiels du comité, repris depuis Systeme.io puis réécrits, structurés et intégrés dans le nouveau site GitHub.</p>
-          <ul class="placeholder-list">
-            <li>Contenu actuel à récupérer depuis Systeme.io</li>
-            <li>Réécriture et hiérarchisation éditoriale</li>
-            <li>Intégration HTML/CSS responsive</li>
-          </ul>
-          <div class="page-actions">
-            <a class="btn primary" href="../">Retour à l’accueil</a>
-            <a class="btn secondary" href="../chronologie/">Voir la chronologie</a>
+    <section class="mq-section mq-section--collee">
+      <div class="mq-conteneur mq-conteneur--etroit mq-besoins">
+        <ul class="mq-besoins__liste">
+          <li class="mq-besoins__item"><p><strong>Lui écrire :</strong> ses conditions d’incarcération et la confirmation de sa peine ne peuvent que peser sur le moral d' Hakim qui a besoin d’être soutenu et d’atténuer ainsi le sentiment d'injustice qui l'atteint profondément et les conditions de son isolement.</p></li>
+        </ul>
+        <div class="mq-besoins__courrier">
+          <p><strong>Vos courriers sont précieux</strong>, voici l'adresse à date (depuis le 26/03/2025) au Centre pénitentiaire de Chateau-Thierry :</p>
+          <div class="mq-besoins__adresse">
+            <p>Hakim KARKI n° 4774</p>
+            <p>centre pénitentiaire de CHATEAU-THIERRY</p>
+            <p>54, avenue de Soissons</p>
+            <p>02400 CHÂTEAU-THIERRY</p>
           </div>
         </div>
+        <ul class="mq-besoins__liste">
+          <li class="mq-besoins__item mq-besoins__item--action"><p><strong>Rejoignez</strong> le comité de soutien</p><a class="mq-bouton mq-bouton--principal" href="https://www.helloasso.com/associations/comite-de-soutien-a-hakim-karki/adhesions/bulletin-d-adhesion-au-comite-de-soutien-de-hakim-karki" target="_blank" rel="noopener">Adhérer au comité</a></li>
+          <li class="mq-besoins__item"><p><strong>Témoignages</strong> : vous connaissez ou avez été en contact avec le juge Karki et pouvez attester de sa probité et son respect des personnes, des femmes notamment, ou de tout fait utile à la manifestation de la vérité, exprimez-le (cliquez <a href="https://www.helloasso.com/associations/comite-de-soutien-a-hakim-karki/adhesions/bulletin-d-adhesion-au-comite-de-soutien-de-hakim-karki" target="_blank" rel="noopener"><strong><u>ICI</u></strong><span class="mq-sr"> (nouvel onglet)</span></a> pour nous  joindre).</p></li>
+          <li class="mq-besoins__item"><p><strong>Relayez ce site</strong> et les éléments permettant de susciter l’attention des personnes et des <strong>médias</strong> (voir <a href="../revue-presse/"><u>Communiqué de Presse</u></a>) sur le cas du juge Hakim Karki, <strong>prisonnier parce qu’il faisait trop bien son métier.</strong></p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mq-section">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-adhesion">
+          <h2 class="mq-h2 mq-adhesion__titre">Bulletin d'adhésion au comité de soutien du juge Hakim Karki</h2>
+          <img class="mq-adhesion__qr" src="../assets/img/qrcode-adhesion.png" alt="QR Code pour adhérer au comité de soutien" width="150" height="150" />
+          <p>Pour adhérer</p>
+          <a class="mq-bouton mq-bouton--principal" href="https://www.helloasso.com/associations/comite-de-soutien-a-hakim-karki/adhesions/bulletin-d-adhesion-au-comite-de-soutien-de-hakim-karki" target="_blank" rel="noopener">Cliquez ici 👆</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section mq-section--collee mq-section--fin">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-actions-fin">
+          <a class="mq-lien-fleche" href="../ecrire-a-hakim-karki/">Écrivez à Hakim karki -&gt;</a>
+          <a class="mq-lien-fleche" href="../partager/">PARTAGEZ LE SITE -&gt;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section mq-suite" id="mq-suite" aria-labelledby="mq-suite-titre" hidden>
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <h2 class="mq-h2" id="mq-suite-titre">Dans la même rubrique</h2>
+        <ul class="mq-suite__grille" id="mq-suite-liens"></ul>
       </div>
     </section>
   </main>
 
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Comité de soutien au juge Hakim Karki</strong>
+  <footer class="mq-pied mq-sur-fond-bleu">
+    <div class="mq-conteneur">
+      <div class="mq-pied__tete">
+        <span class="mq-pied__nom">Comité de soutien au juge Hakim Karki</span>
         <p>Un site d’information, de soutien et de mobilisation citoyenne.</p>
       </div>
-      <div class="footer-links">
-        <a href="../contact/">Contact</a>
-        <a href="../mentions-legales/">Mentions légales</a>
+      <nav class="mq-pied__nav" aria-label="Toutes les pages">
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Comprendre l’affaire</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../">Accueil</a></li>
+            <li><a href="../chronologie/">Chronologie</a></li>
+            <li><a href="../faits-troublants/">Des faits troublants</a></li>
+            <li><a href="../l-affaire-roukia/">L’affaire Roukia</a></li>
+            <li><a href="../un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="../departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Sources et documents</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../revue-presse/">Revue de presse</a></li>
+            <li><a href="../pvag/">PV-AG</a></li>
+            <li><a href="../posts/">/posts/</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Le comité et agir</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../comite-de-soutien/">Le comité</a></li>
+            <li><a href="../evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="../les-besoins/">Les besoins</a></li>
+            <li><a href="../ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="../partager/">Partager le site</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+      <div class="mq-pied__bas">
+        <ul class="mq-pied__legaux">
+          <li><a href="../mentions-legales/">Mentions légales</a></li>
+          <!-- Emplacement réservé : « Politique de confidentialité » (F-10, page inexistante — aucun lien inactif affiché) -->
+          <!-- Emplacement réservé : « Gestion des cookies » (§ 12.5, dispositif non implémenté — aucun lien inactif affiché) -->
+        </ul>
       </div>
     </div>
   </footer>
+
   <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/cartes-suite.js"></script>
 </body>
 </html>
