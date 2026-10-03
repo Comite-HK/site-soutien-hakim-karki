@@ -699,3 +699,32 @@ a:hover { color: var(--mq-bleu-fonce); }
 .mq-besoins__adresse { background: var(--mq-blanc); border: 1px solid var(--mq-or-clair); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 18px 22px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.06); }
 .mq-besoins__adresse p { margin: 0; font-weight: 700; color: var(--mq-encre); font-size: 16.5px; line-height: 1.55; }
 .mq-besoins__adresse p + p { margin-top: 4px; }
+
+/* ---------- Page « Événements » (étape 15) ---------- */
+/* Compte-rendu : blocs aérés, repères ocre, témoins en cartes */
+.mq-evts__chapo { margin: 16px 0 0; max-width: 62ch; color: var(--mq-ardoise); font-size: clamp(17px, 1.6vw, 19px); line-height: 1.65; }
+.mq-evts__date { display: inline-block; margin: 14px 0 0; padding: 8px 14px; background: var(--mq-blanc); border: 1px solid var(--mq-or-clair); border-radius: 999px; color: var(--mq-encre); font-size: 15px; font-weight: 700; }
+.mq-evts__bloc + .mq-evts__bloc, .mq-evts__bloc + .mq-evts__etapes, .mq-evts__etapes + .mq-evts__bloc { margin-top: 42px; }
+.mq-evts__bloc .mq-h2 { margin: 0 0 14px; }
+.mq-evts__bloc p { margin: 0; color: var(--mq-ardoise); font-size: 16.5px; line-height: 1.7; }
+.mq-evts__bloc p + p { margin-top: 14px; }
+.mq-evts__bloc strong { color: var(--mq-encre); }
+.mq-evts__etapes { list-style: none; margin: 42px 0 0; padding: 0; display: grid; gap: 14px; }
+.mq-evts__etape { background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 18px 22px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-evts__etape h3 { margin: 0 0 8px; color: var(--mq-encre); font-size: 17.5px; }
+.mq-evts__etape p { margin: 0; color: var(--mq-ardoise); font-size: 16px; line-height: 1.65; }
+.mq-evts__etape p + p { margin-top: 10px; }
+.mq-evts__etape strong { color: var(--mq-encre); }
+.mq-evts__temoins-titre { margin: 0 0 14px; color: var(--mq-encre); font-size: 17.5px; }
+.mq-evts__temoins { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+@media (min-width: 700px) { .mq-evts__temoins { grid-template-columns: repeat(3, 1fr); } }
+.mq-evts__temoin { background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-radius: var(--mq-rayon); padding: 16px 18px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-evts__temoin p { margin: 0; color: var(--mq-encre); font-size: 16px; }
+.mq-evts__temoin-leg { margin-top: 4px !important; color: var(--mq-ardoise) !important; font-size: 14px !important; line-height: 1.5; }
+.mq-evts__question { margin-top: 18px; background: var(--mq-blanc); border: 1px solid var(--mq-or-clair); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 16px 20px; }
+.mq-evts__question p { margin: 0; color: var(--mq-ardoise); font-size: 16.5px; line-height: 1.65; }
+.mq-evts__question strong { color: var(--mq-encre); }
+.mq-evts__retour { margin: 40px 0 0; }
+.mq-evts__conclu { margin-top: 34px; padding: 20px 22px; background: var(--mq-ivoire); border: 1px solid var(--mq-trait); border-radius: var(--mq-rayon); text-align: center; }
+.mq-evts__conclu p { margin: 0; color: var(--mq-encre); font-size: 17px; }
+.mq-evts__conclu-leg { margin-top: 6px !important; color: var(--mq-ardoise) !important; font-size: 14px !important; }
