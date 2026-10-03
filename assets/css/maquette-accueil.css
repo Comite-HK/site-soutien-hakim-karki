@@ -728,3 +728,53 @@ a:hover { color: var(--mq-bleu-fonce); }
 .mq-evts__conclu { margin-top: 34px; padding: 20px 22px; background: var(--mq-ivoire); border: 1px solid var(--mq-trait); border-radius: var(--mq-rayon); text-align: center; }
 .mq-evts__conclu p { margin: 0; color: var(--mq-encre); font-size: 17px; }
 .mq-evts__conclu-leg { margin-top: 6px !important; color: var(--mq-ardoise) !important; font-size: 14px !important; }
+
+/* ---------- Page « Partager » (étape 16) ---------- */
+.mq-partage__tete { display: grid; gap: 20px; }
+@media (min-width: 700px) { .mq-partage__tete { grid-template-columns: 150px 1fr; align-items: center; } }
+.mq-partage__logo { width: 110px; height: auto; border-radius: 10px; }
+@media (min-width: 700px) { .mq-partage__logo { width: 150px; } }
+.mq-partage__sous { margin: 10px 0 0; color: var(--mq-ocre); font-size: 17px; font-weight: 700; font-style: italic; }
+.mq-partage__chapo { margin: 10px 0 0; max-width: 62ch; color: var(--mq-ardoise); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; }
+.mq-partage__bloc + .mq-partage__bloc, .mq-partage__bloc + .mq-partage__final { margin-top: 44px; }
+.mq-partage__bloc .mq-h2 { margin: 0 0 20px; }
+.mq-partage__intro { margin: -10px 0 18px; color: var(--mq-ardoise); font-size: 16.5px; line-height: 1.65; }
+.mq-partage__grille { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+@media (min-width: 640px) { .mq-partage__grille { grid-template-columns: repeat(2, 1fr); } }
+.mq-partage__carte { display: flex; flex-direction: column; gap: 8px; background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 20px 22px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-partage__icone { margin: 0; font-size: 26px; line-height: 1; }
+.mq-partage__carte h3 { margin: 0; color: var(--mq-encre); font-size: 18px; }
+.mq-partage__desc { margin: 0; color: var(--mq-ardoise); font-size: 15.5px; line-height: 1.6; flex-grow: 1; }
+.mq-partage__carte .mq-bouton { align-self: flex-start; margin-top: 8px; }
+.mq-partage__url { margin: 6px 0 0; padding: 10px 12px; background: var(--mq-ivoire); border: 1px dashed var(--mq-trait); border-radius: 6px; color: var(--mq-encre); font-size: 14px; overflow-wrap: anywhere; }
+.mq-partage__email { background: var(--mq-blanc); border: 1px solid var(--mq-or-clair); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 20px 24px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-partage__email h3 { margin: 0 0 12px; color: var(--mq-encre); font-size: 17px; }
+.mq-partage__email p { margin: 0; color: var(--mq-ardoise); font-size: 16px; line-height: 1.65; }
+.mq-partage__email p + p { margin-top: 10px; }
+.mq-partage__email strong { color: var(--mq-encre); }
+.mq-partage__email-action { margin: 18px 0 0; }
+.mq-partage__final { background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-radius: var(--mq-rayon); padding: 26px 26px 28px; text-align: center; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-partage__final .mq-h2 { margin: 0 0 10px; }
+.mq-partage__final p { margin: 0; color: var(--mq-ardoise); font-size: 16.5px; }
+.mq-partage__cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 20px; }
+
+/* Supports à partager — maquette provisoire autorisée */
+.mq-supports__note { margin: -10px 0 20px; padding: 10px 14px; background: var(--mq-ivoire); border: 1px dashed var(--mq-or-clair); border-radius: 6px; color: var(--mq-ocre); font-size: 14px; font-weight: 700; }
+.mq-supports__groupe + .mq-supports__groupe { margin-top: 26px; }
+.mq-supports__gtitre { margin: 0 0 12px; color: var(--mq-bleu); font-size: 16.5px; text-transform: uppercase; letter-spacing: 0.06em; }
+.mq-supports__carte { display: flex; flex-direction: column; gap: 12px; background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 18px 20px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-supports__titre { margin: 0; color: var(--mq-encre); font-size: 17px; }
+.mq-supports__apercu { display: flex; align-items: center; justify-content: center; aspect-ratio: 1/1; background: var(--mq-ivoire); border: 1px dashed var(--mq-trait); border-radius: 8px; overflow: hidden; }
+.mq-supports__apercu--image { display: block; border-style: solid; }
+.mq-supports__apercu--image img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.mq-supports__placeholder { color: var(--mq-ardoise); font-size: 14px; font-weight: 600; }
+.mq-supports__format { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--mq-ardoise); font-size: 14.5px; }
+.mq-supports__format select { min-height: 44px; padding: 6px 10px; font: inherit; color: var(--mq-encre); background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-radius: 6px; }
+.mq-supports__texte { margin: 0; padding: 10px 12px; background: var(--mq-ivoire); border: 1px dashed var(--mq-trait); border-radius: 6px; color: var(--mq-ardoise); font-size: 14.5px; line-height: 1.55; font-style: italic; flex-grow: 1; }
+.mq-supports__actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.mq-supports__actions .mq-bouton:disabled { opacity: 0.55; cursor: not-allowed; }
+/* Mobile : titres équilibrés et espacement resserré avant l'adhésion */
+@media (max-width: 759.98px) {
+  .mq-partage .mq-h2, .mq-supports__gtitre, .mq-partage-adhesion .mq-adhesion__titre { text-wrap: balance; }
+  .mq-partage-adhesion { padding-top: 20px; }
+}
