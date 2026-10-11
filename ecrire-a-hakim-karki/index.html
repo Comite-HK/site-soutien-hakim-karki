@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Écrire à Hakim Karki | Comité de soutien au juge Hakim Karki</title>
-  <meta name="description" content="Informations pratiques pour adresser un message de soutien." />
-  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Envoyer un message de soutien à Hakim Karki." />
   <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="../assets/css/maquette-accueil.css" />
   <link rel="stylesheet" href="../assets/css/navigation.css" />
 </head>
 <body>
@@ -66,48 +66,224 @@
     </div>
   </header>
 
-  <main class="page-main">
-    <section class="page-hero">
-      <div class="container">
-        <span class="breadcrumb">Accueil / Écrire à Hakim Karki</span>
-        <h1>Écrire à Hakim Karki</h1>
-        <p>Informations pratiques pour adresser un message de soutien.</p>
+  <main>
+    <section class="mq-entete-page mq-ecrire">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <h1 class="mq-h1 mq-entete-page__titre">✉️ Écrire à Hakim Karki</h1>
+        <p class="mq-ecrire__sous">Votre message de soutien compte</p>
+        <p class="mq-ecrire__chapo">Envoyez un message de soutien personnel à Hakim Karki. Vos témoignages et encouragements lui seront transmis directement et l'aideront dans cette épreuve difficile.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="placeholder-panel">
-          <p class="section-kicker">Page en construction</p>
-          <h2>Page en cours de réalisation.</h2>
-          <p>Cette section sera prochainement enrichie avec les contenus officiels du comité, repris depuis Systeme.io puis réécrits, structurés et intégrés dans le nouveau site GitHub.</p>
-          <ul class="placeholder-list">
-            <li>Contenu actuel à récupérer depuis Systeme.io</li>
-            <li>Réécriture et hiérarchisation éditoriale</li>
-            <li>Intégration HTML/CSS responsive</li>
-          </ul>
-          <div class="page-actions">
-            <a class="btn primary" href="../">Retour à l’accueil</a>
-            <a class="btn secondary" href="../chronologie/">Voir la chronologie</a>
-          </div>
+    <section class="mq-section mq-section--collee mq-ecrire">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-ecrire__encart mq-ecrire__encart--important">
+          <h2 class="mq-h2 mq-ecrire__encart-titre">📋 Important</h2>
+          <p><strong>Tous les messages seront transmis personnellement à Hakim Karki par le Comité de Soutien.</strong></p>
+          <p>Vos coordonnées restent confidentielles et ne seront utilisées que pour la transmission de votre message.</p>
+          <p class="mq-ecrire__avis"><strong>⚠️ Message de sécurité normal :</strong> Votre navigateur peut afficher "Ce formulaire n'est pas sécurisé" - c'est un avertissement standard pour ce type de formulaire. <strong>Vos données restent protégées</strong> et seront transmises via votre client email habituel.</p>
         </div>
+
+        <div class="mq-ecrire__encart">
+          <h2 class="mq-h2 mq-ecrire__encart-titre">💡 Conseils pour votre message</h2>
+          <ul class="mq-ecrire__conseils">
+            <li><strong>Soyez respectueux</strong> : Utilisez un ton bienveillant et encourageant</li>
+            <li><strong>Partagez votre soutien</strong> : Exprimez pourquoi cette affaire vous touche</li>
+            <li><strong>Restez constructif</strong> : Évitez les attaques personnelles contre d'autres personnes</li>
+            <li><strong>Soyez authentique</strong> : Vos mots sincères ont plus d'impact</li>
+            <li><strong>Exprimez votre solidarité</strong> : Montrez que Hakim Karki n'est pas seul</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section mq-section--collee mq-ecrire">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <h2 class="mq-h2 mq-ecrire__titre-form">📝 Votre Message pour Hakim Karki</h2>
+        <p class="mq-ecrire__avis mq-ecrire__avis--info"><strong>🔒 Formulaire sécurisé :</strong> Ignorez les avertissements du navigateur - vos données sont protégées et transmises via votre email personnel.</p>
+
+        <form class="mq-ecrire__form" id="mq-ecrire-form" novalidate>
+          <div class="mq-ecrire__ligne">
+            <div class="mq-ecrire__champ">
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" autocomplete="off" required />
+            </div>
+            <div class="mq-ecrire__champ">
+              <label for="nom">Nom de famille</label>
+              <input type="text" id="nom" name="nom" autocomplete="off" required />
+            </div>
+          </div>
+          <div class="mq-ecrire__champ">
+            <label for="ville">Ville (optionnel)</label>
+            <input type="text" id="ville" name="ville" placeholder="Votre ville" autocomplete="off" />
+          </div>
+          <div class="mq-ecrire__champ">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="off" required />
+          </div>
+          <div class="mq-ecrire__champ">
+            <label for="type_message">Type de message</label>
+            <select id="type_message" name="type_message">
+              <option value="soutien" selected>Message de soutien personnel</option>
+              <option value="temoignage">Témoignage professionnel</option>
+              <option value="encouragement">Encouragement</option>
+              <option value="solidarite">Message de solidarité</option>
+            </select>
+          </div>
+          <div class="mq-ecrire__champ">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="9" autocomplete="off" required placeholder="Cher Hakim Karki,
+
+Je vous écris pour vous exprimer mon soutien dans cette épreuve difficile...
+
+Votre courage et votre intégrité sont un exemple pour tous ceux qui croient en une justice indépendante.
+
+Tenez bon, vous n'êtes pas seul dans ce combat.
+
+Cordialement,"></textarea>
+          </div>
+
+          <div class="mq-ecrire__reponse">
+            <h3 class="mq-ecrire__reponse-titre">📬 Souhaitez-vous une réponse d'Hakim Karki ?</h3>
+            <p class="mq-ecrire__case">
+              <input type="checkbox" id="souhaite_reponse" name="souhaite_reponse" aria-controls="adresse_fields" aria-expanded="false" />
+              <label for="souhaite_reponse">Oui, j'aimerais recevoir une réponse d'Hakim Karki</label>
+            </p>
+            <div class="mq-ecrire__champ" id="adresse_fields" hidden>
+              <label for="adresse">Adresse complète</label>
+              <textarea id="adresse" name="adresse" rows="4" autocomplete="off" placeholder="Votre nom complet
+Votre adresse
+Code postal, Ville
+Pays"></textarea>
+            </div>
+          </div>
+
+          <p class="mq-ecrire__case">
+            <input type="checkbox" id="accepte_transmission" required />
+            <label for="accepte_transmission">J'accepte que mon message soit transmis à Hakim Karki par le Comité de Soutien *</label>
+          </p>
+          <p class="mq-ecrire__case">
+            <input type="checkbox" id="accepte_newsletter" />
+            <label for="accepte_newsletter">J'accepte d'être tenu informé des actualités du Comité de Soutien (optionnel)</label>
+          </p>
+
+          <p class="mq-ecrire__note" id="mq-ecrire-note">Envoi indisponible — maquette locale, aucun destinataire configuré.</p>
+          <button class="mq-bouton mq-bouton--principal mq-ecrire__envoyer" type="submit" disabled aria-disabled="true" aria-describedby="mq-ecrire-note">📤 ENVOYER VOTRE COURRIER AU COMITÉ</button>
+
+          <p class="mq-ecrire__avis mq-ecrire__avis--alerte"><strong>⚠️ ATTENTION !</strong> Gmail peut afficher un avertissement de sécurité lors de l'envoi. Cliquez simplement sur "Envoyer quand même" pour continuer - votre message sera transmis en toute sécurité au Comité.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="mq-section mq-section--collee mq-ecrire">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-ecrire__encart">
+          <h2 class="mq-h2 mq-ecrire__encart-titre">🤝 Autres façons de soutenir</h2>
+          <p><strong>Devenez membre du comité :</strong> <a href="https://www.helloasso.com/associations/comite-de-soutien-a-hakim-karki/adhesions/bulletin-d-adhesion-au-comite-de-soutien-de-hakim-karki" target="_blank" rel="noopener">Adhérer sur HelloAsso</a></p>
+          <p><strong>Partagez l'affaire :</strong> <a href="../partager/">Diffuser l'information</a></p>
+          <p><strong>Suivez l'actualité :</strong> <a href="../revue-presse/">Revue de presse</a></p>
+        </div>
+
+        <p class="mq-ecrire__retour"><a class="mq-lien-fleche" href="../">← Retour à l'accueil</a></p>
+
+        <div class="mq-ecrire__final">
+          <p><strong>Justice pour Hakim Karki</strong></p>
+          <p>Vos messages de soutien sont précieux et seront transmis avec respect et confidentialité.</p>
+          <p class="mq-ecrire__mention">Comité de Soutien au Juge Hakim Karki • 2024</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-adhesion">
+          <h2 class="mq-h2 mq-adhesion__titre">Bulletin d'adhésion au comité de soutien du juge <span class="mq-nobr">Hakim Karki</span></h2>
+          <img class="mq-adhesion__qr" src="../assets/img/qrcode-adhesion.png" alt="QR Code pour adhérer au comité de soutien" width="150" height="150" />
+          <p>Pour adhérer</p>
+          <a class="mq-bouton mq-bouton--principal" href="https://www.helloasso.com/associations/comite-de-soutien-a-hakim-karki/adhesions/bulletin-d-adhesion-au-comite-de-soutien-de-hakim-karki" target="_blank" rel="noopener">Cliquez ici 👆</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section mq-section--collee mq-section--fin">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-actions-fin">
+          <a class="mq-lien-fleche" href="../ecrire-a-hakim-karki/">Écrivez à Hakim karki -&gt;</a>
+          <a class="mq-lien-fleche" href="../partager/">PARTAGEZ LE SITE -&gt;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section mq-suite" id="mq-suite" aria-labelledby="mq-suite-titre" hidden>
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <h2 class="mq-h2" id="mq-suite-titre">Dans la même rubrique</h2>
+        <ul class="mq-suite__grille" id="mq-suite-liens"></ul>
       </div>
     </section>
   </main>
 
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Comité de soutien au juge Hakim Karki</strong>
+  <footer class="mq-pied mq-sur-fond-bleu">
+    <div class="mq-conteneur">
+      <div class="mq-pied__tete">
+        <span class="mq-pied__nom">Comité de soutien au juge Hakim Karki</span>
         <p>Un site d’information, de soutien et de mobilisation citoyenne.</p>
       </div>
-      <div class="footer-links">
-        <a href="../contact/">Contact</a>
-        <a href="../mentions-legales/">Mentions légales</a>
+      <nav class="mq-pied__nav" aria-label="Toutes les pages">
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Comprendre l’affaire</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../">Accueil</a></li>
+            <li><a href="../chronologie/">Chronologie</a></li>
+            <li><a href="../faits-troublants/">Des faits troublants</a></li>
+            <li><a href="../l-affaire-roukia/">L’affaire Roukia</a></li>
+            <li><a href="../un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="../departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Sources et documents</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../revue-presse/">Revue de presse</a></li>
+            <li><a href="../pvag/">PV-AG</a></li>
+            <li><a href="../posts/">/posts/</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Le comité et agir</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../comite-de-soutien/">Le comité</a></li>
+            <li><a href="../evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="../les-besoins/">Les besoins</a></li>
+            <li><a href="../ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="../partager/">Partager le site</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+      <div class="mq-pied__bas">
+        <ul class="mq-pied__legaux">
+          <li><a href="../mentions-legales/">Mentions légales</a></li>
+          <!-- Emplacement réservé : « Politique de confidentialité » (F-10, page inexistante — aucun lien inactif affiché) -->
+          <!-- Emplacement réservé : « Gestion des cookies » (§ 12.5, dispositif non implémenté — aucun lien inactif affiché) -->
+        </ul>
       </div>
     </div>
   </footer>
+
   <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/cartes-suite.js"></script>
+  <script>
+    /* Bascule source : la section « Adresse complète » n'apparaît que si une réponse est souhaitée. */
+    (function () {
+      var case_ = document.getElementById('souhaite_reponse');
+      var bloc = document.getElementById('adresse_fields');
+      case_.addEventListener('change', function () {
+        bloc.hidden = !case_.checked;
+        case_.setAttribute('aria-expanded', String(case_.checked));
+      });
+      /* Envoi désactivé (maquette locale) : aucune destination, aucun message transmis. */
+      document.getElementById('mq-ecrire-form').addEventListener('submit', function (e) { e.preventDefault(); });
+    })();
+  </script>
 </body>
 </html>
