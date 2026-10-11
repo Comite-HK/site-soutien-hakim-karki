@@ -837,3 +837,25 @@ a:hover { color: var(--mq-bleu-fonce); }
   .mq-ecrire__form { padding: 20px 16px; }
   .mq-ecrire__encart { padding: 18px 16px; }
 }
+
+/* ---------- Page « /posts/ » — liste des articles (étape 19) ---------- */
+.mq-posts__chapo { margin: 16px 0 0; max-width: 62ch; color: var(--mq-ardoise); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; }
+.mq-posts__grille { display: grid; gap: 26px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 760px) { .mq-posts__grille { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.mq-posts__carte { display: flex; flex-direction: column; background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 18px 20px 20px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-posts__visuel { display: block; border-radius: 8px; overflow: hidden; background: var(--mq-ivoire); border: 1px solid var(--mq-trait); }
+.mq-posts__visuel img { display: block; width: 100%; height: auto; }
+.mq-posts__rubriques { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+.mq-posts__rubriques a { color: var(--mq-ocre); font-weight: 700; text-decoration-color: var(--mq-or-clair); padding-block: 12px; }
+.mq-posts__separateur { color: var(--mq-ardoise); }
+.mq-posts__titre { margin: 6px 0 0; font-size: clamp(18px, 2vw, 21px); line-height: 1.35; text-wrap: balance; }
+.mq-posts__titre a { color: var(--mq-encre); text-decoration-color: var(--mq-or-clair); text-underline-offset: 0.2em; display: inline-block; padding-block: 11px; }
+.mq-posts__titre a:hover { color: var(--mq-bleu); }
+.mq-posts__extrait { margin: 8px 0 0; color: var(--mq-ardoise); font-size: 15.5px; line-height: 1.65; }
+.mq-posts__document { margin: 28px 0 0; }
+.mq-posts__document a { display: inline-block; padding: 12px 16px; background: var(--mq-ivoire); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: 8px; color: var(--mq-bleu); font-weight: 700; overflow-wrap: anywhere; }
+.mq-posts__document a:hover { background: var(--mq-blanc); }
+@media (max-width: 759.98px) {
+  .mq-posts .mq-entete-page__titre, .mq-posts__titre { text-wrap: balance; }
+  .mq-posts__carte { padding: 16px; }
+}
