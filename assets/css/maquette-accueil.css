@@ -778,3 +778,16 @@ a:hover { color: var(--mq-bleu-fonce); }
   .mq-partage .mq-h2, .mq-supports__gtitre, .mq-partage-adhesion .mq-adhesion__titre { text-wrap: balance; }
   .mq-partage-adhesion { padding-top: 20px; }
 }
+
+/* ---------- Page « Contact » (étape 17) ---------- */
+.mq-contact__chapo { margin: 16px 0 0; max-width: 62ch; color: var(--mq-ardoise); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; }
+.mq-contact { background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 24px 26px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-contact__ligne { display: grid; gap: 14px; }
+.mq-contact__champ + .mq-contact__champ, .mq-contact__ligne + .mq-contact__champ, .mq-contact__champ + .mq-contact__note { margin-top: 14px; }
+@media (min-width: 640px) { .mq-contact__ligne--deux { grid-template-columns: 1fr 1fr; } }
+.mq-contact input, .mq-contact textarea { width: 100%; min-height: 46px; padding: 12px 14px; font: inherit; font-size: 16px; color: var(--mq-encre); background: var(--mq-ivoire); border: 1px solid var(--mq-trait); border-radius: 8px; }
+.mq-contact textarea { min-height: 150px; resize: vertical; }
+.mq-contact input::placeholder, .mq-contact textarea::placeholder { color: var(--mq-ardoise); }
+.mq-contact input:focus-visible, .mq-contact textarea:focus-visible { outline: 2px solid var(--mq-bleu); outline-offset: 2px; border-color: var(--mq-bleu); }
+.mq-contact__note { margin: 16px 0 14px; padding: 10px 14px; background: var(--mq-ivoire); border: 1px dashed var(--mq-or-clair); border-radius: 6px; color: var(--mq-ocre); font-size: 14px; font-weight: 700; }
+.mq-contact .mq-bouton:disabled { opacity: 0.55; cursor: not-allowed; }
