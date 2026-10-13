@@ -255,6 +255,42 @@
        et `texte` (texte validé à copier) dans chaque variante.
        Les cartes se mettent à jour seules : aperçu réel, boutons activés. */
     const MQ_SUPPORTS = [
+      { groupe: 'Faire découvrir l\u2019affaire', titre: 'Pour les amis et les proches',
+        variantes: [
+          { format: 'Carr\u00e9', ratio: '1/1',
+            src: '../assets/img/Supports/decouvrir-affaire-amis-carre-apercu.webp',
+            fichier: '../assets/img/Supports/decouvrir-affaire-amis-carre-1254x1254.png',
+            dimensions: '1254 \u00d7 1254 px',
+            texte: `Quand un ami crie à l’injustice, on ne reste pas silencieux.
+
+Hakim Karki, ancien juge d’instruction à Mayotte, conteste sa condamnation. Son comité de soutien rassemble des informations sur son parcours, l’affaire et les démarches pour le soutenir.
+
+Je vous invite à découvrir son histoire, à consulter les éléments présentés et à vous faire votre propre opinion.
+
+👉 https://www.soutien-juge-hakim-karki.fr/
+
+Vous pouvez aussi partager cette publication pour faire connaître l’affaire.
+
+#HakimKarki #ComitéDeSoutien #Justice` }
+        ] },
+      { groupe: 'Faire découvrir l\u2019affaire', titre: 'Pour le grand public',
+        variantes: [
+          { format: 'Carr\u00e9', ratio: '1/1',
+            src: '../assets/img/Supports/decouvrir-affaire-grand-public-carre-apercu.webp',
+            fichier: '../assets/img/Supports/decouvrir-affaire-grand-public-carre-1254x1254.png',
+            dimensions: '1254 \u00d7 1254 px',
+            texte: `La justice nous concerne tous.
+
+Pour soutenir une démarche, il faut d’abord pouvoir s’informer. Le comité de soutien au juge Hakim Karki présente son parcours, la chronologie de l’affaire et une revue de presse.
+
+Hakim Karki conteste sa condamnation. Découvrez les éléments réunis par son comité et faites-vous votre propre opinion.
+
+👉 https://www.soutien-juge-hakim-karki.fr/
+
+Informez-vous et, si vous souhaitez faire connaître cette affaire, partagez cette publication.
+
+#HakimKarki #Justice #IndépendanceDeLaJustice` }
+        ] },
       { groupe: 'Faire découvrir l\u2019affaire', titre: 'Justice ou injustice',
         variantes: [
           { format: 'Carr\u00e9', ratio: '1/1', src: null, texte: null },
@@ -313,7 +349,8 @@
               apercu.innerHTML = '';
               const img = document.createElement('img');
               img.src = v.src;
-              img.alt = s.titre;
+              img.alt = 'Visuel « ' + s.titre + ' »';
+              img.loading = 'lazy';
               apercu.appendChild(img);
             } else {
               apercu.classList.remove('mq-supports__apercu--image');
@@ -322,9 +359,19 @@
               apercu.appendChild(zone);
             }
           };
+          const meta = document.createElement('p');
+          meta.className = 'mq-supports__meta';
+          const majMeta = () => {
+            meta.textContent = (variante && variante.dimensions) ? 'Format ' + variante.format.toLowerCase() + ' — ' + variante.dimensions : '';
+          };
+
           const texte = document.createElement('p');
           texte.className = 'mq-supports__texte';
-          const majTexte = () => { texte.textContent = (variante && variante.texte) ? variante.texte : 'Texte \u00e0 valider'; };
+          const majTexte = () => {
+            const pret = !!(variante && variante.texte);
+            texte.textContent = pret ? variante.texte : 'Texte \u00e0 valider';
+            texte.classList.toggle('mq-supports__texte--pret', pret);
+          };
 
           const actions = document.createElement('div');
           actions.className = 'mq-supports__actions';
@@ -338,18 +385,56 @@
           });
           const boutons = [...actions.querySelectorAll('button')];
           const majBoutons = () => boutons.forEach(b => {
-            const dispo = !!(variante && variante[b.dataset.cle]);
+            const dispo = !!(variante && variante[b.dataset.cle === 'src' ? 'fichier' : b.dataset.cle]);
             b.disabled = !dispo;
             b.setAttribute('aria-disabled', String(!dispo));
             b.title = dispo ? '' : 'Disponible apr\u00e8s int\u00e9gration des fichiers';
           });
 
+          const statut = document.createElement('p');
+          statut.className = 'mq-supports__statut';
+          statut.setAttribute('role', 'status');
+          statut.setAttribute('aria-live', 'polite');
+          const annoncer = (msg, cls) => {
+            statut.textContent = msg;
+            statut.classList.toggle('mq-supports__statut--ok', cls === 'ok');
+            statut.classList.toggle('mq-supports__statut--secours', cls === 'secours');
+          };
+
+          boutons[0].addEventListener('click', () => {
+            if (!variante || !variante.fichier) return;
+            const a = document.createElement('a');
+            a.href = variante.fichier;
+            a.download = variante.fichier.split('/').pop();
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            annoncer('T\u00e9l\u00e9chargement de l\u2019image lanc\u00e9.', 'ok');
+          });
+          boutons[1].addEventListener('click', async () => {
+            if (!variante || !variante.texte) return;
+            try {
+              await navigator.clipboard.writeText(variante.texte);
+              annoncer('Texte copi\u00e9 dans le presse-papiers.', 'ok');
+            } catch (e) {
+              const r = document.createRange();
+              r.selectNodeContents(texte);
+              const sel = window.getSelection();
+              sel.removeAllRanges();
+              sel.addRange(r);
+              annoncer('Copie automatique indisponible — le texte est s\u00e9lectionn\u00e9 : copiez-le avec Ctrl+C.', 'secours');
+            }
+          });
+
           let variante = s.variantes[0];
           rendre(variante);
+          majMeta();
           majTexte();
           majBoutons();
+          li.appendChild(meta);
           li.appendChild(texte);
           li.appendChild(actions);
+          li.appendChild(statut);
 
           if (s.variantes.length > 1) {
             const champ = document.createElement('p');
@@ -365,7 +450,7 @@
               o.textContent = v.format;
               sel.appendChild(o);
             });
-            sel.addEventListener('change', () => { variante = s.variantes[+sel.value]; rendre(variante); majTexte(); majBoutons(); });
+            sel.addEventListener('change', () => { variante = s.variantes[+sel.value]; rendre(variante); majMeta(); majTexte(); majBoutons(); statut.textContent = ''; });
             champ.appendChild(lab);
             champ.appendChild(sel);
             li.insertBefore(champ, apercu.nextSibling);

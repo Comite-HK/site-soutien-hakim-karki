@@ -773,6 +773,12 @@ a:hover { color: var(--mq-bleu-fonce); }
 .mq-supports__texte { margin: 0; padding: 10px 12px; background: var(--mq-ivoire); border: 1px dashed var(--mq-trait); border-radius: 6px; color: var(--mq-ardoise); font-size: 14.5px; line-height: 1.55; font-style: italic; flex-grow: 1; }
 .mq-supports__actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .mq-supports__actions .mq-bouton:disabled { opacity: 0.55; cursor: not-allowed; }
+.mq-supports__meta { margin: -4px 0 0; color: var(--mq-ardoise); font-size: 13.5px; font-weight: 600; }
+.mq-supports__meta:empty { display: none; }
+.mq-supports__texte--pret { font-style: normal; color: var(--mq-encre); border-style: solid; white-space: pre-line; }
+.mq-supports__statut { margin: 0; font-size: 14px; font-weight: 700; }
+.mq-supports__statut--ok { color: #1D5B33; }
+.mq-supports__statut--secours { color: var(--mq-ocre); }
 /* Mobile : titres équilibrés et espacement resserré avant l'adhésion */
 @media (max-width: 759.98px) {
   .mq-partage .mq-h2, .mq-supports__gtitre, .mq-partage-adhesion .mq-adhesion__titre { text-wrap: balance; }
