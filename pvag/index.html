@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PV-AG | Comité de soutien au juge Hakim Karki</title>
-  <meta name="description" content="Page destinée au procès-verbal de l’Assemblée Générale." />
-  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="Procès-verbal de l’Assemblée Générale du 21 décembre 2025, document signé consultable et téléchargeable." />
   <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="../assets/css/maquette-accueil.css" />
   <link rel="stylesheet" href="../assets/css/navigation.css" />
 </head>
 <body>
@@ -66,48 +66,112 @@
     </div>
   </header>
 
-  <main class="page-main">
-    <section class="page-hero">
-      <div class="container">
-        <span class="breadcrumb">Accueil / PV-AG</span>
-        <h1>PV-AG</h1>
-        <p>Page destinée au procès-verbal de l’Assemblée Générale.</p>
+  <main>
+    <section class="mq-entete-page mq-pvag">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <h1 class="mq-h1 mq-entete-page__titre">📋 Procès-Verbal d'Assemblée Générale</h1>
+        <p class="mq-pvag__chapo">21 Décembre 2025 - Association de Soutien au Juge <span class="mq-nobr">Hakim Karki</span></p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="placeholder-panel">
-          <p class="section-kicker">Page en construction</p>
-          <h2>Page en cours de réalisation.</h2>
-          <p>Cette section sera prochainement enrichie avec les contenus officiels du comité, repris depuis Systeme.io puis réécrits, structurés et intégrés dans le nouveau site GitHub.</p>
-          <ul class="placeholder-list">
-            <li>Contenu actuel à récupérer depuis Systeme.io</li>
-            <li>Réécriture et hiérarchisation éditoriale</li>
-            <li>Intégration HTML/CSS responsive</li>
-          </ul>
-          <div class="page-actions">
-            <a class="btn primary" href="../">Retour à l’accueil</a>
-            <a class="btn secondary" href="../chronologie/">Voir la chronologie</a>
-          </div>
+    <section class="mq-section mq-section--collee mq-pvag">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-pvag__document">
+          <p class="mq-pvag__icone" aria-hidden="true">📄</p>
+          <h2 class="mq-h2 mq-pvag__titre">Procès-Verbal d'Assemblée Générale</h2>
+          <p class="mq-pvag__etat">Le document PDF est prêt pour le téléchargement.</p>
+
+          <p class="mq-pvag__actions">
+            <a class="mq-bouton mq-bouton--principal" href="../assets/documents/699c135f9931d_PVdelAGdu21122025sign%C3%A9.pdf" target="_blank" rel="noopener">Consulter le procès-verbal signé&nbsp;<span class="mq-lien-src__ext" aria-hidden="true">↗</span><span class="mq-sr"> (nouvel onglet)</span></a>
+            <a class="mq-bouton mq-bouton--secondaire" href="../assets/documents/699c135f9931d_PVdelAGdu21122025sign%C3%A9.pdf" download>📥 Télécharger le PDF complet</a>
+          </p>
+
+          <p class="mq-pvag__meta">PDF — 3 pages — environ 297 Ko</p>
+          <p class="mq-pvag__authentification">Ce document est officiel et authentifié par le bureau de l'association</p>
+          <p class="mq-pvag__mentions">© 2025 Association de Soutien au Juge Hakim Karki | Tous droits réservés</p>
         </div>
+
+        <p class="mq-pvag__rappel"><a href="../assets/documents/699c135f9931d_PVdelAGdu21122025sign%C3%A9.pdf" target="_blank" rel="noopener">Téléchargez le procès verbal de l'assemblé général&nbsp;<span class="mq-lien-src__ext" aria-hidden="true">↗</span><span class="mq-sr"> (nouvel onglet)</span></a></p>
+      </div>
+    </section>
+
+    <section class="mq-section">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-adhesion">
+          <h2 class="mq-h2 mq-adhesion__titre">Bulletin d'adhésion au comité de soutien du juge <span class="mq-nobr">Hakim Karki</span></h2>
+          <img class="mq-adhesion__qr" src="../assets/img/qrcode-adhesion.png" alt="QR Code pour adhérer au comité de soutien" width="150" height="150" />
+          <p>Pour adhérer</p>
+          <a class="mq-bouton mq-bouton--principal" href="https://www.helloasso.com/associations/comite-de-soutien-a-hakim-karki/adhesions/bulletin-d-adhesion-au-comite-de-soutien-de-hakim-karki" target="_blank" rel="noopener">Cliquez ici 👆</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section mq-section--collee mq-section--fin">
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <div class="mq-actions-fin">
+          <a class="mq-lien-fleche" href="../ecrire-a-hakim-karki/">Écrivez à Hakim karki -&gt;</a>
+          <a class="mq-lien-fleche" href="../partager/">PARTAGEZ LE SITE -&gt;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mq-section mq-suite" id="mq-suite" aria-labelledby="mq-suite-titre" hidden>
+      <div class="mq-conteneur mq-conteneur--etroit">
+        <h2 class="mq-h2" id="mq-suite-titre">Dans la même rubrique</h2>
+        <ul class="mq-suite__grille" id="mq-suite-liens"></ul>
       </div>
     </section>
   </main>
 
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Comité de soutien au juge Hakim Karki</strong>
+  <footer class="mq-pied mq-sur-fond-bleu">
+    <div class="mq-conteneur">
+      <div class="mq-pied__tete">
+        <span class="mq-pied__nom">Comité de soutien au juge Hakim Karki</span>
         <p>Un site d’information, de soutien et de mobilisation citoyenne.</p>
       </div>
-      <div class="footer-links">
-        <a href="../contact/">Contact</a>
-        <a href="../mentions-legales/">Mentions légales</a>
+      <nav class="mq-pied__nav" aria-label="Toutes les pages">
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Comprendre l’affaire</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../">Accueil</a></li>
+            <li><a href="../chronologie/">Chronologie</a></li>
+            <li><a href="../faits-troublants/">Des faits troublants</a></li>
+            <li><a href="../l-affaire-roukia/">L’affaire Roukia</a></li>
+            <li><a href="../un-juge-soumis-a-des-pressions/">Un juge soumis à des pressions</a></li>
+            <li><a href="../departementalisation-a-mayotte/">La départementalisation à Mayotte</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Sources et documents</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../revue-presse/">Revue de presse</a></li>
+            <li><a href="../pvag/" aria-current="page">PV-AG</a></li>
+            <li><a href="../posts/">Archives de presse</a></li>
+          </ul>
+        </section>
+        <section class="mq-pied__groupe">
+          <h3 class="mq-pied__titre">Le comité et agir</h3>
+          <ul class="mq-pied__liens">
+            <li><a href="../comite-de-soutien/">Le comité</a></li>
+            <li><a href="../evenements/">ÉVÈNEMENTS</a></li>
+            <li><a href="../les-besoins/">Les besoins</a></li>
+            <li><a href="../ecrire-a-hakim-karki/">Écrire à Hakim</a></li>
+            <li><a href="../partager/">Partager le site</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </section>
+      </nav>
+      <div class="mq-pied__bas">
+        <ul class="mq-pied__legaux">
+          <li><a href="../mentions-legales/">Mentions légales</a></li>
+          <!-- Emplacement réservé : « Politique de confidentialité » (F-10, page inexistante — aucun lien inactif affiché) -->
+          <!-- Emplacement réservé : « Gestion des cookies » (§ 12.5, dispositif non implémenté — aucun lien inactif affiché) -->
+        </ul>
       </div>
     </div>
   </footer>
+
   <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/cartes-suite.js"></script>
 </body>
 </html>

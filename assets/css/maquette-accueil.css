@@ -865,3 +865,23 @@ a:hover { color: var(--mq-bleu-fonce); }
   .mq-posts .mq-entete-page__titre, .mq-posts__titre { text-wrap: balance; }
   .mq-posts__carte { padding: 16px; }
 }
+
+/* --- PV-AG (page /pvag/) --- */
+.mq-pvag__chapo { margin: 16px 0 0; max-width: 62ch; color: var(--mq-ardoise); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; }
+.mq-pvag__document { background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 30px 32px 28px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
+.mq-pvag__icone { margin: 0; font-size: 34px; line-height: 1; }
+.mq-pvag__titre { margin: 12px 0 0; font-size: clamp(20px, 2.2vw, 25px); line-height: 1.3; }
+.mq-pvag__etat { margin: 10px 0 0; color: var(--mq-ardoise); line-height: 1.65; }
+.mq-pvag__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin: 22px 0 0; }
+.mq-pvag__meta { margin: 20px 0 0; color: var(--mq-ardoise); font-size: 15px; }
+.mq-pvag__authentification { margin: 14px 0 0; padding-top: 14px; border-top: 1px solid var(--mq-trait); color: var(--mq-encre); font-size: 15.5px; line-height: 1.6; }
+.mq-pvag__mentions { margin: 8px 0 0; color: var(--mq-ardoise); font-size: 14px; }
+.mq-pvag__rappel { margin: 26px 0 0; }
+.mq-pvag__rappel a { display: inline-block; padding: 12px 16px; background: var(--mq-ivoire); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: 8px; color: var(--mq-bleu); font-weight: 700; overflow-wrap: anywhere; }
+.mq-pvag__rappel a:hover { background: var(--mq-blanc); }
+@media (max-width: 759.98px) {
+  .mq-pvag .mq-entete-page__titre, .mq-pvag__titre { text-wrap: balance; }
+  .mq-pvag__document { padding: 22px 18px 20px; }
+  .mq-pvag__actions { flex-direction: column; align-items: stretch; gap: 12px; }
+  .mq-pvag__actions .mq-bouton { text-align: center; }
+}
