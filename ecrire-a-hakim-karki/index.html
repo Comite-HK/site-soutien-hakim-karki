@@ -102,7 +102,11 @@
         <h2 class="mq-h2 mq-ecrire__titre-form">📝 Votre Message pour Hakim Karki</h2>
         <p class="mq-ecrire__avis mq-ecrire__avis--info"><strong>🔒 Formulaire sécurisé :</strong> Ignorez les avertissements du navigateur - vos données sont protégées et transmises via votre email personnel.</p>
 
-        <form class="mq-ecrire__form" id="mq-ecrire-form" novalidate>
+        <form class="mq-ecrire__form" id="mq-ecrire-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="5f6d34dc-8653-4c48-b3fd-b042346c81dc" />
+          <input type="hidden" name="subject" value="Courrier pour Hakim — Site du comité" />
+          <input type="hidden" name="from_name" value="Site — Comité de soutien au juge Hakim Karki" />
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="mq-ecrire__ligne">
             <div class="mq-ecrire__champ">
               <label for="prenom">Prénom</label>
@@ -151,7 +155,7 @@ Cordialement,"></textarea>
             </p>
             <div class="mq-ecrire__champ" id="adresse_fields" hidden>
               <label for="adresse">Adresse complète</label>
-              <textarea id="adresse" name="adresse" rows="4" autocomplete="off" placeholder="Votre nom complet
+              <textarea id="adresse" name="adresse" rows="4" autocomplete="off" disabled placeholder="Votre nom complet
 Votre adresse
 Code postal, Ville
 Pays"></textarea>
@@ -159,16 +163,16 @@ Pays"></textarea>
           </div>
 
           <p class="mq-ecrire__case">
-            <input type="checkbox" id="accepte_transmission" required />
+            <input type="checkbox" id="accepte_transmission" name="accepte_transmission" required />
             <label for="accepte_transmission">J'accepte que mon message soit transmis à Hakim Karki par le Comité de Soutien *</label>
           </p>
           <p class="mq-ecrire__case">
-            <input type="checkbox" id="accepte_newsletter" />
+            <input type="checkbox" id="accepte_newsletter" name="accepte_newsletter" />
             <label for="accepte_newsletter">J'accepte d'être tenu informé des actualités du Comité de Soutien (optionnel)</label>
           </p>
 
-          <p class="mq-ecrire__note" id="mq-ecrire-note">Envoi indisponible — maquette locale, aucun destinataire configuré.</p>
-          <button class="mq-bouton mq-bouton--principal mq-ecrire__envoyer" type="submit" disabled aria-disabled="true" aria-describedby="mq-ecrire-note">📤 ENVOYER VOTRE COURRIER AU COMITÉ</button>
+          <p class="mq-ecrire__statut" id="mq-ecrire-statut" role="status" aria-live="polite"></p>
+          <button class="mq-bouton mq-bouton--principal mq-ecrire__envoyer" type="submit" aria-describedby="mq-ecrire-statut">📤 ENVOYER VOTRE COURRIER AU COMITÉ</button>
 
           <p class="mq-ecrire__avis mq-ecrire__avis--alerte"><strong>⚠️ ATTENTION !</strong> Gmail peut afficher un avertissement de sécurité lors de l'envoi. Cliquez simplement sur "Envoyer quand même" pour continuer - votre message sera transmis en toute sécurité au Comité.</p>
         </form>
@@ -272,18 +276,6 @@ Pays"></textarea>
 
   <script src="../assets/js/navigation.js"></script>
   <script src="../assets/js/cartes-suite.js"></script>
-  <script>
-    /* Bascule source : la section « Adresse complète » n'apparaît que si une réponse est souhaitée. */
-    (function () {
-      var case_ = document.getElementById('souhaite_reponse');
-      var bloc = document.getElementById('adresse_fields');
-      case_.addEventListener('change', function () {
-        bloc.hidden = !case_.checked;
-        case_.setAttribute('aria-expanded', String(case_.checked));
-      });
-      /* Envoi désactivé (maquette locale) : aucune destination, aucun message transmis. */
-      document.getElementById('mq-ecrire-form').addEventListener('submit', function (e) { e.preventDefault(); });
-    })();
-  </script>
+  <script src="../assets/js/ecrire-form.js"></script>
 </body>
 </html>
