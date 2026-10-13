@@ -76,7 +76,11 @@
 
     <section class="mq-section mq-section--collee">
       <div class="mq-conteneur mq-conteneur--etroit">
-        <form class="mq-contact" id="mq-contact" novalidate>
+        <form class="mq-contact" id="mq-contact" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="0a334930-d62b-4232-9155-456ad1f3c6ef" />
+          <input type="hidden" name="subject" value="Contact — Site du comité" />
+          <input type="hidden" name="from_name" value="Site — Comité de soutien au juge Hakim Karki" />
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="mq-contact__ligne mq-contact__ligne--deux">
             <div class="mq-contact__champ">
               <label class="mq-sr" for="mq-contact-nom">Nom</label>
@@ -95,8 +99,9 @@
             <label class="mq-sr" for="mq-contact-message">Message</label>
             <textarea id="mq-contact-message" name="message" placeholder="Message" rows="6" required></textarea>
           </div>
-          <p class="mq-contact__note" id="mq-contact-note">Envoi indisponible — maquette locale, aucun destinataire configuré.</p>
-          <button class="mq-bouton mq-bouton--principal" type="submit" disabled aria-disabled="true" aria-describedby="mq-contact-note">Envoyer</button>
+          <p class="mq-contact__statut" id="mq-contact-statut" role="status" aria-live="polite"></p>
+          <button class="mq-bouton mq-bouton--principal" type="submit" aria-describedby="mq-contact-statut">Envoyer</button>
+          <p class="mq-contact__mail">Vous préférez écrire directement ? <a href="mailto:contact@soutien-juge-hakim-karki.fr">contact@soutien-juge-hakim-karki.fr</a></p>
         </form>
       </div>
     </section>
@@ -179,10 +184,6 @@
 
   <script src="../assets/js/navigation.js"></script>
   <script src="../assets/js/cartes-suite.js"></script>
-  <script>
-    /* Formulaire : envoi désactivé (maquette locale). La soumission est bloquée
-       et la validation native reste disponible pour la préparation. */
-    document.getElementById('mq-contact').addEventListener('submit', function (e) { e.preventDefault(); });
-  </script>
+  <script src="../assets/js/contact-form.js"></script>
 </body>
 </html>

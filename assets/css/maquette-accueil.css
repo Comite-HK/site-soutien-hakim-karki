@@ -789,14 +789,19 @@ a:hover { color: var(--mq-bleu-fonce); }
 .mq-contact__chapo { margin: 16px 0 0; max-width: 62ch; color: var(--mq-ardoise); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; }
 .mq-contact { background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 24px 26px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
 .mq-contact__ligne { display: grid; gap: 14px; }
-.mq-contact__champ + .mq-contact__champ, .mq-contact__ligne + .mq-contact__champ, .mq-contact__champ + .mq-contact__note { margin-top: 14px; }
+.mq-contact__champ + .mq-contact__champ, .mq-contact__ligne + .mq-contact__champ, .mq-contact__champ + .mq-contact__statut { margin-top: 14px; }
 @media (min-width: 640px) { .mq-contact__ligne--deux { grid-template-columns: 1fr 1fr; } }
 .mq-contact input, .mq-contact textarea { width: 100%; min-height: 46px; padding: 12px 14px; font: inherit; font-size: 16px; color: var(--mq-encre); background: var(--mq-ivoire); border: 1px solid var(--mq-trait); border-radius: 8px; }
 .mq-contact textarea { min-height: 150px; resize: vertical; }
 .mq-contact input::placeholder, .mq-contact textarea::placeholder { color: var(--mq-ardoise); }
 .mq-contact input:focus-visible, .mq-contact textarea:focus-visible { outline: 2px solid var(--mq-bleu); outline-offset: 2px; border-color: var(--mq-bleu); }
-.mq-contact__note { margin: 16px 0 14px; padding: 10px 14px; background: var(--mq-ivoire); border: 1px dashed var(--mq-or-clair); border-radius: 6px; color: var(--mq-ocre); font-size: 14px; font-weight: 700; }
-.mq-contact .mq-bouton:disabled { opacity: 0.55; cursor: not-allowed; }
+.mq-contact__statut { margin: 16px 0 14px; padding: 10px 14px; border-radius: 6px; font-size: 14px; font-weight: 700; }
+.mq-contact__statut:empty { display: none; }
+.mq-contact__statut--ok { background: #EAF3EC; border: 1px solid #8CB89B; color: #1D5B33; }
+.mq-contact__statut--erreur { background: #FBEBE8; border: 1px solid #D99A8D; color: #8F2D1B; }
+.mq-contact__mail { margin: 14px 0 0; color: var(--mq-ardoise); font-size: 14.5px; line-height: 1.55; }
+.mq-contact__mail a { color: var(--mq-bleu); text-underline-offset: 0.2em; }
+.mq-contact .mq-bouton:disabled { opacity: 0.55; cursor: wait; }
 
 /* ---------- Page « Écrire à Hakim » (étape 18) ---------- */
 .mq-ecrire__sous { margin: 14px 0 0; color: var(--mq-ocre); font-size: clamp(17px, 1.8vw, 20px); font-weight: 700; }
