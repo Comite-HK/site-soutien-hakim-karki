@@ -893,6 +893,9 @@ a:hover { color: var(--mq-bleu-fonce); }
   .mq-pvag__actions { flex-direction: column; align-items: stretch; gap: 12px; }
   .mq-pvag__actions .mq-bouton { text-align: center; }
 }
+@media (max-width: 355px) {
+  .mq-pvag .mq-entete-page__titre { font-size: min(24px, 7.5vw); }
+}
 
 /* --- Accueil : contexte presse, repères et colère des avocats --- */
 .mq-presse-detail { display: grid; gap: 34px; margin-top: 34px; align-items: start; }
