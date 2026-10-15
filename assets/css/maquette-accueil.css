@@ -898,6 +898,7 @@ a:hover { color: var(--mq-bleu-fonce); }
 }
 @media (max-width: 350px) {
   .mq-pvag ~ .mq-suite .mq-h2 { font-size: min(24px, 7.4vw); }
+  #soutiens ~ .mq-suite .mq-h2 { font-size: min(24px, 7.4vw); }
 }
 
 /* --- Accueil : contexte presse, repères et colère des avocats --- */
