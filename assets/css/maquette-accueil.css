@@ -782,6 +782,7 @@ a:hover { color: var(--mq-bleu-fonce); }
 /* Mobile : titres équilibrés et espacement resserré avant l'adhésion */
 @media (max-width: 759.98px) {
   .mq-partage .mq-h2, .mq-supports__gtitre, .mq-partage-adhesion .mq-adhesion__titre { text-wrap: balance; }
+  #reseaux-titre, #email-titre, #outils-titre { font-size: min(21px, 6.25vw); line-height: 1.25; }
   .mq-partage-adhesion { padding-top: 20px; }
 }
 
