@@ -761,6 +761,7 @@ a:hover { color: var(--mq-bleu-fonce); }
 /* Supports à partager — maquette provisoire autorisée */
 .mq-supports__note { margin: -10px 0 20px; padding: 10px 14px; background: var(--mq-ivoire); border: 1px dashed var(--mq-or-clair); border-radius: 6px; color: var(--mq-ocre); font-size: 14px; font-weight: 700; }
 .mq-supports__groupe + .mq-supports__groupe { margin-top: 26px; }
+.mq-supports__grille { align-items: start; }
 .mq-supports__gtitre { margin: 0 0 12px; color: var(--mq-bleu); font-size: 16.5px; text-transform: uppercase; letter-spacing: 0.06em; }
 .mq-supports__carte { display: flex; flex-direction: column; gap: 12px; background: var(--mq-blanc); border: 1px solid var(--mq-trait); border-left: 4px solid var(--mq-ocre); border-radius: var(--mq-rayon); padding: 18px 20px; box-shadow: 0 10px 24px rgba(27, 55, 96, 0.05); }
 .mq-supports__titre { margin: 0; color: var(--mq-encre); font-size: 17px; }

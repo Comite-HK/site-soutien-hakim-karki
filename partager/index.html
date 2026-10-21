@@ -290,6 +290,24 @@ Informez-vous et, si vous souhaitez faire connaître cette affaire, partagez cet
 
 #HakimKarki #Justice #IndépendanceDeLaJustice` }
         ] },
+      { groupe: 'Faire découvrir l\u2019affaire', titre: 'Partagez son histoire',
+        variantes: [
+          { format: 'Carr\u00e9', ratio: '1/1',
+            src: '../assets/img/Supports/partager-son-histoire-carre-apercu.webp',
+            fichier: '../assets/img/Supports/partager-son-histoire-carre.png',
+            dimensions: '1254 \u00d7 1254 px',
+            texte: `📢 Un partage peut ouvrir le dialogue.
+
+Connaissez-vous l’affaire Hakim Karki, ancien juge d’instruction à Mayotte ?
+
+Condamné à dix ans de prison pour viol, il conteste cette accusation et affirme son innocence. Son comité de soutien invite chacun à découvrir son histoire et à consulter les éléments réunis sur son site : chronologie, revue de presse et actions de soutien.
+
+Informez-vous, faites-vous votre opinion et partagez ce site autour de vous.
+
+👉 https://www.soutien-juge-hakim-karki.fr/
+
+#HakimKarki #Justice #ComitéDeSoutien` }
+        ] },
       { groupe: 'Soutenir et rejoindre le comit\u00e9', titre: 'Devenez membre du comit\u00e9',
         variantes: [
           { format: 'Carr\u00e9', ratio: '1/1',
@@ -311,153 +329,143 @@ Rejoignez son comité de soutien et participez aux actions pour faire connaître
     (function () {
       const racine = document.getElementById('mq-supports');
       if (!racine) return;
-      const groupes = new Map();
-      MQ_SUPPORTS.forEach(s => { if (!groupes.has(s.groupe)) groupes.set(s.groupe, []); groupes.get(s.groupe).push(s); });
+      // Une seule grille : les intertitres de groupe sont retirés sur décision de Fred.
+      const liste = document.createElement('ul');
+      liste.className = 'mq-partage__grille mq-supports__grille';
       let n = 0;
-      groupes.forEach((supports, groupe) => {
-        const bloc = document.createElement('div');
-        bloc.className = 'mq-supports__groupe';
-        const h = document.createElement('h3');
-        h.className = 'mq-supports__gtitre';
-        h.textContent = groupe;
-        const liste = document.createElement('ul');
-        liste.className = 'mq-partage__grille mq-supports__grille';
-        supports.forEach(s => {
-          n++;
-          const li = document.createElement('li');
-          li.className = 'mq-supports__carte';
+      MQ_SUPPORTS.forEach(s => {
+        n++;
+        const li = document.createElement('li');
+        li.className = 'mq-supports__carte';
 
-          const t = document.createElement('h4');
-          t.className = 'mq-supports__titre';
-          t.textContent = s.titre;
-          li.appendChild(t);
+        const t = document.createElement('h4');
+        t.className = 'mq-supports__titre';
+        t.textContent = s.titre;
+        li.appendChild(t);
 
-          const apercu = document.createElement('div');
-          apercu.className = 'mq-supports__apercu';
-          const zone = document.createElement('span');
-          zone.className = 'mq-supports__placeholder';
-          apercu.appendChild(zone);
-          li.appendChild(apercu);
+        const apercu = document.createElement('div');
+        apercu.className = 'mq-supports__apercu';
+        const zone = document.createElement('span');
+        zone.className = 'mq-supports__placeholder';
+        apercu.appendChild(zone);
+        li.appendChild(apercu);
 
-          const rendre = v => {
-            apercu.style.aspectRatio = v.ratio;
-            if (v.src) {
-              apercu.classList.add('mq-supports__apercu--image');
-              apercu.innerHTML = '';
-              const img = document.createElement('img');
-              img.src = v.src;
-              img.alt = 'Visuel « ' + s.titre + ' »';
-              img.loading = 'lazy';
-              apercu.appendChild(img);
-            } else {
-              apercu.classList.remove('mq-supports__apercu--image');
-              apercu.innerHTML = '';
-              zone.textContent = 'Visuel \u00e0 int\u00e9grer';
-              apercu.appendChild(zone);
-            }
-          };
-          const meta = document.createElement('p');
-          meta.className = 'mq-supports__meta';
-          const majMeta = () => {
-            meta.textContent = (variante && variante.dimensions) ? 'Format ' + variante.format.toLowerCase() + ' — ' + variante.dimensions : '';
-          };
-
-          const texte = document.createElement('p');
-          texte.className = 'mq-supports__texte';
-          const majTexte = () => {
-            const pret = !!(variante && variante.texte);
-            texte.textContent = pret ? variante.texte : 'Texte \u00e0 valider';
-            texte.classList.toggle('mq-supports__texte--pret', pret);
-          };
-
-          const actions = document.createElement('div');
-          actions.className = 'mq-supports__actions';
-          [['T\u00e9l\u00e9charger l\u2019image', 'src'], ['Copier le texte', 'texte']].forEach(([lib, cle]) => {
-            const b = document.createElement('button');
-            b.type = 'button';
-            b.className = 'mq-bouton mq-bouton--secondaire';
-            b.dataset.cle = cle;
-            b.textContent = lib;
-            actions.appendChild(b);
-          });
-          const boutons = [...actions.querySelectorAll('button')];
-          const majBoutons = () => boutons.forEach(b => {
-            const dispo = !!(variante && variante[b.dataset.cle === 'src' ? 'fichier' : b.dataset.cle]);
-            b.disabled = !dispo;
-            b.setAttribute('aria-disabled', String(!dispo));
-            b.title = dispo ? '' : 'Disponible apr\u00e8s int\u00e9gration des fichiers';
-          });
-
-          const statut = document.createElement('p');
-          statut.className = 'mq-supports__statut';
-          statut.setAttribute('role', 'status');
-          statut.setAttribute('aria-live', 'polite');
-          const annoncer = (msg, cls) => {
-            statut.textContent = msg;
-            statut.classList.toggle('mq-supports__statut--ok', cls === 'ok');
-            statut.classList.toggle('mq-supports__statut--secours', cls === 'secours');
-          };
-
-          boutons[0].addEventListener('click', () => {
-            if (!variante || !variante.fichier) return;
-            const a = document.createElement('a');
-            a.href = variante.fichier;
-            a.download = variante.fichier.split('/').pop();
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            annoncer('T\u00e9l\u00e9chargement de l\u2019image lanc\u00e9.', 'ok');
-          });
-          boutons[1].addEventListener('click', async () => {
-            if (!variante || !variante.texte) return;
-            try {
-              await navigator.clipboard.writeText(variante.texte);
-              annoncer('Texte copi\u00e9 dans le presse-papiers.', 'ok');
-            } catch (e) {
-              const r = document.createRange();
-              r.selectNodeContents(texte);
-              const sel = window.getSelection();
-              sel.removeAllRanges();
-              sel.addRange(r);
-              annoncer('Copie automatique indisponible — le texte est s\u00e9lectionn\u00e9 : copiez-le avec Ctrl+C.', 'secours');
-            }
-          });
-
-          let variante = s.variantes[0];
-          rendre(variante);
-          majMeta();
-          majTexte();
-          majBoutons();
-          li.appendChild(meta);
-          li.appendChild(texte);
-          li.appendChild(actions);
-          li.appendChild(statut);
-
-          if (s.variantes.length > 1) {
-            const champ = document.createElement('p');
-            champ.className = 'mq-supports__format';
-            const lab = document.createElement('label');
-            lab.htmlFor = 'mq-supports-format-' + n;
-            lab.textContent = 'Format\u00a0:';
-            const sel = document.createElement('select');
-            sel.id = 'mq-supports-format-' + n;
-            s.variantes.forEach((v, i) => {
-              const o = document.createElement('option');
-              o.value = String(i);
-              o.textContent = v.format;
-              sel.appendChild(o);
-            });
-            sel.addEventListener('change', () => { variante = s.variantes[+sel.value]; rendre(variante); majMeta(); majTexte(); majBoutons(); statut.textContent = ''; });
-            champ.appendChild(lab);
-            champ.appendChild(sel);
-            li.insertBefore(champ, apercu.nextSibling);
+        const rendre = v => {
+          apercu.style.aspectRatio = v.ratio;
+          if (v.src) {
+            apercu.classList.add('mq-supports__apercu--image');
+            apercu.innerHTML = '';
+            const img = document.createElement('img');
+            img.src = v.src;
+            img.alt = 'Visuel « ' + s.titre + ' »';
+            img.loading = 'lazy';
+            apercu.appendChild(img);
+          } else {
+            apercu.classList.remove('mq-supports__apercu--image');
+            apercu.innerHTML = '';
+            zone.textContent = 'Visuel \u00e0 int\u00e9grer';
+            apercu.appendChild(zone);
           }
-          liste.appendChild(li);
+        };
+        const meta = document.createElement('p');
+        meta.className = 'mq-supports__meta';
+        const majMeta = () => {
+          meta.textContent = (variante && variante.dimensions) ? 'Format ' + variante.format.toLowerCase() + ' — ' + variante.dimensions : '';
+        };
+
+        const texte = document.createElement('p');
+        texte.className = 'mq-supports__texte';
+        const majTexte = () => {
+          const pret = !!(variante && variante.texte);
+          texte.textContent = pret ? variante.texte : 'Texte \u00e0 valider';
+          texte.classList.toggle('mq-supports__texte--pret', pret);
+        };
+
+        const actions = document.createElement('div');
+        actions.className = 'mq-supports__actions';
+        [['T\u00e9l\u00e9charger l\u2019image', 'src'], ['Copier le texte', 'texte']].forEach(([lib, cle]) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'mq-bouton mq-bouton--secondaire';
+          b.dataset.cle = cle;
+          b.textContent = lib;
+          actions.appendChild(b);
         });
-        bloc.appendChild(h);
-        bloc.appendChild(liste);
-        racine.appendChild(bloc);
+        const boutons = [...actions.querySelectorAll('button')];
+        const majBoutons = () => boutons.forEach(b => {
+          const dispo = !!(variante && variante[b.dataset.cle === 'src' ? 'fichier' : b.dataset.cle]);
+          b.disabled = !dispo;
+          b.setAttribute('aria-disabled', String(!dispo));
+          b.title = dispo ? '' : 'Disponible apr\u00e8s int\u00e9gration des fichiers';
+        });
+
+        const statut = document.createElement('p');
+        statut.className = 'mq-supports__statut';
+        statut.setAttribute('role', 'status');
+        statut.setAttribute('aria-live', 'polite');
+        const annoncer = (msg, cls) => {
+          statut.textContent = msg;
+          statut.classList.toggle('mq-supports__statut--ok', cls === 'ok');
+          statut.classList.toggle('mq-supports__statut--secours', cls === 'secours');
+        };
+
+        boutons[0].addEventListener('click', () => {
+          if (!variante || !variante.fichier) return;
+          const a = document.createElement('a');
+          a.href = variante.fichier;
+          a.download = variante.fichier.split('/').pop();
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          annoncer('T\u00e9l\u00e9chargement de l\u2019image lanc\u00e9.', 'ok');
+        });
+        boutons[1].addEventListener('click', async () => {
+          if (!variante || !variante.texte) return;
+          try {
+            await navigator.clipboard.writeText(variante.texte);
+            annoncer('Texte copi\u00e9 dans le presse-papiers.', 'ok');
+          } catch (e) {
+            const r = document.createRange();
+            r.selectNodeContents(texte);
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(r);
+            annoncer('Copie automatique indisponible — le texte est s\u00e9lectionn\u00e9 : copiez-le avec Ctrl+C.', 'secours');
+          }
+        });
+
+        let variante = s.variantes[0];
+        rendre(variante);
+        majMeta();
+        majTexte();
+        majBoutons();
+        li.appendChild(meta);
+        li.appendChild(texte);
+        li.appendChild(actions);
+        li.appendChild(statut);
+
+        if (s.variantes.length > 1) {
+          const champ = document.createElement('p');
+          champ.className = 'mq-supports__format';
+          const lab = document.createElement('label');
+          lab.htmlFor = 'mq-supports-format-' + n;
+          lab.textContent = 'Format\u00a0:';
+          const sel = document.createElement('select');
+          sel.id = 'mq-supports-format-' + n;
+          s.variantes.forEach((v, i) => {
+            const o = document.createElement('option');
+            o.value = String(i);
+            o.textContent = v.format;
+            sel.appendChild(o);
+          });
+          sel.addEventListener('change', () => { variante = s.variantes[+sel.value]; rendre(variante); majMeta(); majTexte(); majBoutons(); statut.textContent = ''; });
+          champ.appendChild(lab);
+          champ.appendChild(sel);
+          li.insertBefore(champ, apercu.nextSibling);
+        }
+        liste.appendChild(li);
       });
+      racine.appendChild(liste);
     })();
   </script>
 </body>
