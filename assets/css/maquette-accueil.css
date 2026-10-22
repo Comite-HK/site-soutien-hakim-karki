@@ -1014,3 +1014,27 @@ a:hover { color: var(--mq-bleu-fonce); }
   .mq-hero__intitule .mq-surtitre { gap: 4px 7px; font-size: 11.5px; letter-spacing: 0.05em; }
   .mq-hero__intitule .mq-surtitre::before { width: 16px; }
 }
+
+/* --------------------------------------------------------------------------
+   Mentions légales & politique de confidentialité (F-10 — projet en revue)
+   Lecture étroite, repères de complétion visibles pour la relecture du comité.
+   -------------------------------------------------------------------------- */
+.mq-legal p, .mq-legal li { color: var(--mq-ardoise); font-size: 16.5px; line-height: 1.75; }
+.mq-legal p { margin: 0; max-width: 72ch; }
+.mq-legal p + p { margin-top: 12px; }
+.mq-legal ul { margin: 10px 0 0; padding-left: 22px; }
+.mq-legal li + li { margin-top: 6px; }
+.mq-legal strong { color: var(--mq-encre); }
+.mq-legal a { color: var(--mq-bleu); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.mq-legal .mq-h2 { font-size: clamp(22px, 2.4vw, 28px); margin: 0 0 14px; }
+.mq-legal__h3 { margin: 20px 0 8px; color: var(--mq-encre); font-size: 18px; }
+.mq-legal dl { margin: 14px 0 0; }
+.mq-legal dt { margin-top: 14px; font-weight: 700; color: var(--mq-encre); font-size: 15.5px; }
+.mq-legal dt:first-child { margin-top: 0; }
+.mq-legal dd { margin: 4px 0 0; color: var(--mq-ardoise); line-height: 1.7; }
+.mq-legal__a-completer { display: inline-block; padding: 1px 8px; background: var(--mq-ivoire); border: 1px dashed var(--mq-or-clair); border-radius: 6px; color: var(--mq-encre); font-weight: 600; font-size: 0.92em; }
+.mq-legal .mq-legal__revue { margin: 0 0 26px; padding: 14px 16px; background: var(--mq-ivoire); border: 1px solid var(--mq-or-clair); border-left: 4px solid var(--mq-ocre); border-radius: 8px; color: var(--mq-ardoise); font-size: 15px; line-height: 1.65; }
+.mq-legal__revue strong { color: var(--mq-encre); }
+@media (max-width: 759.98px) {
+  .mq-legal .mq-entete-page__titre, .mq-legal .mq-h2 { text-wrap: balance; }
+}
