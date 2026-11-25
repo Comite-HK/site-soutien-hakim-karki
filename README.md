@@ -43,7 +43,7 @@ Exemples :
 - Accueil : `/`
 - Le Comité de soutien : `/comite-de-soutien/`
 - Chronologie : `/chronologie/`
-- Des faits troublants : `/faits-troublants/`
+- Les Faits : `/les-faits/` (`/faits-troublants/` redirige vers cette page)
 - L’affaire Roukia : `/l-affaire-roukia/`
 - Un juge soumis à des pressions : `/un-juge-soumis-a-des-pressions/`
 - La départementalisation à Mayotte : `/departementalisation-a-mayotte/`
