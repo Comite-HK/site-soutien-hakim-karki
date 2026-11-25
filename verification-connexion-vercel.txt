@@ -1,0 +1,2 @@
+Test de Preview Vercel : vérification de la connexion automatique GitHub vers Vercel.
+Cette branche ne doit pas modifier la production.
