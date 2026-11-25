@@ -1,0 +1,291 @@
+/* Accueil uniquement : adaptation de reference-visuelle-comite-hk.zip.
+   Georgia / Arial, palette et composition issues de app/globals.css.
+   Les composants et scripts de navigation du site restent partagés.
+   Charger après maquette-accueil.css et navigation.css. */
+.hk-accueil {
+  --mq-bleu: #234683;
+  --mq-bleu-fonce: #17314f;
+  --mq-blanc: #fbfcfe;
+  --mq-ivoire: #edf2f8;
+  --mq-encre: #162c46;
+  --mq-ardoise: #53647b;
+  --mq-ocre: #526880;
+  --mq-or-clair: #b5c5da;
+  --mq-trait: #dbe2eb;
+  --mq-bordure: #c3cedc;
+  --mq-rayon: 4px;
+  --mq-ombre: none;
+  --mq-ombre-legere: none;
+  --mq-conteneur: 1180px;
+  background: #fbfcfe;
+  color: #162c46;
+  font: 17px/1.7 Arial, Helvetica, sans-serif;
+}
+.hk-accueil ::selection { background: #d2dff1; }
+.hk-accueil :focus-visible { outline: 3px solid #ad653f; outline-offset: 5px; }
+.hk-accueil .mq-conteneur {
+  width: min(1180px, calc(100% - 64px));
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+.hk-accueil .hk-acces-contenu {
+  position: fixed;
+  top: -100px;
+  left: 10px;
+  z-index: 100;
+  padding: 12px;
+  background: white;
+}
+.hk-accueil .hk-acces-contenu:focus { top: 8px; }
+.hk-accueil main,
+.hk-accueil main > section[id] { scroll-margin-top: 180px; }
+.hk-accueil .mq-h1,
+.hk-accueil .mq-h2,
+.hk-accueil h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.hk-accueil .mq-h2 { font-size: clamp(30px, 3vw, 37px); letter-spacing: -.5px; }
+.hk-accueil .mq-nobr { white-space: normal; }
+.hk-accueil .mq-surtitre {
+  color: #526880;
+  font: 700 11px/1.6 Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+.hk-accueil .mq-surtitre::before { content: none; }
+.hk-accueil .mq-bouton {
+  min-height: 48px;
+  border-radius: 4px;
+  padding: 13px 21px;
+  font: 600 14px/1.4 Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.hk-accueil .mq-bouton--secondaire { background: transparent; border-color: #a8b6ca; }
+.hk-accueil .mq-bouton--principal:hover { background: #19325c; }
+
+/* Navigation existante, habillée comme l'en-tête de la référence. */
+.hk-accueil .mq-bandeau { background: #edf2f8; }
+.hk-accueil .mq-bandeau a {
+  width: min(1180px, calc(100% - 64px));
+  max-width: none;
+  padding: 8px 0;
+  min-height: 40px;
+  font-size: 12px;
+  color: #234683;
+  text-align: right;
+}
+.hk-accueil .mq-entete { position: sticky; top: 0; background: #fbfcfef5; }
+.hk-accueil .mq-entete__rangee { min-height: 100px; gap: 20px; }
+.hk-accueil .mq-logo { gap: 14px; font-family: Arial, Helvetica, sans-serif; }
+.hk-accueil .mq-logo__marque {
+  display: block;
+  width: auto;
+  height: auto;
+  padding-right: 8px;
+  background: none;
+  color: #162c46;
+  border-radius: 0;
+  font: 32px/1 Georgia, serif;
+  letter-spacing: -3px;
+}
+.hk-accueil .mq-logo__marque span { display: block; color: #ae6546; font-size: 24px; line-height: .3; }
+.hk-accueil .mq-logo__nom { font-size: 10px; letter-spacing: 1.8px; line-height: 1.6; text-transform: uppercase; }
+.hk-accueil .mq-logo__sous { font: 400 20px/1.6 Georgia, serif; color: #162c46; }
+.hk-accueil .mq-nav { font-family: Arial, Helvetica, sans-serif; gap: 8px; }
+.hk-accueil .mq-nav__lien,
+.hk-accueil .mq-nav__parent { font-size: 13px; font-weight: 400; border-radius: 0; padding-inline: 10px; }
+.hk-accueil .mq-nav__sous { border-radius: 4px; }
+.hk-accueil .mq-nav__sous a { font-size: 14px; border-radius: 2px; }
+.hk-accueil .mq-nav__bascule { border-radius: 4px; font-family: Arial, Helvetica, sans-serif; }
+
+/* Ouverture : titre éditorial et portrait, puis repères chiffrés. */
+.hk-accueil .mq-hero { background: #fbfcfe; border-bottom: 0; }
+.hk-accueil .mq-hero__grille {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 48px 80px;
+  align-items: center;
+  padding-block: 66px 0;
+}
+.hk-accueil .mq-hero__presentation { max-width: none; min-width: 0; }
+.hk-accueil .mq-hero__tete { display: block; margin: 0 0 24px; }
+.hk-accueil .mq-hero__intitule .mq-h1 {
+  max-width: 13ch;
+  font-size: clamp(46px, 5.4vw, 74px);
+  line-height: 1.09;
+  letter-spacing: -2px;
+  margin: 0 0 26px;
+  white-space: normal;
+  text-wrap: initial;
+}
+.hk-accueil .mq-h1 em { display: block; color: #315897; font-weight: 400; }
+.hk-accueil .mq-hero__question {
+  font: italic 25px/1.45 Georgia, serif;
+  color: #315897;
+  white-space: normal;
+}
+.hk-accueil .mq-hero__texte { max-width: 475px; font-size: 17px; color: #53647b; line-height: 1.8; white-space: normal; }
+.hk-accueil .mq-hero__alerte {
+  background: #edf2f8;
+  box-shadow: none;
+  border: 0;
+  border-left: 2px solid #b5c5da;
+  border-radius: 0;
+  padding: 14px 18px;
+}
+.hk-accueil .mq-hero__alerte p { font-size: 14px; color: #53647b; white-space: normal; }
+.hk-accueil .mq-hero__alerte-marque { width: 20px; height: 20px; background: #526880; }
+.hk-accueil .mq-hero__actions { gap: 16px; margin-top: 30px; }
+.hk-accueil .mq-hero__actions .mq-bouton { font-size: 14px; min-height: 48px; padding: 13px 21px; }
+.hk-accueil .hk-portrait { margin: 0; position: relative; overflow: hidden; background: #e0e4e9; border-radius: 2px; }
+.hk-accueil .hk-portrait img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: 50% 22%;
+  filter: grayscale(100%);
+}
+.hk-accueil .hk-portrait figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 65px 28px 24px;
+  color: white;
+  background: linear-gradient(transparent, #11253dec);
+  line-height: 1.5;
+}
+.hk-accueil .hk-portrait blockquote { margin: 0; }
+.hk-accueil .hk-portrait p { font: 27px/1.5 Georgia, serif; margin: 0; }
+.hk-accueil .hk-portrait figcaption span { font-size: 13px; }
+.hk-accueil .mq-hero__col { grid-column: 1 / -1; display: block; }
+.hk-accueil .mq-reperes {
+  background: transparent;
+  color: #234683;
+  padding: 28px 0 0;
+  border-top: 1px solid #dbe2eb;
+  border-radius: 0;
+}
+.hk-accueil .mq-reperes__titre { color: #526880; font-size: 11px; letter-spacing: 2px; margin-bottom: 12px; }
+.hk-accueil .mq-hero__col .mq-reperes__grille { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+.hk-accueil .mq-repere { border: 0; border-right: 1px solid #dbe2eb; border-radius: 0; background: none; padding: 20px 32px 28px; }
+.hk-accueil .mq-repere:first-child { padding-left: 0; }
+.hk-accueil .mq-repere:last-child { border-right: 0; }
+.hk-accueil .mq-repere--pleine { grid-column: auto; }
+.hk-accueil .mq-repere strong { font: 42px/1.2 Georgia, serif; letter-spacing: 0; }
+.hk-accueil .mq-repere span { margin-top: 10px; font-size: 13px; color: #53647b; }
+
+/* Même vocabulaire visuel appliqué à tous les contenus locaux de l'accueil. */
+.hk-accueil .mq-section { padding-block: 64px; background: #fbfcfe; border-top: 1px solid #dbe2eb; }
+.hk-accueil .mq-fond-ivoire { background: #f0f4f9; }
+.hk-accueil .mq-hero + .mq-section { background: #edf2f8; padding-block: 36px; }
+.hk-accueil .mq-hero + .mq-section .mq-conteneur {
+  display: grid;
+  grid-template-columns: 160px 1fr 1.2fr;
+  align-items: center;
+  gap: 36px;
+}
+.hk-accueil .mq-hero + .mq-section .mq-surtitre { margin: 0; }
+.hk-accueil .mq-hero + .mq-section .mq-h2 { font-size: 27px; }
+.hk-accueil .mq-section__texte { margin: 0; font-size: 16px; color: #53647b; }
+.hk-accueil .mq-section-head { max-width: 760px; }
+.hk-accueil .mq-chrono { gap: 0; }
+.hk-accueil .mq-chrono__item { background: none; border: 0; border-top: 1px solid #dbe2eb; border-radius: 0; padding: 22px 0; gap: 28px; }
+.hk-accueil .mq-chrono__item time { font: 21px/1.4 Georgia, serif; color: #426393; }
+.hk-accueil .mq-chrono__item p { font-size: 16px; line-height: 1.7; }
+.hk-accueil .mq-points { gap: 24px; counter-reset: points; }
+.hk-accueil .mq-point { background: #f0f4f9; border: 0; border-top: 2px solid #b5c5da; padding: 28px; border-radius: 0; counter-increment: points; }
+.hk-accueil .mq-point__icone { display: none; }
+.hk-accueil .mq-point::before { content: counter(points, decimal-leading-zero); font-size: 12px; color: #6b7d95; letter-spacing: 1px; }
+.hk-accueil .mq-point h3 { font-size: 24px; font-weight: 400; margin: 22px 0 14px; }
+.hk-accueil .mq-point p { font-size: 15px; line-height: 1.7; }
+.hk-accueil .mq-appel { background: #17314f; border-radius: 0; padding: 48px; }
+.hk-accueil .mq-appel .mq-surtitre { color: #a6bedb; }
+.hk-accueil .mq-appel .mq-h2 { max-width: 30ch; }
+.hk-accueil .mq-appel p:not(.mq-surtitre) { color: #c4d2e2; }
+.hk-accueil .mq-presse { display: block; }
+.hk-accueil #presse .mq-presse__texte .mq-h2 { max-width: 26ch; font-size: clamp(30px, 3vw, 37px); white-space: normal; text-wrap: balance; margin-bottom: 20px; }
+.hk-accueil .mq-presse__texte > p:not(.mq-surtitre) { max-width: 760px; }
+.hk-accueil .mq-lien-fleche { font-size: 14px; }
+.hk-accueil .mq-presse-detail__titre { font-family: Georgia, serif; font-size: 25px; font-weight: 400; }
+.hk-accueil .mq-video { border: 1px solid #dbe2eb; border-radius: 2px; }
+.hk-accueil .mq-video__facade,
+.hk-accueil .mq-video__lecteur { border-radius: 2px; }
+.hk-accueil .mq-rep-art__item { border: 0; border-top: 1px solid #b5c5da; background: transparent; border-radius: 0; padding: 22px 0; }
+.hk-accueil .mq-rep-art__titre { font: 22px/1.4 Georgia, serif; }
+.hk-accueil .mq-rep-art__lien { font-size: 14px; text-decoration-color: currentColor; }
+.hk-accueil .mq-agir { border-radius: 0; background: #edf2f8; border: 0; padding: 48px; }
+.hk-accueil .mq-avocats { background: #17314f; padding: 48px; border-radius: 0; }
+.hk-accueil .mq-avocats__figure img,
+.hk-accueil .mq-avocats__legende,
+.hk-accueil .mq-avocats__contenu,
+.hk-accueil .mq-avocats__citation,
+.hk-accueil .mq-avocats__questions { border-radius: 0; }
+.hk-accueil .mq-avocats__legende { background: none; padding: 12px 0; font-size: 13px; }
+.hk-accueil .mq-avocats__contenu { padding: 0; background: none; border: 0; }
+.hk-accueil .mq-avocats__citation { text-align: left; border-left: 2px solid #95aac4; background: none; }
+.hk-accueil .mq-avocats__citation p { font: italic 24px/1.5 Georgia, serif; }
+.hk-accueil .mq-avocats__questions-titre { color: #dbe4ef; font: 600 14px/1.5 Arial, sans-serif; }
+
+/* Pied de page : marque et trois groupes de liens, sans changement de routes. */
+.hk-accueil .mq-pied { background: #12263f; color: #dbe4ef; }
+.hk-accueil .mq-pied .mq-conteneur { display: grid; grid-template-columns: 1fr 3fr; gap: 40px; padding-block: 50px; }
+.hk-accueil .mq-pied__tete { margin: 0; }
+.hk-accueil .mq-pied__nom { font: 24px/1.4 Georgia, serif; color: white; letter-spacing: 0; }
+.hk-accueil .mq-pied__tete p { color: #a9b9cb; font-size: 13px; margin-top: 20px; }
+.hk-accueil .mq-pied__nav { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.hk-accueil .mq-pied__titre { font: 600 11px/1.6 Arial, sans-serif; letter-spacing: 1.8px; color: #95aac4; border: 0; padding: 0; margin-bottom: 20px; }
+.hk-accueil .mq-pied__liens a { font-size: 13px; color: #dbe4ef; text-decoration: none; line-height: 1.5; }
+.hk-accueil .mq-pied__liens a:hover { text-decoration: underline; color: white; }
+.hk-accueil .mq-pied__bas { grid-column: 1 / -1; border-color: #304057; padding-top: 24px; margin: 0; }
+.hk-accueil .mq-pied__legaux a { color: #a9b9cb; font-size: 12px; text-decoration: none; }
+.hk-accueil .mq-pied__legaux a:hover { text-decoration: underline; color: white; }
+
+@media (max-width: 1199px) {
+  .hk-accueil .mq-entete__rangee { min-height: 80px; gap: 12px; }
+  .js .hk-accueil .mq-nav.mq-ouvert { max-height: calc(100vh - 180px); max-height: calc(100dvh - 180px); overflow-y: auto; }
+  .hk-accueil .mq-hero__grille { gap: 40px; }
+  .hk-accueil .mq-hero__intitule .mq-h1 { font-size: clamp(46px, 5.4vw, 64px); }
+  .hk-accueil .mq-hero + .mq-section .mq-conteneur { grid-template-columns: 1fr 2fr; }
+  .hk-accueil .mq-hero + .mq-section .mq-section__texte { grid-column: 2; }
+  .hk-accueil .mq-pied .mq-conteneur { grid-template-columns: 1fr; gap: 32px; }
+  .hk-accueil .mq-pied__tete { max-width: 360px; }
+}
+@media (max-width: 760px) {
+  .hk-accueil .mq-conteneur,
+  .hk-accueil .mq-bandeau a { width: calc(100% - 40px); }
+  .hk-accueil .mq-hero__grille { grid-template-columns: minmax(0, 1fr); padding-top: 38px; gap: 34px; }
+  .hk-accueil .mq-hero__intitule .mq-h1 { font-size: 49px; letter-spacing: -1.5px; }
+  .hk-accueil .mq-hero__question { font-size: 23px; }
+  .hk-accueil .mq-hero__texte { max-width: none; }
+  .hk-accueil .hk-portrait img { height: 360px; }
+  .hk-accueil .mq-hero + .mq-section .mq-conteneur { grid-template-columns: 1fr; gap: 20px; }
+  .hk-accueil .mq-hero + .mq-section .mq-section__texte { grid-column: auto; }
+  .hk-accueil .mq-section { padding-block: 40px; }
+  .hk-accueil .mq-chrono__item { grid-template-columns: 1fr; gap: 10px; }
+  .hk-accueil .mq-points { grid-template-columns: 1fr; }
+  .hk-accueil .mq-appel,
+  .hk-accueil .mq-agir,
+  .hk-accueil .mq-avocats { padding: 28px; }
+  .hk-accueil .mq-avocats__grille { grid-template-columns: minmax(0, 1fr); }
+  .hk-accueil .mq-pied__nav { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+}
+@media (max-width: 559px) {
+  .hk-accueil .mq-entete__rangee { grid-template-columns: 1fr auto; }
+  .hk-accueil .mq-logo { grid-column: 1; }
+  .hk-accueil .mq-logo__nom { font-size: 8px; letter-spacing: 1px; }
+  .hk-accueil .mq-logo__sous { font-size: 17px; }
+  .hk-accueil .mq-logo__marque { font-size: 28px; padding-right: 0; }
+  .hk-accueil .mq-nav__bascule { grid-column: 2; grid-row: 1; min-width: 60px; padding-inline: 8px; font-size: 13px; }
+  .hk-accueil .mq-nav__action-mobile { grid-column: 1 / -1; min-height: 44px; padding: 10px 14px; font-size: 12px; }
+  .hk-accueil .mq-hero__actions { flex-direction: column; align-items: stretch; }
+  .hk-accueil .mq-hero__col .mq-reperes__grille { grid-template-columns: 1fr; }
+  .hk-accueil .mq-repere,
+  .hk-accueil .mq-repere:first-child { padding: 20px 0; border-right: 0; border-bottom: 1px solid #dbe2eb; }
+  .hk-accueil .mq-repere:last-child { border-bottom: 0; }
+  .hk-accueil .mq-repere strong { font-size: 35px; }
+  .hk-accueil .mq-pied__nav { grid-template-columns: 1fr; }
+}
